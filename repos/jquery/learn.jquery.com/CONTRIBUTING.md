@@ -36,8 +36,8 @@ The site's layout and design is controlled by our [`jquery-wp-content`](https://
 
 The static content in the `page` directory is deployed to a [`jquery-wp-content`](https://github.com/jquery/jquery-wp-content) instance using [grunt](http://gruntjs.com), specifically with two grunt plugins we've created:
 
-* [grunt-jquery-content](https://github.com/jquery/grunt-jquery-content) – pre-processes content in a variety of formats (HTML, Markdown, XML) into HTML, applying syntax highlighting and some simple partial support, preparing it for processing by:
-* [grunt-wordpress](https://github.com/scottgonzalez/grunt-wordpress) – syncs static content to WordPress using [XML-RPC](http://codex.wordpress.org/XML-RPC_Support)
+- [grunt-jquery-content](https://github.com/jquery/grunt-jquery-content) – pre-processes content in a variety of formats (HTML, Markdown, XML) into HTML, applying syntax highlighting and some simple partial support, preparing it for processing by:
+- [grunt-wordpress](https://github.com/scottgonzalez/grunt-wordpress) – syncs static content to WordPress using [XML-RPC](http://codex.wordpress.org/XML-RPC_Support)
 
 ## How Can I Help?
 
@@ -45,13 +45,13 @@ The simplest and least complicated way to help is to [file issues](https://githu
 
 If you'd like to go a step further and contribute new articles, make edits to existing ones, or work on the site itself, the first thing you'll need is a [fork](https://help.github.com/articles/fork-a-repo). When you have changes you'd like to have reviewed for integration into the site, submit a [pull request](https://help.github.com/articles/using-pull-requests).
 
-*(If you're unfamiliar with Git, you can still contribute by using features in GitHub's web interface. You can edit files directly via [GitHub's in-browser editor](https://github.com/blog/905-edit-like-an-ace). You can [create and delete branches directly from your fork](https://github.com/blog/1377-create-and-delete-branches), so you can also submit new articles as well. Either way, we still encourage you to [learn how to use Git and GitHub](https://help.github.com/) as soon as you can.)*
+_(If you're unfamiliar with Git, you can still contribute by using features in GitHub's web interface. You can edit files directly via [GitHub's in-browser editor](https://github.com/blog/905-edit-like-an-ace). You can [create and delete branches directly from your fork](https://github.com/blog/1377-create-and-delete-branches), so you can also submit new articles as well. Either way, we still encourage you to [learn how to use Git and GitHub](https://help.github.com/) as soon as you can.)_
 
 ## Local Development
 
 In order to preview your changes locally, work on design/layout issues, or work on other jQuery sites' content, and generally contribute most effectively, we recommend that you set up a local development environment. You can learn how to get set up from our [documentation on contributing to jQuery Foundation web sites](http://contribute.jquery.org/web-sites/#local-development).
 
-* **Windows note:** Line endings need to be Unix-style (line-feed only). Make sure your text editor creates new files with Unix-style line endings. In addition, the following setting to your git config will keep the Unix-style line endings when pulling from the repository:
+- **Windows note:** Line endings need to be Unix-style (line-feed only). Make sure your text editor creates new files with Unix-style line endings. In addition, the following setting to your git config will keep the Unix-style line endings when pulling from the repository:
 
 ```
 $ git config --global core.autocrlf true

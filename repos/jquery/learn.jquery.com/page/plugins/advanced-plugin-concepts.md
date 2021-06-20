@@ -179,7 +179,7 @@ The first thing that probably comes to your mind (OK, maybe not the first) is th
 
 Now, our friend Bob thinks this is all fine; in fact, he's quite impressed with the plugin and its level of customization. He believes that all the options make for a more versatile solution, one which can be used in many different situations.
 
-Sue, another friend of ours, has decided to use this new plugin. She has set up all of the options required and now has a working solution sitting in front of her. It's only five minutes later, after playing with the plugin, that she realizes the gallery would look much nicer if each image's width were animated at a slower speed. She hastily searches through Bob's documentation but finds no *animateWidthDuration* option!
+Sue, another friend of ours, has decided to use this new plugin. She has set up all of the options required and now has a working solution sitting in front of her. It's only five minutes later, after playing with the plugin, that she realizes the gallery would look much nicer if each image's width were animated at a slower speed. She hastily searches through Bob's documentation but finds no _animateWidthDuration_ option!
 
 ### Do You See The Problem?
 
@@ -191,7 +191,7 @@ Bob has gone a little over the top. The level of customization he's offering, wh
 
 So it's pretty obvious: Bob needs a new customization model, one which does not relinquish control or abstract away the necessary details.
 
-The reason Bob is so drawn to this high-level simplicity is that the jQuery framework very much lends itself to this mindset. Offering a *previousButtonTextColor* option is nice and simple, but let's face it, the vast majority of plugin users are going to want way more control!
+The reason Bob is so drawn to this high-level simplicity is that the jQuery framework very much lends itself to this mindset. Offering a _previousButtonTextColor_ option is nice and simple, but let's face it, the vast majority of plugin users are going to want way more control!
 
 Here are a few tips which should help you create a better set of customizable options for your plugins:
 
@@ -199,7 +199,7 @@ Here are a few tips which should help you create a better set of customizable op
 
 Developers who use your plugin shouldn't have to learn a new language or terminology just to get the job done.
 
-Bob thought he was offering maximum customization with his *delay* option (look above). He made it so that with his plugin you can specify four different delays, "quite short," "very short," "quite long," or "very long":
+Bob thought he was offering maximum customization with his _delay_ option (look above). He made it so that with his plugin you can specify four different delays, "quite short," "very short," "quite long," or "very long":
 
 ```
 var delayDuration = 0;
@@ -272,7 +272,7 @@ var defaults = {
 var settings = $.extend( true, {}, defaults, options );
 ```
 
-The *$.extend()* method will now recurse through all nested objects to give us a merged version of both the defaults and the passed options, giving the passed options precedence.
+The _$.extend()_ method will now recurse through all nested objects to give us a merged version of both the defaults and the passed options, giving the passed options precedence.
 
 The plugin user now has the power to specify any attribute of that wrapper element so if they require that there be a hook for any CSS styles then they can quite easily add a class or change the name of the ID without having to go digging around in plugin source.
 
@@ -295,7 +295,7 @@ Your plugin may have an associated stylesheet where developers can add CSS style
 
 ### Provide Callback Capabilities
 
-*What is a callback?* – A callback is essentially a function to be called later, normally triggered by an event. It's passed as an argument, usually to the initiating call of a component, in this case, a jQuery plugin.
+_What is a callback?_ – A callback is essentially a function to be called later, normally triggered by an event. It's passed as an argument, usually to the initiating call of a component, in this case, a jQuery plugin.
 
 If your plugin is driven by events then it might be a good idea to provide a callback capability for each event. Plus, you can create your own custom events and then provide callbacks for those. In this gallery plugin it might make sense to add an "onImageShow" callback.
 
@@ -344,6 +344,6 @@ Similarly you could add an "onImageHide" callback and numerous other ones. The p
 
 Your plugin is not going to be able to work in every situation. And equally, it's not going to be very useful if you offer no or very few methods of control. So, remember, it's always going to be a compromise. Three things you must always take into account are:
 
-- *Flexibility*: How many situations will your plugin be able to deal with?
-- *Size*: Does the size of your plugin correspond to its level of functionality? I.e. Would you use a very basic tooltip plugin if it was 20k in size? – Probably not!
-- *Performance*: Does your plugin heavily process the options in any way? Does this affect speed? Is the overhead caused worth it for the end user?
+- _Flexibility_: How many situations will your plugin be able to deal with?
+- _Size_: Does the size of your plugin correspond to its level of functionality? I.e. Would you use a very basic tooltip plugin if it was 20k in size? – Probably not!
+- _Performance_: Does your plugin heavily process the options in any way? Does this affect speed? Is the overhead caused worth it for the end user?

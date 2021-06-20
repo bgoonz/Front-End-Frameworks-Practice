@@ -12,6 +12,7 @@ Event delegation allows us to attach a single event listener, to a parent elemen
 ## Example
 
 For the remainder of the lesson, we will reference the following HTML structure:
+
 ```
 <html>
 <body>
@@ -48,19 +49,19 @@ If we were to click our newly added item, nothing would happen. This is because 
 
 ## Event Propagation
 
-Understanding how events propagate is an important factor in being able to leverage Event Delegation. Any time one of our anchor tags is clicked, a *click* event is fired for that anchor, and then bubbles up the DOM tree, triggering each of its parent click event handlers:
+Understanding how events propagate is an important factor in being able to leverage Event Delegation. Any time one of our anchor tags is clicked, a _click_ event is fired for that anchor, and then bubbles up the DOM tree, triggering each of its parent click event handlers:
 
-* `<a>`
-* `<li>`
-* `<ul #list>`
-* `<div #container>`
-* `<body>`
-* `<html>`
-* *document* root
+- `<a>`
+- `<li>`
+- `<ul #list>`
+- `<div #container>`
+- `<body>`
+- `<html>`
+- _document_ root
 
-This means that anytime you click one of our bound anchor tags, you are effectively clicking the entire document body! This is called *event bubbling* or *event propagation*.
+This means that anytime you click one of our bound anchor tags, you are effectively clicking the entire document body! This is called _event bubbling_ or _event propagation_.
 
-Since we know how events bubble, we can create a *delegated* event:
+Since we know how events bubble, we can create a _delegated_ event:
 
 ```
 // Attach a delegated event handler
@@ -70,7 +71,7 @@ $( "#list" ).on( "click", "a", function( event ) {
 });
 ```
 
-Notice how we have moved the `a` part from the selector to the second parameter position of the `.on()` method. This second, selector parameter tells the handler to listen for the specified event, and when it hears it, check to see if the triggering element for that event matches the second parameter. In this case, the triggering event is our anchor tag, which matches that parameter. Since it matches, our anonymous function will execute. We have now attached a single *click* event listener to our `<ul>` that will listen for clicks on its descendant anchors, instead of attaching an unknown number of directly bound events to the existing anchor tags only.
+Notice how we have moved the `a` part from the selector to the second parameter position of the `.on()` method. This second, selector parameter tells the handler to listen for the specified event, and when it hears it, check to see if the triggering element for that event matches the second parameter. In this case, the triggering event is our anchor tag, which matches that parameter. Since it matches, our anonymous function will execute. We have now attached a single _click_ event listener to our `<ul>` that will listen for clicks on its descendant anchors, instead of attaching an unknown number of directly bound events to the existing anchor tags only.
 
 ### Using the Triggering Element
 

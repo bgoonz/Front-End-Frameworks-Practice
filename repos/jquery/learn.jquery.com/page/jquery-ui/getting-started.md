@@ -28,7 +28,7 @@ The main column of the Download Builder lists all of the JavaScript components i
 In the right column of the Download Builder, you'll find a field where you can choose from a number of pre-designed themes for your jQuery UI widgets.
 You can either choose from the various themes we provide, or you can design your own custom theme using ThemeRoller (more on that later).
 
-**Advanced Theme Settings:** *The theme section of the Download Builder also offers some advanced configuration settings for your theme. If you plan to use multiple themes on a single page, these fields will come in handy. If you plan to only use one theme on a page, you can skip these settings entirely.*
+**Advanced Theme Settings:** _The theme section of the Download Builder also offers some advanced configuration settings for your theme. If you plan to use multiple themes on a single page, these fields will come in handy. If you plan to only use one theme on a page, you can skip these settings entirely._
 
 #### Step 3: Choose a Version of jQuery UI
 
@@ -43,7 +43,7 @@ You're finished with the Download Builder! Click the download button and you'll 
 Next, open up `index.html` from the downloaded zip in a text editor. You'll see that it references your theme, jQuery, and jQuery UI. Generally, you'll need to include these three files on any page to use the jQuery UI widgets and interactions:
 
 ```html
-<link rel="stylesheet" href="jquery-ui.min.css">
+<link rel="stylesheet" href="jquery-ui.min.css" />
 <script src="external/jquery/jquery.js"></script>
 <script src="jquery-ui.min.js"></script>
 ```
@@ -53,13 +53,13 @@ Once you've included the necessary files, you can add some jQuery widgets to you
 **HTML:**
 
 ```html
-<input type="text" name="date" id="date">
+<input type="text" name="date" id="date" />
 ```
 
 **JavaScript:**
 
 ```javascript
-$( "#date" ).datepicker();
+$("#date").datepicker();
 ```
 
 ![Example Screenshot](/resources/jquery-ui/ex-datepicker.png)
@@ -77,19 +77,19 @@ jQuery UI allows you to customize it in several ways. You've already seen how th
 Each plugin in jQuery UI has a default configuration which is catered to the most basic and common use case. But if you want a plugin to behave different from its default configuration, you can override each of its default settings using "options". Options are a set of properties passed into a jQuery UI widget as an argument. For example, the slider widget has an option for orientation, which allows you to specify whether the slider should be horizontal or vertical. To set this option for a slider on your page, you just pass it in as an argument, like this:
 
 ```javascript
-$( "#mySliderDiv" ).slider({
-	orientation: "vertical"
+$("#mySliderDiv").slider({
+	orientation: "vertical",
 });
 ```
 
 You can pass as many different options as you'd like by following each one with a comma (except the last one):
 
 ```javascript
-$( "#mySliderDiv" ).slider({
+$("#mySliderDiv").slider({
 	orientation: "vertical",
 	min: 0,
 	max: 150,
-	value: 50
+	value: 50,
 });
 ```
 
@@ -107,7 +107,7 @@ ThemeRoller provides a custom interface for designing all of the elements used b
 
 When you click the "Download theme" button in ThemeRoller, you'll be directed to the Download Builder and your custom theme will be auto-selected in the Theme dropdown menu. You can configure your download package further from there. Once you download, you'll see that the `example.html` page is styled using your custom theme.
 
-**Quick Tip:** *If you ever need to edit your theme, simply open the CSS file and find where it says "To view and modify this theme, visit ..." That URL will open the theme in ThemeRoller for editing.*
+**Quick Tip:** _If you ever need to edit your theme, simply open the CSS file and find where it says "To view and modify this theme, visit ..." That URL will open the theme in ThemeRoller for editing._
 
 ### Support: Where Can I Get Help?
 

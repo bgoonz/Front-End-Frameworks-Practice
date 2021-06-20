@@ -82,7 +82,6 @@ $( "p" ).on( "click", {
 });
 ```
 
-
 #### Binding events to elements that don't exist yet
 
 This is called _event delegation_. Here's an example just for completeness, but see the page on [Event Delegation](/events/event-delegation/) for a full explanation.

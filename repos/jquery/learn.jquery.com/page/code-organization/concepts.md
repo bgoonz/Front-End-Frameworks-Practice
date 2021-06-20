@@ -11,10 +11,10 @@ When you move beyond adding simple enhancements to your website with jQuery and 
 
 Before we jump into code organization patterns, it's important to understand some concepts that are common to all good code organization patterns.
 
-* Your code should be divided into units of functionality — modules, services, etc. Avoid the temptation to have all of your code in one huge `$( document ).ready()` block. This concept, loosely, is known as encapsulation.
-* Don't repeat yourself. Identify similarities among pieces of functionality, and use inheritance techniques to avoid repetitive code.
-* Despite jQuery's DOM-centric nature, JavaScript applications are not all about the DOM. Remember that not all pieces of functionality need to — or should — have a DOM representation.
-* Units of functionality should be [loosely coupled](http://en.wikipedia.org/wiki/Loose_coupling), that is, a unit of functionality should be able to exist on its own, and communication between units should be handled via a messaging system such as custom events or pub/sub. Stay away from direct communication between units of functionality whenever possible.
+- Your code should be divided into units of functionality — modules, services, etc. Avoid the temptation to have all of your code in one huge `$( document ).ready()` block. This concept, loosely, is known as encapsulation.
+- Don't repeat yourself. Identify similarities among pieces of functionality, and use inheritance techniques to avoid repetitive code.
+- Despite jQuery's DOM-centric nature, JavaScript applications are not all about the DOM. Remember that not all pieces of functionality need to — or should — have a DOM representation.
+- Units of functionality should be [loosely coupled](http://en.wikipedia.org/wiki/Loose_coupling), that is, a unit of functionality should be able to exist on its own, and communication between units should be handled via a messaging system such as custom events or pub/sub. Stay away from direct communication between units of functionality whenever possible.
 
 The concept of loose coupling can be especially troublesome to developers making their first foray into complex applications, so be mindful of this as you're getting started.
 
@@ -137,10 +137,10 @@ $( document ).ready( myFeature.init );
 
 The first thing you'll notice is that this approach is obviously far longer than the original — again, if this were the extent of our application, using an object literal would likely be overkill. Assuming it's not the extent of our application, though, we've gained several things:
 
-* We've broken our feature up into tiny methods. In the future, if we want to change how content is shown, it's clear where to change it. In the original code, this step is much harder to locate.
-* We've eliminated the use of anonymous functions.
-* We've moved configuration options out of the body of the code and put them in a central location.
-* We've eliminated the constraints of the chain, making the code easier to refactor, remix, and rearrange.
+- We've broken our feature up into tiny methods. In the future, if we want to change how content is shown, it's clear where to change it. In the original code, this step is much harder to locate.
+- We've eliminated the use of anonymous functions.
+- We've moved configuration options out of the body of the code and put them in a central location.
+- We've eliminated the constraints of the chain, making the code easier to refactor, remix, and rearrange.
 
 For non-trivial features, object literals are a clear improvement over a long stretch of code stuffed in a `$( document ).ready()` block, as they get us thinking about the pieces of our functionality. However, they aren't a whole lot more advanced than simply having a bunch of function declarations inside of that `$( document ).ready()` block.
 

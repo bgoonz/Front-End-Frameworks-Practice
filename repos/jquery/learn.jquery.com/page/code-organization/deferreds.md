@@ -37,8 +37,8 @@ promise.then(function( futureValue ) {
 
 Furthermore, a promise can actually end up being in two different states:
 
-* Resolved: in which case data is available
-* Rejected: in which case something went wrong and no value is available
+- Resolved: in which case data is available
+- Rejected: in which case something went wrong and no value is available
 
 Thankfully, the "then" method accepts two parameters: one for when the promise was resolved, another for when the promise was rejected. If we get back to pseudo-code, we may do things like:
 

@@ -28,7 +28,7 @@ $( "p" ).on( "click", function() {
 
 ### Extending Events to New Page Elements
 
-It is important to note that `.on()` can only create event listeners on elements that exist *at the time you set up the listeners*. Similar elements created after the event listeners are established will not automatically pick up event behaviors you've set up previously. For example:
+It is important to note that `.on()` can only create event listeners on elements that exist _at the time you set up the listeners_. Similar elements created after the event listeners are established will not automatically pick up event behaviors you've set up previously. For example:
 
 ```
 $( document ).ready(function(){
@@ -188,7 +188,7 @@ function firstClick() {
 }
 ```
 
-Note that in the code snippet above, the `firstClick` function will be executed for the first click on *each* paragraph element rather than the function being removed from *all* paragraphs when *any* paragraph is clicked for the first time.
+Note that in the code snippet above, the `firstClick` function will be executed for the first click on _each_ paragraph element rather than the function being removed from _all_ paragraphs when _any_ paragraph is clicked for the first time.
 
 `.one()` can also be used to bind multiple events:
 
@@ -201,4 +201,4 @@ function firstEvent( eventObject ) {
 }
 ```
 
-In this case, the `firstEvent` function will be executed once *for each event*. For the snippet above, this means that once an input element gains focus, the handler function will still execute for the first keydown event on that element.
+In this case, the `firstEvent` function will be executed once _for each event_. For the snippet above, this means that once an input element gains focus, the handler function will still execute for the first keydown event on that element.

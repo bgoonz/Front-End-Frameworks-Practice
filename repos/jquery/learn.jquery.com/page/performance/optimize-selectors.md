@@ -51,6 +51,7 @@ With the first approach, jQuery queries the DOM using `document.querySelectorAll
 When support for older browsers, such as Internet Explorer 8 and below, is necessary, consider the following tips:
 
 ### Specificity
+
 Be specific on the right-hand side of your selector, and less specific on the left.
 
 ```

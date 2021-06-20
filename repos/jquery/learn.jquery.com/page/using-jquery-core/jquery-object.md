@@ -15,7 +15,7 @@ Elements have properties like any JavaScript object. Among these properties are 
 
 It turns out that working directly with DOM elements can be awkward. The jQuery object defines [many](http://api.jquery.com/) methods to smooth out the experience for developers. Some benefits of the jQuery Object include:
 
-*Compatibility* – The implementation of element methods varies across browser vendors and versions. The following snippet attempts to set the inner HTML of a `<tr>` element stored in `target`:
+_Compatibility_ – The implementation of element methods varies across browser vendors and versions. The following snippet attempts to set the inner HTML of a `<tr>` element stored in `target`:
 
 ```
 var target = document.getElementById( "target" );
@@ -33,7 +33,7 @@ var target = document.getElementById( "target" );
 $( target ).html( "<td>Hello <b>World</b>!</td>" );
 ```
 
-*Convenience* – There are also a lot of common DOM manipulation use cases that are awkward to accomplish with pure DOM methods. For instance, inserting an element stored in `newElement` after the `target` element requires a rather verbose DOM method:
+_Convenience_ – There are also a lot of common DOM manipulation use cases that are awkward to accomplish with pure DOM methods. For instance, inserting an element stored in `newElement` after the `target` element requires a rather verbose DOM method:
 
 ```
 // Inserting a new element after another with the native DOM API.
@@ -69,7 +69,7 @@ When the jQuery function is invoked with a CSS selector, it will return a jQuery
 var headings = $( "h1" );
 ```
 
-`headings` is now a jQuery element containing *all* the `<h1>` tags already on the page. This can be verified by inspecting the `.length` property of `headings`:
+`headings` is now a jQuery element containing _all_ the `<h1>` tags already on the page. This can be verified by inspecting the `.length` property of `headings`:
 
 ```
 // Viewing the number of <h1> tags on the page.
@@ -107,11 +107,11 @@ Alternatively, because the jQuery object is "array-like," it supports array subs
 var firstHeadingElem = $( "h1" )[ 0 ];
 ```
 
-In either case, `firstHeadingElem` contains the native DOM element. This means it has DOM properties like `.innerHTML` and methods like `.appendChild()`, but *not* jQuery methods like `.html()` or `.after()`. The `firstHeadingElem` element is more difficult to work with, but there are certain instances that require it. One such instance is making comparisons.
+In either case, `firstHeadingElem` contains the native DOM element. This means it has DOM properties like `.innerHTML` and methods like `.appendChild()`, but _not_ jQuery methods like `.html()` or `.after()`. The `firstHeadingElem` element is more difficult to work with, but there are certain instances that require it. One such instance is making comparisons.
 
 ### Not All jQuery Objects are Created `===`
 
-An important detail regarding this "wrapping" behavior is that each wrapped object is unique. This is true *even if the object was created with the same selector or contain references to the exact same DOM elements*.
+An important detail regarding this "wrapping" behavior is that each wrapped object is unique. This is true _even if the object was created with the same selector or contain references to the exact same DOM elements_.
 
 ```
 // Creating two jQuery objects for the same element.

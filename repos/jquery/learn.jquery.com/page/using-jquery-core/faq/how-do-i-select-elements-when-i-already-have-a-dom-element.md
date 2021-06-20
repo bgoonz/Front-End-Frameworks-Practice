@@ -20,4 +20,4 @@ Unfortunately, you cannot concatenate strings to objects.
 
 ### Related Articles
 
-* [The jQuery Object](/using-jquery-core/jquery-object/)
+- [The jQuery Object](/using-jquery-core/jquery-object/)

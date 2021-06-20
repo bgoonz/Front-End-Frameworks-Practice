@@ -74,7 +74,7 @@ A callback function to run if the request succeeds. The function receives the re
 
 A callback function to run if the request results in an error. The function receives the raw request object and the text status of the request.
 
-#### always 
+#### always
 
 A callback function to run when the request is complete, regardless of success or failure. The function receives the raw request object and the text status of the request.
 
@@ -93,7 +93,6 @@ The type of data you expect back from the server. By default, jQuery will look a
 #### jsonp
 
 The callback name to send in a query string when making a JSONP request. Defaults to "callback".
-
 
 #### timeout
 

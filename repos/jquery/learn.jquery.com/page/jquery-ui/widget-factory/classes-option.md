@@ -22,7 +22,7 @@ The `classes` option is used to map structural class names to theme-related clas
 </script>
 ```
 
-Here, the presentational `custom-red` class name is associated with the structural `ui-dialog` class name. Now, whenever the dialog applies the `ui-dialog` class name, it will also add a `custom-red` class name. However, something other than adding the `custom-red` class has happened here, which isn't immediately obvious. This code also *removes* the existing default value which was `"ui-corner-all"`. You can associate multiple class names by including multiple space-delimited class names in the object's value. For instance the following code creates a dialog that is red and still has rounded corners:
+Here, the presentational `custom-red` class name is associated with the structural `ui-dialog` class name. Now, whenever the dialog applies the `ui-dialog` class name, it will also add a `custom-red` class name. However, something other than adding the `custom-red` class has happened here, which isn't immediately obvious. This code also _removes_ the existing default value which was `"ui-corner-all"`. You can associate multiple class names by including multiple space-delimited class names in the object's value. For instance the following code creates a dialog that is red and still has rounded corners:
 
 ```
 <style>
@@ -37,7 +37,7 @@ Here, the presentational `custom-red` class name is associated with the structur
 </script>
 ```
 
-*Note: To get a full list of the class names you can use with the `classes` option, check the API documentation for the jQuery UI widget you're interested in. For example, here's the list of classes for the dialog width: <http://api.jqueryui.com/dialog/#theming>.*
+_Note: To get a full list of the class names you can use with the `classes` option, check the API documentation for the jQuery UI widget you're interested in. For example, here's the list of classes for the dialog width: <http://api.jqueryui.com/dialog/#theming>._
 
 The `classes` option works like any other widget factory option, which means all the widget factory option mechanisms still apply. For instance, the following code uses the [`option()` method](http://api.jqueryui.com/jquery.widget/#method-option) to remove all class names currently associated with the `ui-dialog` class name:
 

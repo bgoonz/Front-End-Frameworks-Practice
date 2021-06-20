@@ -4,7 +4,7 @@
 	"source": "http://jqueryfordesigners.com/api-queue-dequeue/"
 }</script>
 
-Queues are the foundation for all animations in jQuery, they allow a series functions to be executed asynchronously on an element.  Methods such as `.slideUp()`, `.slideDown()`, `.fadeIn()`, and `.fadeOut()` all use `.animate()`, which leverages *queues* to build up the series of steps that will transition one or more CSS values throughout the duration of the animation.
+Queues are the foundation for all animations in jQuery, they allow a series functions to be executed asynchronously on an element. Methods such as `.slideUp()`, `.slideDown()`, `.fadeIn()`, and `.fadeOut()` all use `.animate()`, which leverages _queues_ to build up the series of steps that will transition one or more CSS values throughout the duration of the animation.
 
 We can pass a callback function to the `.animate()` method, which will execute once the animation has completed.
 
@@ -19,7 +19,7 @@ $( ".box" )
 
 ## Queues As Callbacks
 
-Instead of passing a callback as an argument, we can add another function to the *queue* that will act as our callback. This will execute after all of the steps in the animation have completed.
+Instead of passing a callback as an argument, we can add another function to the _queue_ that will act as our callback. This will execute after all of the steps in the animation have completed.
 
 ```
 $( ".box" )
@@ -39,7 +39,7 @@ In this example, the queued function will execute right after the animation.
 
 jQuery does not have any insight into how the queue items function, so we need to call `.dequeue()`, which tells jQuery when to move to the next item in the queue.
 
-Another way of *dequeuing* is by calling the function that is passed to your callback. That function will automatically call `.dequeue()` for you.
+Another way of _dequeuing_ is by calling the function that is passed to your callback. That function will automatically call `.dequeue()` for you.
 
 ```
 .queue( function( next ) {
@@ -50,7 +50,7 @@ Another way of *dequeuing* is by calling the function that is passed to your cal
 
 ## Custom Queues
 
-Up to this point all of our animation and queue examples have been using the default queue name which is `fx`.  Elements can have multiple queues attached to them, and we can give each of these queues a different name.  We can specify a custom queue name as the first argument to the `.queue()` method.
+Up to this point all of our animation and queue examples have been using the default queue name which is `fx`. Elements can have multiple queues attached to them, and we can give each of these queues a different name. We can specify a custom queue name as the first argument to the `.queue()` method.
 
 ```
 $( ".box" )

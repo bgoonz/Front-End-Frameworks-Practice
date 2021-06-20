@@ -95,7 +95,7 @@ A common mistake when implementing jQuery effects is assuming that the execution
 $( "p.hidden" ).fadeIn( 750 ).addClass( "lookAtMe" );
 ```
 
-It is important to realize that `.fadeIn()` above only *kicks off* the animation. Once started, the animation is implemented by rapidly changing CSS properties in a JavaScript `setInterval()` loop. When you call `.fadeIn()`, it starts the animation loop and then returns the jQuery object, passing it along to `.addClass()` which will then add the `lookAtMe` style class while the animation loop is just getting started.
+It is important to realize that `.fadeIn()` above only _kicks off_ the animation. Once started, the animation is implemented by rapidly changing CSS properties in a JavaScript `setInterval()` loop. When you call `.fadeIn()`, it starts the animation loop and then returns the jQuery object, passing it along to `.addClass()` which will then add the `lookAtMe` style class while the animation loop is just getting started.
 
 To defer an action until after an animation has run to completion, you need to use an animation callback function. You can specify your animation callback as the second argument passed to any of the animation methods discussed above. For the code snippet above, we can implement a callback as follows:
 

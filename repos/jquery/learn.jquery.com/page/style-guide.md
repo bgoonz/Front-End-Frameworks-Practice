@@ -42,13 +42,13 @@ Content should be educational and accessible to a broad audience of developers. 
 ### Prose & Grammar
 
 - Use the Oxford comma in a list of three or more items:
-	- **Yes:** The `load`, `scroll`, and `error` events (e.g. on an `<img>` element) do not bubble.
-	- **No:** The `load`, `scroll` and `error` events (e.g. on an `<img>` element) do not bubble.
+  - **Yes:** The `load`, `scroll`, and `error` events (e.g. on an `<img>` element) do not bubble.
+  - **No:** The `load`, `scroll` and `error` events (e.g. on an `<img>` element) do not bubble.
 - Numbers:
-	- Spell out numbers below 10 (e.g. one, two, three)
-	- Use numerals for numbers 10 and above (e.g. 10, 20, 100).
+  - Spell out numbers below 10 (e.g. one, two, three)
+  - Use numerals for numbers 10 and above (e.g. 10, 20, 100).
 - Abbreviations:
-	- Spell out abbreviated words on first reference, followed by the abbreviation in parentheses. Use abbreviations on second reference.
+  - Spell out abbreviated words on first reference, followed by the abbreviation in parentheses. Use abbreviations on second reference.
 
 #### Code Within Prose
 
@@ -62,28 +62,28 @@ Content should be educational and accessible to a broad audience of developers. 
 - Use headings to break up content into easier-to-read sections. Begin headings within an article with `<h2>`.
 - Keep sentences short and to the point. A good rule-of-thumb is to break up any sentence longer than 21 words into two or more separate thoughts.
 - Lists:
-	- Use bulleted lists when necessary to share a series of five or more points.
-	- Use numbered lists only when providing step-by-step instruction – note that this should be avoided.
-	- Use a period at the end of each ordered list item, and a period or comma at the end of an unordered list item.
+  - Use bulleted lists when necessary to share a series of five or more points.
+  - Use numbered lists only when providing step-by-step instruction – note that this should be avoided.
+  - Use a period at the end of each ordered list item, and a period or comma at the end of an unordered list item.
 
 #### Spelling
 
 - Use standard American English spelling.
 - Capitalization:
-	- Capitalize all proper nouns.
-	- Do not capitalize HTML elements in code examples.
-	- Capitalize all words in a heading or sub-heading with the exception of article adjectives and the prepositions like "with," "of," or "to."
-	- Capitalize the first word in a list.
+  - Capitalize all proper nouns.
+  - Do not capitalize HTML elements in code examples.
+  - Capitalize all words in a heading or sub-heading with the exception of article adjectives and the prepositions like "with," "of," or "to."
+  - Capitalize the first word in a list.
 - Punctuation:
-	- Periods and commas go inside quotation marks.
-	- Avoid using semicolons.
+  - Periods and commas go inside quotation marks.
+  - Avoid using semicolons.
 
 #### Pronoun Usage
 
 - Don't use "I," "me," "us," "our," "we," and gender-specific pronouns such as "him" or "she."
 - Use the second-person pronoun "you" when addressing the reader, and the definite article "the" when addressing code or content:
-	- *"You will be able to foo bar after you bar the foo."*
-	- *"Insert the paragraph after the unordered list."*
+  - _"You will be able to foo bar after you bar the foo."_
+  - _"Insert the paragraph after the unordered list."_
 
 #### Voice & Tone
 
@@ -106,9 +106,9 @@ Content should be educational and accessible to a broad audience of developers. 
 - Link to the jQuery blog or API documentation when necessary.
 - Use inline hyperlinks to reference relevant content.
 - Acceptable external resources:
-	- [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
-	- [Webplatform.org](http://www.webplatform.org/)
-	- [htmldog.com](http://www.htmldog.com/)
+  - [Mozilla Developer Network](https://developer.mozilla.org/en-US/)
+  - [Webplatform.org](http://www.webplatform.org/)
+  - [htmldog.com](http://www.htmldog.com/)
 
 ### Code Examples
 

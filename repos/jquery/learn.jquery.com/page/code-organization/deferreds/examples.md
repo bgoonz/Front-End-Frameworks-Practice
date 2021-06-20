@@ -207,9 +207,9 @@ $.fn.bindOnce = function( event, callback ) {
 
 The code works as follows:
 
-* Check if the element already has a deferred attached for the given event
-* if not, create it and make it so it is resolved when the event is fired the first time around
-* then attach the given callback to the deferred and return the promise
+- Check if the element already has a deferred attached for the given event
+- if not, create it and make it so it is resolved when the event is fired the first time around
+- then attach the given callback to the deferred and return the promise
 
 While the code is definitely more verbose, it makes dealing with the problem at hand much simpler in a compartmentalized and decoupled way. But let's define a helper method first:
 
@@ -319,8 +319,8 @@ In order to implement deferred image display on the entire page, the following f
 
 What it says is pretty straight-forward:
 
-* Load `image1.png` and show it immediately for the third image and after one second for the first one
-* Load `image2.png` and show it after one second for the second image and after two seconds for the fourth image
+- Load `image1.png` and show it immediately for the third image and after one second for the first one
+- Load `image2.png` and show it after one second for the second image and after two seconds for the fourth image
 
 ```
 $( "img" ).each(function() {

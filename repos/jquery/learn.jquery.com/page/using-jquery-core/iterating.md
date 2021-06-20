@@ -71,7 +71,7 @@ console.log( sum ); // 3
 
 Again, we don't have to directly access `obj[ key ]` as the value is passed directly to the callback.
 
-Note that `$.each()` is for plain objects, arrays, array-like objects *that are not jQuery collections*.
+Note that `$.each()` is for plain objects, arrays, array-like objects _that are not jQuery collections_.
 
 This would be considered incorrect:
 
@@ -174,22 +174,22 @@ $( "input" ).each( function( i, el ) {
 
 The following is a list of methods that require `.each()`:
 
-* [`.attr()`](http://api.jquery.com/attr/#attr1) (getter)
-* [`.css()`](http://api.jquery.com/css/#css1) (getter)
-* [`.data()`](http://api.jquery.com/data/#data2) (getter)
-* [`.height()`](http://api.jquery.com/height/#height1) (getter)
-* [`.html()`](http://api.jquery.com/html/#html1) (getter)
-* [`.innerHeight()`](http://api.jquery.com/innerHeight/)
-* [`.innerWidth()`](http://api.jquery.com/innerWidth/)
-* [`.offset()`](http://api.jquery.com/offset/#offset1) (getter)
-* [`.outerHeight()`](http://api.jquery.com/outerHeight/)
-* [`.outerWidth()`](http://api.jquery.com/outerWidth/)
-* [`.position()`](http://api.jquery.com/position/)
-* [`.prop()`](http://api.jquery.com/prop/#prop1) (getter)
-* [`.scrollLeft()`](http://api.jquery.com/scrollLeft/#scrollLeft1) (getter)
-* [`.scrollTop()`](http://api.jquery.com/scrollTop/#scrollTop1) (getter)
-* [`.val()`](http://api.jquery.com/val/#val1) (getter)
-* [`.width()`](http://api.jquery.com/width/#width1) (getter)
+- [`.attr()`](http://api.jquery.com/attr/#attr1) (getter)
+- [`.css()`](http://api.jquery.com/css/#css1) (getter)
+- [`.data()`](http://api.jquery.com/data/#data2) (getter)
+- [`.height()`](http://api.jquery.com/height/#height1) (getter)
+- [`.html()`](http://api.jquery.com/html/#html1) (getter)
+- [`.innerHeight()`](http://api.jquery.com/innerHeight/)
+- [`.innerWidth()`](http://api.jquery.com/innerWidth/)
+- [`.offset()`](http://api.jquery.com/offset/#offset1) (getter)
+- [`.outerHeight()`](http://api.jquery.com/outerHeight/)
+- [`.outerWidth()`](http://api.jquery.com/outerWidth/)
+- [`.position()`](http://api.jquery.com/position/)
+- [`.prop()`](http://api.jquery.com/prop/#prop1) (getter)
+- [`.scrollLeft()`](http://api.jquery.com/scrollLeft/#scrollLeft1) (getter)
+- [`.scrollTop()`](http://api.jquery.com/scrollTop/#scrollTop1) (getter)
+- [`.val()`](http://api.jquery.com/val/#val1) (getter)
+- [`.width()`](http://api.jquery.com/width/#width1) (getter)
 
 Note that in most cases, the "getter" signature returns the result from the first element in a jQuery collection while the setter acts over the entire collection of matched elements. The exception to this is `.text()` where the getter signature will return a concatenated string of text from all matched elements.
 

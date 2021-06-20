@@ -11,9 +11,9 @@ We're all familiar with the basic events — click, mouseover, focus, blur, subm
 
 It can be difficult at first to understand why you'd want to use custom events, when the built-in events seem to suit your needs just fine. It turns out that custom events offer a whole new way of thinking about event-driven JavaScript. Instead of focusing on the element that triggers an action, custom events put the spotlight on the element being acted upon. This brings a bevy of benefits, including:
 
-* Behaviors of the target element can easily be triggered by different elements using the same code.
-* Behaviors can be triggered across multiple, similar, target elements at once.
-* Behaviors are more clearly associated with the target element in code, making code easier to read and maintain.
+- Behaviors of the target element can easily be triggered by different elements using the same code.
+- Behaviors can be triggered across multiple, similar, target elements at once.
+- Behaviors are more clearly associated with the target element in code, making code easier to read and maintain.
 
 Why should you care? An example is probably the best way to explain. Suppose you have a lightbulb in a room in a house. The lightbulb is currently turned on, and it's controlled by two three-way switches and a clapper:
 
@@ -116,15 +116,15 @@ Note how the behavior of the master switch is attached to the master switch; the
 
 ### Naming Custom Events
 
-You can use any name for a custom event, however you should beware of creating new events with names that might be used by future DOM events.  For this reason, in this article we have chosen to use `light:` for all of our event names, as events with colons are unlikely to be used by a future DOM spec.
+You can use any name for a custom event, however you should beware of creating new events with names that might be used by future DOM events. For this reason, in this article we have chosen to use `light:` for all of our event names, as events with colons are unlikely to be used by a future DOM spec.
 
 ### Recap: `.on()` and `.trigger()`
 
 In the world of custom events, there are two important jQuery methods: `.on()` and `.trigger()`. In the [Events](/events/) chapter, we saw how to use these methods for working with user events; for this chapter, it's important to remember two things:
 
-* `.on()` method takes an event type and an event handling function as arguments. Optionally, it can also receive event-related data as its second argument, pushing the event handling function to the third argument. Any data that is passed will be available to the event handling function in the `data` property of the event object. The event handling function always receives the event object as its first argument.
+- `.on()` method takes an event type and an event handling function as arguments. Optionally, it can also receive event-related data as its second argument, pushing the event handling function to the third argument. Any data that is passed will be available to the event handling function in the `data` property of the event object. The event handling function always receives the event object as its first argument.
 
-* `.trigger()` method takes an event type as its argument. Optionally, it can also take an array of values. These values will be passed to the event handling function as arguments after the event object.
+- `.trigger()` method takes an event type as its argument. Optionally, it can also take an array of values. These values will be passed to the event handling function as arguments after the event object.
 
 Here is an example of the usage of `.on()` and `.trigger()` that uses custom data in both cases:
 

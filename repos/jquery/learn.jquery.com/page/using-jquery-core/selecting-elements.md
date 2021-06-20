@@ -62,7 +62,6 @@ Elements that have not been added to the DOM will always be considered hidden, e
 
 Choosing good selectors is one way to improve JavaScript's performance. Too much specificity can be a bad thing. A selector such as `#myTable thead tr th.special` is overkill if a selector such as `#myTable th.special` will get the job done.
 
-
 ### Does My Selection Contain Any Elements?
 
 Once you've made a selection, you'll often want to know whether you have anything to work with. A common mistake is to use:
@@ -116,7 +115,7 @@ jQuery offers several pseudo-selectors that help find elements in forms. These a
 
 #### :checked
 
-Not to be confused with *:checkbox*, `:checked` targets *checked* checkboxes, but keep in mind that this selector works also for *checked* radio buttons, and `<select>` elements (for `<select>` elements only, use the `:selected` selector):
+Not to be confused with _:checkbox_, `:checked` targets _checked_ checkboxes, but keep in mind that this selector works also for _checked_ radio buttons, and `<select>` elements (for `<select>` elements only, use the `:selected` selector):
 
 ```
 $( "form :checked" );
@@ -136,7 +135,7 @@ In order to get the best performance using `:disabled`, first select elements wi
 
 #### :enabled
 
-Basically the inverse of the *:disabled* pseudo-selector, the `:enabled` pseudo-selector targets any elements that *do not* have a `disabled` attribute:
+Basically the inverse of the _:disabled_ pseudo-selector, the `:enabled` pseudo-selector targets any elements that _do not_ have a `disabled` attribute:
 
 ```
 $( "form :enabled" );
@@ -166,14 +165,14 @@ In order to get the best performance using `:selected`, first select elements wi
 
 jQuery provides pseudo selectors to select form-specific elements according to their type:
 
-* [`:password`](http://api.jquery.com/password-selector/)
-* [`:reset`](http://api.jquery.com/reset-selector/)
-* [`:radio`](http://api.jquery.com/radio-selector/)
-* [`:text`](http://api.jquery.com/text-selector/)
-* [`:submit`](http://api.jquery.com/submit-selector/)
-* [`:checkbox`](http://api.jquery.com/checkbox-selector/)
-* [`:button`](http://api.jquery.com/button-selector/)
-* [`:image`](http://api.jquery.com/image-selector/)
-* [`:file`](http://api.jquery.com/file-selector/)
+- [`:password`](http://api.jquery.com/password-selector/)
+- [`:reset`](http://api.jquery.com/reset-selector/)
+- [`:radio`](http://api.jquery.com/radio-selector/)
+- [`:text`](http://api.jquery.com/text-selector/)
+- [`:submit`](http://api.jquery.com/submit-selector/)
+- [`:checkbox`](http://api.jquery.com/checkbox-selector/)
+- [`:button`](http://api.jquery.com/button-selector/)
+- [`:image`](http://api.jquery.com/image-selector/)
+- [`:file`](http://api.jquery.com/file-selector/)
 
 For all of these there are side notes about performance, so be sure to check out [the API docs](http://api.jquery.com/category/selectors/form-selectors/) for more in-depth information.

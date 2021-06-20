@@ -148,7 +148,7 @@ $( "<div>" ).dialog();
 $( "<div>" ).dialog();
 ```
 
-While this is powerful, sometimes you only need to change the behavior for a single instance of the widget.  To do this, obtain a reference to the instance and override the method using normal JavaScript property assignment. The example below shows this.
+While this is powerful, sometimes you only need to change the behavior for a single instance of the widget. To do this, obtain a reference to the instance and override the method using normal JavaScript property assignment. The example below shows this.
 
 ```
 var dialogInstance = $( "<div>" )

@@ -7,8 +7,8 @@
 
 There are a couple of common ways to check whether or not a particular feature is supported by a user's browser:
 
-* Browser Detection
-* Specific Feature Detection
+- Browser Detection
+- Specific Feature Detection
 
 In general, we recommend specific feature detection. Let's look at why.
 
@@ -50,8 +50,8 @@ Now how would you go about doing that?
 
 There are several ways to go about feature detection:
 
-* Straight JavaScript
-* A Helper Library
+- Straight JavaScript
+- A Helper Library
 
 #### Straight JavaScript
 
@@ -97,14 +97,14 @@ If you're using Modernizr, we highly encourage you to use the [build configurato
 
 #### Feature Detection Tools
 
-* [modernizr](http://modernizr.com/) — Conditionally check to see if a specific feature is available in a browser.
-* [html5please](http://html5please.com/) — Use the new and shiny responsibly.
-* [html5please API](http://api.html5please.com/) — An API you can query to see how good (or bad) support for a specific feature is.
-* [caniuse](http://caniuse.com/) — Browser compatibility tables for HTML5, CSS3, SVG, etc.
+- [modernizr](http://modernizr.com/) — Conditionally check to see if a specific feature is available in a browser.
+- [html5please](http://html5please.com/) — Use the new and shiny responsibly.
+- [html5please API](http://api.html5please.com/) — An API you can query to see how good (or bad) support for a specific feature is.
+- [caniuse](http://caniuse.com/) — Browser compatibility tables for HTML5, CSS3, SVG, etc.
 
 #### Helpful Articles
 
-* [Browser Feature Detection](https://developer.mozilla.org/en-US/docs/Browser_Feature_Detection)
-* [Using Modernizr to detect HTML5 and CSS3 browser support](http://www.adobe.com/devnet/dreamweaver/articles/using-modernizr.html)
-* [Polyfilling the HTML5 gaps](http://addyosmani.com/polyfillthehtml5gaps/slides/#1) by Addy Osmani
-* [Feature, Browser, and Form Factor Detection: It's Good for the Environment](http://www.html5rocks.com/en/tutorials/detection/index.html) by Michael Mahemoff
+- [Browser Feature Detection](https://developer.mozilla.org/en-US/docs/Browser_Feature_Detection)
+- [Using Modernizr to detect HTML5 and CSS3 browser support](http://www.adobe.com/devnet/dreamweaver/articles/using-modernizr.html)
+- [Polyfilling the HTML5 gaps](http://addyosmani.com/polyfillthehtml5gaps/slides/#1) by Addy Osmani
+- [Feature, Browser, and Form Factor Detection: It's Good for the Environment](http://www.html5rocks.com/en/tutorials/detection/index.html) by Michael Mahemoff

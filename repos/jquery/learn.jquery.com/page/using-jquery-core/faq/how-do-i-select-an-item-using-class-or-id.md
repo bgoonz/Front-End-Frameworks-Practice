@@ -30,5 +30,5 @@ $( "#myDivId" ).val( "hello world" ); // Set the value of a form input.
 
 ### Related Articles
 
-* [Selecting Elements](/using-jquery-core/selecting-elements/)
-* [Working with Selections](/using-jquery-core/working-with-selections/)
+- [Selecting Elements](/using-jquery-core/selecting-elements/)
+- [Working with Selections](/using-jquery-core/working-with-selections/)

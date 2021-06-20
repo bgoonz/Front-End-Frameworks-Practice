@@ -29,6 +29,7 @@ When you're done designing a theme, you can download it for use in your projects
 Once you've unzipped the package, you will see several `css` and `js` files, along with two folders. If you're only interested in the full theme, copy `jquery-ui.css` and the `images` folder into your project and link to the `jquery-ui.css` file from your pages.
 
 ### Building Custom "ThemeRoller-Ready" Components
+
 ![ThemeRoller Ready Banner](/resources/jquery-ui/themeroller-ready-black-200px.png)
 ![ThemeRoller Ready Banner](/resources/jquery-ui/themeroller-ready-white-200px.png)
 
