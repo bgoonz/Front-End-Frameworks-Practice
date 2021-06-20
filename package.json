@@ -1,0 +1,26 @@
+{
+  "name": "front-end-frameworks",
+  "version": "1.0.0",
+  "description": "learning resource",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bgoonz/Front-End-Frameworks-Practice.git"
+  },
+  "keywords": [
+    "boottrap",
+    "gatsby",
+    "react",
+    "redux",
+    "sass"
+  ],
+  "author": "Bryan Guner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bgoonz/Front-End-Frameworks-Practice/issues"
+  },
+  "homepage": "https://github.com/bgoonz/Front-End-Frameworks-Practice#readme"
+}
