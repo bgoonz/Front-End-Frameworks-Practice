@@ -4,35 +4,34 @@
 
 When you’re new to Gatsby there can be a lot of words to learn. This glossary aims to give you a 10,000-foot overview of common terms and what they mean for Gatsby sites.
 
-*   [A](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#a)
-*   [B](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#b)
-*   [C](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#c)
-*   [D](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#d)
-*   [E](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#e)
-*   [F](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#f)
-*   [G](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#g)
-*   [H](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#h)
-*   [I](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#i)
-*   [J](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#j)
-*   [K](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#k)
-*   [L](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#l)
-*   [M](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#m)
-*   [N](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#n)
-*   [O](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#o)
-*   [P](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#p)
-*   [Q](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#q)
-*   [R](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#r)
-*   [S](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#s)
-*   [T](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#t)
-*   [U](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#u)
-*   [V](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#v)
-*   [W](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#w)
-*   [X](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#x)
-*   [Y](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#y)
-*   [Z](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#z)
+- [A](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#a)
+- [B](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#b)
+- [C](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#c)
+- [D](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#d)
+- [E](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#e)
+- [F](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#f)
+- [G](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#g)
+- [H](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#h)
+- [I](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#i)
+- [J](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#j)
+- [K](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#k)
+- [L](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#l)
+- [M](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#m)
+- [N](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#n)
+- [O](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#o)
+- [P](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#p)
+- [Q](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#q)
+- [R](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#r)
+- [S](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#s)
+- [T](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#t)
+- [U](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#u)
+- [V](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#v)
+- [W](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#w)
+- [X](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#x)
+- [Y](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#y)
+- [Z](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary#z)
 
-[](#a)A
--------
+## [](#a)A
 
 ### [](#ast)AST
 
@@ -46,8 +45,7 @@ Application Programming Interface: A method for one application to communicate w
 
 The inclusive practice of removing barriers that prevent interaction with, or access to websites, by people with disabilities. When sites are correctly designed, developed and edited for accessibility, generally all users have equal access to information and functionality. Read about [Gatsby’s Commitment to Accessibility](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/blog/2019-04-18-gatsby-commitment-to-accessibility/).
 
-[](#b)B
--------
+## [](#b)B
 
 ### [](#babel)Babel
 
@@ -61,8 +59,7 @@ The behind the scenes that the [public](#public) does not see. This often refers
 
 In Gatsby, this is the process of taking your code and content and packaging it into a website that can be hosted and accessed. Commonly referred to as _build time_. See also: [backend](#backend) and [server-side](#server-side).
 
-[](#c)C
--------
+## [](#c)C
 
 ### [](#cache)Cache
 
@@ -116,8 +113,7 @@ Continuous deployment (CD) automates the process of releasing changes to your pr
 
 [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) stands for Cascading Style Sheets, and it’s a major part of the Web Platform with [HTML](#html) and [JavaScript](#javascript). CSS is a language for styling webpages designed to be highly backwards-compatible. As new features are rolled out to end users, [CSS parsers](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/#CSS_parsing) can safely ignore unsupported features and enhance with the properties they do support. CSS accomplishes this with its _cascading_ design, fundamental to styling with new techniques like [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) while providing fallbacks for older browsers. Gatsby supports multiple [approaches to styling](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/styling/), including regular CSS files, CSS modules, and CSS-in-JS.
 
-[](#d)D
--------
+## [](#d)D
 
 ### [](#data-source)Data Source
 
@@ -147,8 +143,7 @@ The [environment](#environment) when you’re developing your code. It’s acces
 
 The Document Object Model, commonly referred to as “the DOM”, is a standard browser API that connects web pages to scripts or programming languages by representing the structure of an HTML document in memory. Developers commonly interact with the DOM through [HTML](#html) markup (written in [JSX](#jsx) in Gatsby), as well as both [React](https://reactjs.org/docs/react-dom.html) and [vanilla JavaScript](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction#DOM_and_JavaScript) code. Another important aspect of utilizing the DOM to its full potential is writing [accessible](#accessibility) HTML markup to expose a page’s structure to assistive technology.
 
-[](#e)E
--------
+## [](#e)E
 
 ### [](#ecmascript)ECMAScript
 
@@ -164,8 +159,7 @@ Gatsby supports two environments by default, the [development environment](#deve
 
 [Environment Variables](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/how-to/local-development/environment-variables/) allow you to customize the behavior of your app depending on its [environment](#environment). For instance, you may wish to get content from a staging CMS during development and connect to your production CMS when you [build](#build) your site. With environment variables you can set a different URL for each environment.
 
-[](#f)F
--------
+## [](#f)F
 
 ### [](#filesystem)Filesystem
 
@@ -175,8 +169,7 @@ The way files are organized. With Gatsby, it means having files in the same plac
 
 The [public-facing](#public) interface for your website or app, delivered using web technologies: HTML, CSS, and JavaScript. For more insight into how the Web Platform brings these technologies together, check out this article on [How Browsers Work](https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/).
 
-[](#g)G
--------
+## [](#g)G
 
 ### [](#gatsby)Gatsby
 
@@ -186,8 +179,7 @@ Gatsby is a modern website framework that builds performance into every website 
 
 A [query](#query) language that allows you to pull data into your website or app. It’s the [interface that Gatsby uses](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/graphql/) for managing site data.
 
-[](#h)H
--------
+## [](#h)H
 
 ### [](#html)HTML
 
@@ -213,8 +205,7 @@ A feature in use when you run `gatsby develop` that live updates your site on sa
 
 Once a site has been [built](#build) by Gatsby and loaded in a web browser, [client-side](#client-side) JavaScript assets will download and turn the site into a full React application that can manipulate the [DOM](#dom). This process is often called re-hydration as it runs some of the same JavaScript code used to generate Gatsby pages, but this time with browser DOM APIs like `window` available.
 
-[](#i)I
--------
+## [](#i)I
 
 ### [](#inference)Inference
 
@@ -224,8 +215,7 @@ As part of its data layer and [build](#build) process, Gatsby will automatically
 
 Infrastructure as Code is the practice of using configuration files and scripts to automate the process of setting up your development, testing, and production environments.
 
-[](#j)J
--------
+## [](#j)J
 
 ### [](#jamstack)[JAMStack](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/jamstack/)
 
@@ -239,18 +229,15 @@ A programming language that helps us make the web dynamic and interactive. [Java
 
 JSX is an extension to JavaScript that allows developers to write HTML and custom components in the same piece of code. The [React team recommends](https://reactjs.org/docs/introducing-jsx.html) using it to describe what a [UI](#UI) should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript. Some important details to note are that because JSX uses JavaScript, some HTML attributes in your markup have to be swapped out to avoid reserved words in JavaScript (things like `htmlFor` and `className`).
 
-[](#k)K
--------
+## [](#k)K
 
-[](#l)L
--------
+## [](#l)L
 
 ### [](#linting)Linting
 
 Linting is the process of running a program that will analyze code for potential errors. The Gatsby project uses [prettier](https://prettier.io/) to identify and fix common style issues. Another example of a linter commonly used in React projects is [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), which checks for common [accessibility](#accessibility) issues in development.
 
-[](#m)M
--------
+## [](#m)M
 
 ### [](#mdx)[MDX](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/mdx/)
 
@@ -260,8 +247,7 @@ Extends [Markdown](#markdown) to support [React](#react) [components](#component
 
 A way of writing HTML content with plain text, using special characters to denote content types such as hash symbols for [headings](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements), and underscores and asterisks for text emphasis.
 
-[](#n)N
--------
+## [](#n)N
 
 ### [](#npm)[npm](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/npm/)
 
@@ -275,11 +261,9 @@ Gatsby uses [data nodes](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/doc
 
 A program that lets you run [JavaScript](#javascript) on your computer. Gatsby is powered by Node.
 
-[](#o)O
--------
+## [](#o)O
 
-[](#p)P
--------
+## [](#p)P
 
 ### [](#package)Package
 
@@ -311,15 +295,13 @@ Progressive enhancement is a strategy for the web that emphasizes core page cont
 
 This usually refers to either a member of the public (as opposed to your team) or the folder `/public` in which your [built](#build) website or app is saved.
 
-[](#q)Q
--------
+## [](#q)Q
 
 ### [](#query)Query
 
 The process of requesting specific data from somewhere. With Gatsby you normally query with [GraphQL](#graphql).
 
-[](#r)R
--------
+## [](#r)R
 
 ### [](#react)[React](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/react/)
 
@@ -335,8 +317,7 @@ Runtime is when a program is running (or being executable); it can refer to a fe
 
 Routing is the mechanism for loading the correct content in a website or app based on a network request - usually a URL. For example, it allows for routing URLs like `/about-us` to the appropriate [page](#page), [template](#template), or [component](#component).
 
-[](#s)S
--------
+## [](#s)S
 
 ### [](#schema)Schema
 
@@ -374,8 +355,7 @@ It also refers to the `/static` folder which is automatically copied into `/publ
 
 A software application that creates HTML pages from templates or [components](#component) and a given content source.
 
-[](#t)T
--------
+## [](#t)T
 
 ### [](#template)Template
 
@@ -393,18 +373,15 @@ A [plugin](#plugin) that transforms one type of data to another. For example you
 
 The process of converting code from one syntax or format to another, such as TypeScript, a superset of JavaScript which provides custom type checking during development. [Babel](#babel) is another common example of transpilation that reformats newer JavaScript code following the [ECMAScript](#ecmascript) standard to be more backwards-compatible during the site [compilation](#compiler) process.
 
-[](#u)U
--------
+## [](#u)U
 
 ### [](#ui)UI
 
 A UI refers to a User Interface. In the field of human-computer interaction, a UI is a space where interactions between humans and machines occur. The goal of this interaction is to allow effective operation and control of the machine from the human end, while the machine simultaneously feeds back information that aids the user’s decision-making process (such as error messages or notifications).
 
-[](#v)V
--------
+## [](#v)V
 
-[](#w)W
--------
+## [](#w)W
 
 ### [](#webpack)[webpack](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/webpack/)
 
@@ -414,18 +391,12 @@ A [JavaScript](#javascript) application that Gatsby uses to bundle your website�
 
 A WordPress plugin that adds [GraphQL](#graphql) capabilities to WordPress. It’s another way that you can use WordPress as a content source for Gatsby.
 
-[](#x)X
--------
+## [](#x)X
 
-[](#y)Y
--------
+## [](#y)Y
 
 ### [](#yarn)[Yarn](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/docs/glossary/yarn/)
 
 A [package](#package) manager that some prefer to [npm](#npm). It is also required for [developing Gatsby](chrome-extension://cjedbglnccaioiolemnfhjncicchinao/contributing/setting-up-your-local-dev-environment/#using-yarn).
 
-[](#z)Z
--------
-
-
-[Source](https://www.gatsbyjs.com/docs/glossary/)
+## [](#z)Z
