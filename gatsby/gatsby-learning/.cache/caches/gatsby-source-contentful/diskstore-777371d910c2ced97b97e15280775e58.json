@@ -1,0 +1,2581 @@
+{
+  "expireTime": 9007200878959508000,
+  "key": "contentful-sync-data-i31un640bs1z-master",
+  "val": {
+    "entries": [
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "5hLeh0SIxW6vxtFoA4s1EF",
+          "type": "Entry",
+          "createdAt": "2021-05-07T21:20:38.092Z",
+          "updatedAt": "2021-05-07T21:20:38.092Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogPost"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Me" },
+          "slug": { "en-US": "me" },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "63zuMQihvbj0vpP975yWBY"
+              }
+            }
+          },
+          "description": {
+            "en-US": "A passionate Web Developer, Electrical Engineer, Musician & Producer\n🔭 Contract Web Development Relational Concepts\n\n🌱 I'm currently learning React/Redux, Python, Java, Express, jQuery\n\n👯 I'm looking to collaborate on Any web audio or open source educational tools.\n\n🤝 I'm looking for help with Learning React\n\n👨‍💻 All of my projects are available at https://bgoonz.github.io/\n\n📝 I regularly write articles on medium && Web-Dev-Resource-Hub\n\n💬 Ask me about Anything:\n\n📫 How to reach me bryan.guner@gmail.com\n\n⚡ Fun fact I played Bamboozle Music Festival at the Meadowlands Stadium Complex when I was 14.\n"
+          },
+          "body": {
+            "en-US": "\ni really like music 🎧\nWhat's the most useful business-related book you've ever read?\nA Random Walk Down Wall Street\n\nWhat's your favorite non-business book?\nHitchhiker's Guide To The Galaxy\n\nIf money were not an issue, what would you be doing right now?\nDesigning recording software/hardware and using it\n\nWhat words of advice would you give your younger self?\nTry harder and listen to your parents more (the latter bit of advice would be almost certain to fall on deaf ears lol)\n\nWhat's the most creative thing you've ever done?\nI built a platform that listens to a guitarist's performance and automatically triggers guitar effects at the appropriate time in the song.\n\nWhich founders or startups do you most admire?\nIs it to basic to say Tesla... I know they're prevalent now but I've been an avid fan since as early as 2012.\n\nWhat's your super power?\nHaving really good ideas and forgetting them moments later.\n\nWhat's the best way for people to get in touch with you?\nA text\n\nWhat aspects of your work are you most passionate about?\nCreating things that change my every day life.\n\nWhat was the most impactful class you took in school?\nModern Physics... almost changed my major after that class... but at the end of the day engineering was a much more fiscally secure avenue.\n\nWhat's something you wish you had done years earlier?\nLearned to code ... and sing\n\nWhat words of wisdom do you live by?\n*Disclaimer: The following wisdom is very cliche ... but... \"Be the change that you wish to see in the world.\"\n\n― Mahatma Gandhi"
+          },
+          "author": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "TPWm5AaWTabpjVt92OV9j"
+              }
+            }
+          },
+          "publishDate": { "en-US": "2021-05-07T10:00-04:00" }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "TPWm5AaWTabpjVt92OV9j",
+          "type": "Entry",
+          "createdAt": "2021-05-07T21:20:00.953Z",
+          "updatedAt": "2021-05-07T21:20:00.953Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": { "type": "Link", "linkType": "ContentType", "id": "person" }
+          }
+        },
+        "fields": {
+          "name": { "en-US": "Bryan Guner" },
+          "title": { "en-US": "Student" },
+          "company": { "en-US": "Lambda" },
+          "shortBio": {
+            "en-US": "\ni really like music 🎧\nWhat's the most useful business-related book you've ever read?\nA Random Walk Down Wall Street\n\nWhat's your favorite non-business book?\nHitchhiker's Guide To The Galaxy\n\nIf money were not an issue, what would you be doing right now?\nDesigning recording software/hardware and using it\n\nWhat words of advice would you give your younger self?\nTry harder and listen to your parents more (the latter bit of advice would be almost certain to fall on deaf ears lol)\n\nWhat's the most creative thing you've ever done?\nI built a platform that listens to a guitarist's performance and automatically triggers guitar effects at the appropriate time in the song.\n\nWhich founders or startups do you most admire?\nIs it to basic to say Tesla... I know they're prevalent now but I've been an avid fan since as early as 2012.\n\nWhat's your super power?\nHaving really good ideas and forgetting them moments later.\n\nWhat's the best way for people to get in touch with you?\nA text\n\nWhat aspects of your work are you most passionate about?\nCreating things that change my every day life.\n\nWhat was the most impactful class you took in school?\nModern Physics... almost changed my major after that class... but at the end of the day engineering was a much more fiscally secure avenue.\n\nWhat's something you wish you had done years earlier?\nLearned to code ... and sing\n\nWhat words of wisdom do you live by?\n*Disclaimer: The following wisdom is very cliche ... but... \"Be the change that you wish to see in the world.\"\n\n― Mahatma Gandhi"
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "1mmuU3OfwCRR3Icp5uVBwe",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:48.423Z",
+          "updatedAt": "2021-05-07T20:59:48.423Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Embed assets" },
+          "slug": { "en-US": "embed-assets" },
+          "metaDescription": { "en-US": "How to embed assets." },
+          "body": {
+            "en-US": {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Embed Assets",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Embedding assets is straightforward. First, upload your media to Contentful. You can do it through the Media tab, or directly in the editor of an entry. Then, select the asset you’d like to add to your entry, and link. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Through the Media tab:",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Click the Media tab in the top navigation bar.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Click the Add asset button.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Select whether you want to upload a single asset or multiple assets.\n",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    }
+                  ],
+                  "nodeType": "ordered-list"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "You can either drag and drop your media file into the window or select it from your computer.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "In the Editor:\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Navigate to the entry you want to embed an asset in. Click the + ",
+                              "nodeType": "text"
+                            },
+                            {
+                              "data": {},
+                              "marks": [{ "type": "bold" }],
+                              "value": "Embed ",
+                              "nodeType": "text"
+                            },
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": " button and select Asset.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "If your asset has already been added, you can select it from the dialog that appears. If not, click “+ Create new asset” and upload your file. ",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "When finished, the asset will appear in the body of your entry.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    }
+                  ],
+                  "nodeType": "ordered-list"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "kbAppCategory": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "14VV8DioigjGqfMXo5x55f"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "3FT5VN8QGd0BhqVVdcOK95",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:48.413Z",
+          "updatedAt": "2021-05-07T20:59:48.413Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "FAQs" },
+          "slug": { "en-US": "frequently-asked-questions" },
+          "metaDescription": { "en-US": "FAQs about the app." },
+          "body": {
+            "en-US": {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Can I import content from other platforms?",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "\nContentful allows for the importing, exporting and migration of content from other platforms. This is done with the Contentful CLI tool.  After installation, you can set a variety of configurations in a JSON file and then use the command line to import your content.  ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "Find out more about importing and exporting content",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ".",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "How can I localize my content?\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "To localize content in Contentful, you need to set up locales for your space. Navigate to ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [{ "type": "bold" }],
+                      "value": "Settings > Locales ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "and click ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [{ "type": "bold" }],
+                      "value": "Add locale",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ". From there, you can configure as desired. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "For more complex translation workflows or localization needs, you can ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/developers/docs/concepts/locales/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "read more about field vs entry level localization patterns",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ".  Once localization has been set up, it’s time for ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/working-with-translations/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "working with translations in Contentful.",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "How can I set up an approval workflow?",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "You can use ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/space-roles-and-permissions/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "space roles and permissions",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": " to set up an approval workflow.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Editor: Can view, create, edit and delete content, is the only one who can publish it",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Author: Can create content, but not publish or delete it",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Translator: Can edit content for the language they are assigned to, but not modify the original",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    }
+                  ],
+                  "nodeType": "unordered-list"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "After roles are assigned, you can use ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/tasks/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "tasks ",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "and ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/developers/docs/tutorials/general/scheduled-publishing/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "scheduled publishing",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": " to ensure content is reviewed and published according to schedule.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "I want sub-categories. How can I set them up?",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Sub-categories can be easily created by adding them to the content model. Navigate to ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [{ "type": "bold" }],
+                      "value": "Content model > Add content type",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": " and add the relevant fields, then save the new content type.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Once the content type is created, engineering support will be needed to enable editors to use it. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "How do I add images to an article?",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "\nImages are added to articles by uploading them as assets to Contentful, and then embedding them in the relevant entry.  ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [{ "type": "bold" }],
+                      "value": "Only 1 image can be added to an article",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ".",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Open or create the entry for the article you want to add images to.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "In the editor entry, click the ",
+                              "nodeType": "text"
+                            },
+                            {
+                              "data": {},
+                              "marks": [{ "type": "bold" }],
+                              "value": "Embed asset ",
+                              "nodeType": "text"
+                            },
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "button. ",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Select the asset you’d like to embed.",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    }
+                  ],
+                  "nodeType": "ordered-list"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "For more detailed instructions, read about ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/working-with-media/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "working with media in Contentful",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ".",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Where can I see changes people have made to an article?",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "As changes are made to each entry, Contentful autosaves these entries. After an entry is published, a snapshot is taken. When a published entry is edited and these subsequent changes are published, another snapshot is taken. In the Versions section of the entry editor, you can compare these snapshots to each other to see what changes have been made over time.  ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/versions/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [{ "type": "underline" }],
+                          "value": "Read about versions in our Help Center",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ".",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "kbAppCategory": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "14VV8DioigjGqfMXo5x55f"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "7LcIKhZdSS2FYPeZhr8HD8",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:48.411Z",
+          "updatedAt": "2021-05-07T20:59:48.411Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Using references" },
+          "slug": { "en-US": "using-references" },
+          "metaDescription": {
+            "en-US": "How to use references in Contentful."
+          },
+          "body": {
+            "en-US": {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Using references with the content model",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "References in this app are used to create the navigation, the header links, the footer links, and to add articles to categories.  This structure allows for changes to be reflected globally, and enables you to re-use these linked entries throughout your content space. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "For a detailed guide on adding references to your content, see our ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "uri": "https://www.contentful.com/help/references/"
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "help center article.",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "kbAppCategory": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "14VV8DioigjGqfMXo5x55f"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "1YzWhqntJXOncYb4OUWn74",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:48.346Z",
+          "updatedAt": "2021-05-07T20:59:48.346Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppLink"
+            }
+          }
+        },
+        "fields": {
+          "text": { "en-US": "Go to contentful.com" },
+          "url": { "en-US": "https://contentful.com" }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "6Pna4OrC1gL9f1idJpegEi",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:48.344Z",
+          "updatedAt": "2021-05-07T20:59:48.344Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "KB App Content Model Overview" },
+          "slug": { "en-US": "kb-app-content-model-overview" },
+          "metaDescription": { "en-US": "Content model overview." },
+          "body": {
+            "en-US": {
+              "nodeType": "document",
+              "data": {},
+              "content": [
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "In the Content Model tab, you’ll find a sample content model already created for your use. This content model is the basic structure of your knowledge base. You can edit the content model as desired, but note that any changes will require additional engineering support. The content model for this app is as follows:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    { "nodeType": "text", "value": "", "marks": [], "data": {} }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "heading-2",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Site settings",
+                      "marks": [{ "type": "bold" }],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Site settings content type is where the master settings for your knowledge base are located. All changes made to this content type are reflected globally. There must only be ",
+                      "marks": [],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": "one",
+                      "marks": [{ "type": "bold" }],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "text",
+                      "value": " Site settings entry in your space. \n",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Site settings content type contains the following fields:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Site name (SEO) (short text): The name of your website as it will appear in search results.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Site description (SEO) (short text): A description of your website as it will appear in search results.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Logo (media): The logo you want displayed in the help center site header. Maximum width is 160 px (height is proportional). Maximum size is 2 GB.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Heading (short text): The heading to be displayed on your help center home page",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Subheading (short text): Subheading to be displayed beneath the home page heading",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Navigation links (references): Links to be displayed in the site header. Maximum of 3. See Links section below for more information.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Google Analytics ID (short text): Enter the Google Analytics ID for your project to track audience metrics",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "\n",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "heading-2",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Link",
+                      "marks": [{ "type": "bold" }],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Link content type creates links for your knowledge base. These can be used for navigation links in the header, for example. You can customize the display text, set the destination URL and set the icon to one of your choosing. Reference this entry type in your Site settings content type to make global changes.",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Link content type contains the following fields:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Display text: The text you want to link",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Href: The url you want to link to",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "\n",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Category",
+                      "marks": [{ "type": "bold" }],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Category content type organizes entries by topic. Your app space comes with two pre-existing categories called “Getting Started” and \"Content Model Overview\". These categories can be edited or removed. You can also create your own categories. Articles can be linked to a Category to group them as desired. By default, Categories will be displayed as an alphabetical list on your home page.\n",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Category content type contains the following fields:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Name (short text): The desired name of your category",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Slug (short text): The desired URL for your category. Once a category is published, this should not be changed",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Description (Long text): A description of what the category contains\n",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Article",
+                      "marks": [{ "type": "bold" }],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Article content type creates entries for knowledge base articles. Articles can be in three states: draft, published or changed:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Draft articles can only be accessed within Contentful",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Published articles are “live” and publicly available in the knowledge base",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Changed articles are published articles that have been edited, but those changes are not yet published. These changes are not visible outside of Contentful until the article is published again",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "Articles can be formatted with any of the options available in RichText. Sidebar links are automatically generated based on the heading size you use (H1, H2, etc.). ",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    {
+                      "nodeType": "text",
+                      "value": "The Article content type contains the following fields:",
+                      "marks": [],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "unordered-list",
+                  "content": [
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Title (short text): Title of your article. Will be displayed at the top of the page.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Slug (short text): The URL for your article. Once an article is published, this should not be changed",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Meta Description (long text): Short description of article contents. Will be seen in search results, social media posts, Slack messages, etc.",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Body (RichText field): The main body for your article. All standard RichText formatting options are available",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    },
+                    {
+                      "nodeType": "list-item",
+                      "content": [
+                        {
+                          "nodeType": "paragraph",
+                          "content": [
+                            {
+                              "nodeType": "text",
+                              "value": "Category (Reference): Before an article can be published, it must be linked to a Category",
+                              "marks": [],
+                              "data": {}
+                            }
+                          ],
+                          "data": {}
+                        }
+                      ],
+                      "data": {}
+                    }
+                  ],
+                  "data": {}
+                },
+                {
+                  "nodeType": "paragraph",
+                  "content": [
+                    { "nodeType": "text", "value": "", "marks": [], "data": {} }
+                  ],
+                  "data": {}
+                }
+              ]
+            }
+          },
+          "kbAppCategory": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6MK78LQY20vdFA7q5dqVfg"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "34bGQMuTqqpJ7MGgqbTeIo",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:46.580Z",
+          "updatedAt": "2021-05-07T20:59:46.580Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppArticle"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Overview" },
+          "slug": { "en-US": "overview" },
+          "metaDescription": { "en-US": "How to use the Knowledge base app." },
+          "body": {
+            "en-US": {
+              "data": {},
+              "content": [
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Welcome to the Contentful Knowledge Base app! This app will enable you to get a knowledge base up and running within 10 minutes. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Here’s what’s included with the app:\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Content model. An explanation of the content types and how they work can be found ",
+                              "nodeType": "text"
+                            },
+                            {
+                              "data": {
+                                "target": {
+                                  "sys": {
+                                    "id": "6Pna4OrC1gL9f1idJpegEi",
+                                    "type": "Link",
+                                    "linkType": "Entry"
+                                  }
+                                }
+                              },
+                              "content": [
+                                {
+                                  "data": {},
+                                  "marks": [],
+                                  "value": "here",
+                                  "nodeType": "text"
+                                }
+                              ],
+                              "nodeType": "entry-hyperlink"
+                            },
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Sample articles (including this one!) that will quickly get you up to speed on the different aspects of the app",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Sample categories, allowing you to preview how your knowledge base will look to customers",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    },
+                    {
+                      "data": {},
+                      "content": [
+                        {
+                          "data": {},
+                          "content": [
+                            {
+                              "data": {},
+                              "marks": [],
+                              "value": "Sample media assets, so you can see how embedding assets works",
+                              "nodeType": "text"
+                            }
+                          ],
+                          "nodeType": "paragraph"
+                        }
+                      ],
+                      "nodeType": "list-item"
+                    }
+                  ],
+                  "nodeType": "unordered-list"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "\n",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "What this app does",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "This app will allow you to set up and start publishing articles for a knowledge base. It’s been created with support agents and content editors in mind, allowing them to quickly publish content that answers commonly asked questions regarding your product. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Basic customizations (such as creating categories, embedding images in articles, changing logos, editing links, customizing the footer, and adding social media) are all included in this app.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    { "data": {}, "marks": [], "value": "", "nodeType": "text" }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "What’s ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [{ "type": "bold" }],
+                      "value": "not ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "included",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "Any changes made to the content model, or extensive customizations are beyond the scope of this app and will require additional engineering resources from your organization. ",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "I’m confused by some Contentful features",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "heading-2"
+                },
+                {
+                  "data": {},
+                  "content": [
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": "You can read the ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": {
+                        "target": {
+                          "sys": {
+                            "id": "3FT5VN8QGd0BhqVVdcOK95",
+                            "type": "Link",
+                            "linkType": "Entry"
+                          }
+                        }
+                      },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "KB App FAQ",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "entry-hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": ", or visit our ",
+                      "nodeType": "text"
+                    },
+                    {
+                      "data": { "uri": "https://www.contentful.com/help" },
+                      "content": [
+                        {
+                          "data": {},
+                          "marks": [],
+                          "value": "Help Center",
+                          "nodeType": "text"
+                        }
+                      ],
+                      "nodeType": "hyperlink"
+                    },
+                    {
+                      "data": {},
+                      "marks": [],
+                      "value": " for questions about using Contentful.",
+                      "nodeType": "text"
+                    }
+                  ],
+                  "nodeType": "paragraph"
+                }
+              ],
+              "nodeType": "document"
+            }
+          },
+          "kbAppCategory": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "14VV8DioigjGqfMXo5x55f"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "6MK78LQY20vdFA7q5dqVfg",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:46.373Z",
+          "updatedAt": "2021-05-07T20:59:46.373Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": { "en-US": "Content Model Overview" },
+          "slug": { "en-US": "content-model-overview" },
+          "previewDescription": { "en-US": "Content model overview" }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "17faFp5UY1vwA7HvcWnfNl",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:46.371Z",
+          "updatedAt": "2021-05-07T20:59:46.371Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppSiteSettings"
+            }
+          }
+        },
+        "fields": {
+          "logo": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "617qDs1u983leRNfv31tQu"
+              }
+            }
+          },
+          "heading": { "en-US": "Welcome to the Contentful help center" },
+          "subheading": { "en-US": "How can we help you?" },
+          "headerLinks": {
+            "en-US": [
+              {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Entry",
+                  "id": "1YzWhqntJXOncYb4OUWn74"
+                }
+              }
+            ]
+          },
+          "siteName": { "en-US": "Contentful help center" },
+          "siteDescriptionSeo": { "en-US": "All of your questions answered." },
+          "googleAnalyticsId": { "en-US": "UA-0000-0" }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "14VV8DioigjGqfMXo5x55f",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:59:46.367Z",
+          "updatedAt": "2021-05-07T20:59:46.367Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "kbAppCategory"
+            }
+          }
+        },
+        "fields": {
+          "name": { "en-US": "Getting Started" },
+          "slug": { "en-US": "getting-started" },
+          "previewDescription": { "en-US": "Articles on getting started." }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "15jwOBqpxqSAOy2eOO4S0m",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:07:17.612Z",
+          "updatedAt": "2021-05-07T20:54:06.662Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 2,
+          "contentType": {
+            "sys": { "type": "Link", "linkType": "ContentType", "id": "person" }
+          }
+        },
+        "fields": {
+          "name": { "en-US": "Bryan Guner" },
+          "title": { "en-US": "Web Developer" },
+          "company": { "en-US": "Lambda School Web Development Bootcamp" },
+          "shortBio": {
+            "en-US": "A passionate Web Developer, Electrical Engineer, Musician & Producer\n🔭 Contract Web Development Relational Concepts\n\n🌱 I'm currently learning React/Redux, Python, Java, Express, jQuery\n\n👯 I'm looking to collaborate on Any web audio or open source educational tools.\n\n🤝 I'm looking for help with Learning React\n\n👨‍💻 All of my projects are available at https://bgoonz.github.io/\n\n📝 I regularly write articles on medium && Web-Dev-Resource-Hub\n\n💬 Ask me about Anything:\n\n📫 How to reach me bryan.guner@gmail.com\n\n⚡ Fun fact I played Bamboozle Music Festival at the Meadowlands Stadium Complex when I was 14."
+          },
+          "email": { "en-US": "bryan.guner@gmail.com" },
+          "phone": { "en-US": "5512545505" },
+          "facebook": { "en-US": "https://www.facebook.com/bryan.guner/" },
+          "github": { "en-US": "bgoonz" },
+          "image": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7orLdboQQowIUs22KAW4U"
+              }
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "31TNnjHlfaGUoMOwU0M2og",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:07:18.304Z",
+          "updatedAt": "2021-05-07T20:07:18.304Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogPost"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Automate with webhooks" },
+          "slug": { "en-US": "automate-with-webhooks" },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4shwYI3POEGkw0Eg6kcyaQ"
+              }
+            }
+          },
+          "description": {
+            "en-US": "Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint."
+          },
+          "body": {
+            "en-US": "## What are webhooks?\n\nThe webhooks are used to notify you when content has been changed. Specify a URL, configure your webhook, and we will send an HTTP POST request whenever something happens to your content.\n\n## How do I configure a webhook?\n\nGo to Settings → Webhooks from the navigation bar at the top. From there, hit Add webhook, and you will be directed to your new webhook. Then choose a name, put in the information of your HTTP endpoint (URL and authentication), specify any custom headers and select the types of events that should trigger the webhook.\n\n## Why do I get an old version in the CDA?\n\nAs the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes.\n\nExtracted from the [Webhooks FAQ](https://www.contentful.com/faq/webhooks/ \"Webhooks FAQ\")."
+          },
+          "author": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "15jwOBqpxqSAOy2eOO4S0m"
+              }
+            }
+          },
+          "publishDate": { "en-US": "2017-05-12T00:00+02:00" },
+          "tags": { "en-US": ["javascript"] }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "2PtC9h1YqIA6kaUaIsWEQ0",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:07:17.611Z",
+          "updatedAt": "2021-05-07T20:07:17.611Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogPost"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Static sites are great" },
+          "slug": { "en-US": "static-sites-are-great" },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4NzwDSDlGECGIiokKomsyI"
+              }
+            }
+          },
+          "description": {
+            "en-US": "Worry less about security, caching, and talking to the server. Static sites are the new thing."
+          },
+          "body": {
+            "en-US": "## The case for the static site generator\n\nMore and more developers are jumping on the \"go static train\", and rightfully so. Static pages are fast, lightweight, they scale well. They are more secure, and simple to maintain and they allow you to focus all your time and effort on the user interface. Often times, this dedication really shows.\n\nIt just so happens that static site generators are mostly loved by developers, but not by the average Joe. They do not offer WYSIWYG, previewing on demo sites may take an update cycle, they are often based on markdown text files, and they require some knowledge of modern day repositories.\n\nMoreover, when teams are collaborating, it can get complicated quickly. Has this article already been proof-read or reviewed? Is this input valid? Are user permissions available, e.g. for administering adding and removing team members? Can this article be published at a future date? How can a large repository of content be categorized, organized, and searched? All these requirements have previously been more or less solved within the admin area of your CMS. But of course with all the baggage that made you leave the appserver-app-database-in-one-big-blob stack in the first place.\n\n## Content APIs to the rescue\n\nAn alternative is decoupling the content management aspect from the system. And then replacing the maintenance prone server with a cloud based web service offering. Effectively, instead of your CMS of old, you move to a [Content Management as a Service (CMaaS)](https://www.contentful.com/r/knowledgebase/content-as-a-service/ \"Content Management as a Service (CMaaS)\") world, with a content API to deliver all your content. That way, you get the all the [benefits of content management features](http://www.digett.com/blog/01/16/2014/pairing-static-websites-cms \"benefits of content management features\") while still being able to embrace the static site generator mantra.\n\nIt so happens that Contentful is offering just that kind of content API. A service that\n\n* from the ground up has been designed to be fast, scalable, secure, and offer high uptime, so that you don’t have to worry about maintenance ever again.\n* offers a powerful editor and lots of flexibility in creating templates for your documents that your editors can reuse and combine, so that no developers resources are required in everyday writing and updating tasks.\n* separates content from presentation, so you can reuse your content repository for any device platform your heart desires. That way, you can COPE (\"create once, publish everywhere\").\n* offers webhooks that you can use to rebuild your static site in a fully automated fashion every time your content is modified.\n\nExtracted from the article [CMS-functionality for static site generators](https://www.contentful.com/r/knowledgebase/contentful-api-cms-static-site-generators/ \"CMS-functionality for static site generators\"). Read more about the [static site generators supported by Contentful](https://www.contentful.com/developers/docs/tools/staticsitegenerators/ \"static site generators supported by Contentful\")."
+          },
+          "author": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "15jwOBqpxqSAOy2eOO4S0m"
+              }
+            }
+          },
+          "publishDate": { "en-US": "2017-05-16T00:00+02:00" },
+          "tags": { "en-US": ["javascript", "static-sites"] }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "3K9b0esdy0q0yGqgW2g6Ke",
+          "type": "Entry",
+          "createdAt": "2021-05-07T20:07:17.539Z",
+          "updatedAt": "2021-05-07T20:07:17.539Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1,
+          "contentType": {
+            "sys": {
+              "type": "Link",
+              "linkType": "ContentType",
+              "id": "blogPost"
+            }
+          }
+        },
+        "fields": {
+          "title": { "en-US": "Hello world" },
+          "slug": { "en-US": "hello-world" },
+          "heroImage": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6Od9v3wzLOysiMum0Wkmme"
+              }
+            }
+          },
+          "description": {
+            "en-US": "Your very first content with Contentful, pulled in JSON format using the Content Delivery API."
+          },
+          "body": {
+            "en-US": "These is your very first content with Contentful, pulled in JSON format using the [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ \"Content Delivery API\"). Content and presentation are now decoupled, allowing you to focus your efforts in building the perfect app.\n\n## Your first steps\n\nBuilding with Contentful is easy. First take a moment to get [the basics of content modelling](https://www.contentful.com/r/knowledgebase/content-modelling-basics/ \"the basics of content modelling\"), which you can set up in the [Contentful Web app](https://app.contentful.com/ \"Contentful Web app\"). Once you get that, feel free to drop by the [Documentation](https://www.contentful.com/developers/docs/ \"Documentation\") to learn a bit more about how to build your app with Contentful, in particular the [API basics](https://www.contentful.com/developers/docs/concepts/apis/ \"API basics\") and each one of our four APIs, as shown below.\n\n### Content Delivery API\n\nThe [Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/ \"Content Delivery API\") (CDA), available at `cdn.contentful.com`, is a read-only API for delivering content from Contentful to apps, websites and other media. Content is delivered as JSON data, and images, videos and other media as files.\nThe API is available via a globally distributed content delivery network. The server closest to the user serves all content, both JSON and binary. This minimizes latency, which especially benefits mobile apps. Hosting content in multiple global data centers also greatly improves the availability of content.\n\n### Content Management API\n\nThe [Content Management API](https://www.contentful.com/developers/docs/references/content-management-api/ \"Content Management API\") (CMA), available at `api.contentful.com`, is a read-write API for managing content. Unlike the Content Delivery API, the management API requires you to authenticate as a Contentful user. You could use the CMA for several use cases, such as:\n* Automatic imports from different CMSes like WordPress or Drupal.\n* Integration with other backend systems, such as an e-commerce shop.\n* Building custom editing experiences. We built the [Contentful Web app](https://app.contentful.com/ \"Contentful Web app\") on top of this API.\n\n### Preview API\n\nThe [Content Preview API](https://www.contentful.com/developers/docs/concepts/apis/#content-preview-api \"Content Preview API\"), available at `preview.contentful.com`, is a variant of the CDA for previewing your content before delivering it to your customers. You use the Content Preview API in combination with a \"preview\" deployment of your website (or a \"preview\" build of your mobile app) that allows content managers and authors to view their work in-context, as if it were published, using a \"preview\" access token as though it were delivered by the CDA.\n\n### Images API\n\nThe [Images API](https://www.contentful.com/developers/docs/concepts/apis/#images-api \"Images API\"), available at `images.contentful.com`, allows you to resize and crop images, change their background color and convert them to different formats. Using our API for these transformations lets you upload high-quality assets, deliver exactly what your app needs, and still get all the benefits of our caching CDN."
+          },
+          "author": {
+            "en-US": {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "15jwOBqpxqSAOy2eOO4S0m"
+              }
+            }
+          },
+          "publishDate": { "en-US": "2017-05-15T00:00+02:00" },
+          "tags": { "en-US": ["general"] }
+        }
+      }
+    ],
+    "assets": [
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "63zuMQihvbj0vpP975yWBY",
+          "type": "Asset",
+          "createdAt": "2021-05-07T21:17:51.022Z",
+          "updatedAt": "2021-05-07T21:18:06.348Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 2
+        },
+        "fields": {
+          "title": { "en-US": "resume" },
+          "description": { "en-US": "resume" },
+          "file": {
+            "en-US": {
+              "url": "//assets.ctfassets.net/i31un640bs1z/63zuMQihvbj0vpP975yWBY/8948d825b2a5897b49ac4aefea4bf454/bryan-guner-resume-2021.docx",
+              "details": { "size": 30658 },
+              "fileName": "bryan-guner-resume-2021.docx",
+              "contentType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "24umHh1bsK3M1CaPmr6eHx",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:59:42.430Z",
+          "updatedAt": "2021-05-07T20:59:42.430Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "richtext editor" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/24umHh1bsK3M1CaPmr6eHx/1cc7eeb0c9e038834503dd9339d70c91/rich-text-editor.png",
+              "details": {
+                "size": 103546,
+                "image": { "width": 1496, "height": 482 }
+              },
+              "fileName": "rich-text-editor.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "617qDs1u983leRNfv31tQu",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:59:42.430Z",
+          "updatedAt": "2021-05-07T20:59:42.430Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "Contentful" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/617qDs1u983leRNfv31tQu/c269c3c29196f402ec5cb0a5c9876061/contentful-logo.png",
+              "details": {
+                "size": 17476,
+                "image": { "width": 600, "height": 124 }
+              },
+              "fileName": "contentful-logo.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "1n4IaRk6t3nOQ4yZlg7ZJD",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:59:42.410Z",
+          "updatedAt": "2021-05-07T20:59:42.410Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "add entry dropdown" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/1n4IaRk6t3nOQ4yZlg7ZJD/da33b9d115b48d03b77dc00d53eb7e78/add-entry-dropdown.png",
+              "details": {
+                "size": 47291,
+                "image": { "width": 503, "height": 622 }
+              },
+              "fileName": "add-entry-dropdown.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "5ZRfx29TBuZSG6NIIc4LgF",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:59:42.410Z",
+          "updatedAt": "2021-05-07T20:59:42.410Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "add new entry" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/5ZRfx29TBuZSG6NIIc4LgF/6ba72e1c0bae1d5e04c0931804364b73/new-entry.png",
+              "details": {
+                "size": 336507,
+                "image": { "width": 2240, "height": 1748 }
+              },
+              "fileName": "new-entry.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "4b0jXXgydLHuMLOR4vq2iH",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:59:42.405Z",
+          "updatedAt": "2021-05-07T20:59:42.405Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "adding teams" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/4b0jXXgydLHuMLOR4vq2iH/f1051efc882a03cc2d6f27bd4c91f908/adding-teams.png",
+              "details": {
+                "size": 225471,
+                "image": { "width": 2216, "height": 1574 }
+              },
+              "fileName": "adding-teams.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      },
+      {
+        "metadata": { "tags": [] },
+        "sys": {
+          "space": {
+            "sys": { "type": "Link", "linkType": "Space", "id": "i31un640bs1z" }
+          },
+          "id": "7orLdboQQowIUs22KAW4U",
+          "type": "Asset",
+          "createdAt": "2021-05-07T20:53:46.855Z",
+          "updatedAt": "2021-05-07T20:53:46.855Z",
+          "environment": {
+            "sys": { "id": "master", "type": "Link", "linkType": "Environment" }
+          },
+          "revision": 1
+        },
+        "fields": {
+          "title": { "en-US": "bryan" },
+          "description": { "en-US": "that's my face" },
+          "file": {
+            "en-US": {
+              "url": "//images.ctfassets.net/i31un640bs1z/7orLdboQQowIUs22KAW4U/09ae30106ffa2c8217f8528088fecd23/gravatar.png",
+              "details": {
+                "size": 12779,
+                "image": { "width": 80, "height": 80 }
+              },
+              "fileName": "gravatar.png",
+              "contentType": "image/png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

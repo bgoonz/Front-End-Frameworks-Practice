@@ -1,0 +1,185 @@
+{
+  "stages": {
+    "develop": {
+      "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        }
+      ],
+      "presets": [
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/preset-typescript/lib/index.js",
+          "options": {
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
+          }
+        }
+      ],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "develop-html": {
+      "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        }
+      ],
+      "presets": [
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/preset-typescript/lib/index.js",
+          "options": {
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
+          }
+        }
+      ],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "build-html": {
+      "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        }
+      ],
+      "presets": [
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/preset-typescript/lib/index.js",
+          "options": {
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
+          }
+        }
+      ],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    },
+    "build-javascript": {
+      "plugins": [
+        {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/gatsby-plugin-image/dist/babel-plugin-parse-static-images.js",
+          "options": {
+            "cacheDir": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/.cache/caches/gatsby-plugin-image"
+          }
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        }
+      ],
+      "presets": [
+        {
+          "name": "/mnt/c/MY-WEB-DEV/BLOG____2.0/MEDIUM/materials/front-end-frameworks/gatsby/gatsby-learning/node_modules/@babel/preset-typescript/lib/index.js",
+          "options": {
+            "plugins": [],
+            "allExtensions": false,
+            "isTSX": false,
+            "jsxPragma": "React"
+          }
+        }
+      ],
+      "options": {
+        "cacheDirectory": true,
+        "sourceType": "unambiguous"
+      }
+    }
+  },
+  "browserslist": [">0.25%", "not dead"]
+}
