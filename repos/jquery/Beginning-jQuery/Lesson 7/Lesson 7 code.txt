@@ -1,0 +1,423 @@
+***Installing jQuery Plugins - HTML***
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Book Browser</title>
+
+  <link rel="stylesheet" href="07.css" type="text/css" />
+
+  <script src="jquery.js"></script>
+  <script src="jquery.cycle2.min.js"></script>
+  <script src="07.js"></script>
+</head>
+
+***Calling a Plugin Method - Step 1 (HTML)***
+
+<ul id="books">
+  <li>
+    <img src="images/0042.jpg" alt="jQuery 1.4 Reference Guide" />
+    <div class="title">jQuery 1.4 Reference Guide</div>
+    <div class="author">Karl Swedberg</div>
+    <div class="author">Jonathan Chaffer</div>
+  </li>
+  <li>
+    <img src="images/2244.jpg" alt="jQuery Plugin Development" />
+    <div class="title">jQuery Plugin Development</div>
+    <div class="author">Giulio Bai</div>
+  </li>
+  ...
+</ul>
+
+***Calling a Plugin Method - jQuery***
+
+$(() => {
+  $('#books').cycle({
+    slides: "> li"
+  });
+});
+
+***Specifying Plugin Options***
+
+$(() => {
+  $('#books').cycle({
+    slides: "> li",
+    timeout: 2000,
+    speed: 200,
+    pauseOnHover: true
+  });
+});
+
+***Modifying Defaults***
+
+$(() => {
+  $.fn.cycle.defaults.timeout = 10000;
+  $.fn.cycle.defaults.random = true;
+
+  $('#books').cycle({
+    slides: "> li",
+    timeout: 2000,
+    speed: 200,
+    pauseOnHover: true
+  });
+});
+
+***Interacting with Plugins - Step 1***
+
+$(() => {
+  $.fn.cycle.defaults.timeout = 10000;
+  $.fn.cycle.defaults.random = true;
+
+  const $books = $('#books').cycle({
+    slides: "> li",
+    timeout: 2000,
+    speed: 200,
+    pauseOnHover: true
+  });
+
+  const $controls = $('<div/>')
+    .attr('id', 'books-controls')
+    .insertAfter($books);
+
+  $('<button/>')
+    .text('Pause')
+    .click(() => {
+        $books.cycle('pause');
+    })
+  .appendTo($controls);
+
+  $('<button/>')
+  .text('Resume')
+  .click(() => {
+      $books.cycle('resume');
+  })
+  .appendTo($controls);
+
+});
+
+***jQuery UI - Step 1 (HTML)***
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Book Browser</title>
+
+  <!-- jQuery UI CSS goes here -->
+  <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="07.css" type="text/css" />
+
+  <script src="jquery.js"></script>
+  <script src="jquery.cycle2.min.js"></script>
+  <!-- jQuery UI JS goes here -->
+  <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <script src="07.js"></script>
+</head>
+
+
+***Color Animations - Step 1***
+
+$(() => {
+
+  $books.hover((e) => {
+    $(e.currentTarget)
+      .find('.title')
+      .animate({
+        backgroundColor: '#eee',
+        color: '#000'
+      }, 1000);
+    }, (e) => {
+    $(e.currentTarget)
+      .find('.title')
+      .animate({
+          backgroundColor: '#000',
+        color: '#fff'
+      }, 1000);
+  });
+
+});
+
+***CSS Class Animations***
+
+$(() => {
+  $('h1')
+  .click((e) => {
+    $(e.target).toggleClass('highlighted', 'slow');
+  });
+});
+
+***Advanced Easing - Step 1***
+
+$(() => {
+  $('h1')
+  .click((e) => {
+    $(e.target)
+      .toggleClass(
+        'highlighted',
+        'slow',
+        'easeInExpo'
+      );
+  });
+});
+
+***Additional Effects - Step 1***
+
+$(() => {
+
+  $('<button/>')
+  .text('Resume or shake')
+  .click((e) => {
+    const paused = $books.is( '.cycle-paused' );
+    if (paused) {
+        $books.cycle('resume');
+    } else {
+      $(e.target)
+          .effect('shake', {
+          distance: 10
+        });
+    }
+  })
+  .appendTo($controls);
+
+});
+
+***jQuery UI Interaction Components***
+
+(() => {
+  $books
+  .find('.title')
+  .resizable();
+});
+
+
+***jQuery UI Interaction Components - constrain the resizing to only happen vertically***
+
+$(() => {
+  $books
+  .find('.title')
+  .resizable({ handles: 's' });
+});
+
+***Widgets***
+
+$(() => {
+  $('button').button();
+});
+
+***Widgets - customize the Pause and Resume buttons***
+
+$(() => {
+  $pauseButton.button({
+    icons: { primary: 'ui-icon-pause' }
+  });
+
+  $resumeButton.button({
+    icons: { primary: 'ui-icon-play' }
+  });
+});
+
+***Widgets - The Slider widget***
+
+$(() => {
+  $('<div/>')
+  .attr('id', 'slider')
+  .slider({
+    min: 0,
+    max: $books.find('li').length - 1
+  })
+    .appendTo($controls);
+});
+
+***Widgets - Step 2 (add our event handler to the .slider() call)***
+
+$(() => {
+  $('<div/>')
+  .attr('id', 'slider')
+  .slider({
+    min: 0,
+    max: $books.find('li').length - 1,
+    slide: (e, ui) => {
+        $books.cycle(ui.value);
+    }
+  })
+    .appendTo($controls);
+});
+
+***Widgets - Step 3 (update the slider widget whenever the slideshow advances to another slide)***
+
+$(() => {
+
+  $books.on('cycle-before', (event, options) => {
+    const slideIndex = options.nextSlide;
+    $('#slider')
+    .slider(
+      'value',
+      slideIndex
+    );
+  });
+
+});
+
+***jQuery UI ThemeRoller***
+
+<head>
+  <meta charset="utf-8">
+  <title>jQuery Book Browser</title>
+
+  <!-- jQuery UI CSS goes here -->
+  <link rel="stylesheet" href="jquery-ui-1.12.1.lefrog/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="07.css" type="text/css" />
+
+  <script src="jquery.js"></script>
+  <script src="jquery.cycle2.min.js"></script>
+  <!-- jQuery UI JS goes here -->
+  <script src="jquery-ui-1.12.1.lefrog/jquery-ui.min.js"></script>
+  <script src="07.js"></script>
+</head>
+
+
+***Mobile Navigation - Step 1***
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Book Browser</title>
+  <!-- jQuery Mobile CSS goes here -->
+  <link rel="stylesheet" href="booklist.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- jQuery Mobile JS goes here -->
+</head>
+<body>
+
+  <div>
+    <div>
+      <h1>Selected jQuery Books</h1>
+    </div>
+
+    <div>
+      <!-- jQuery Mobile Search Filter goes here -->
+      <ul>
+        <li><a href="#jq-game">jQuery Game Development Essentials</a></li>
+        <li><a href="#jqmobile-cookbook">jQuery Mobile Cookbook</a></li>
+        <li><a href="#jquery-designers">jQuery for Designers</a></li>
+        <li><a href="#jquery-hotshot">jQuery Hotshot</a></li>
+        <li><a href="#jqui-cookbook">jQuery UI Cookbook</a></li>
+        <li><a href="#mobile-apps">Creating Mobile Apps with jQuery Mobile</a></li>
+        <li><a href="#drupal-7">Drupal 7 Development by Example</a></li>
+        <li><a href="wp-mobile-apps.html">WordPress Mobile Applications with PhoneGap</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="jq-game">
+    <div>
+      <h1>jQuery Game Development Essentials</h1>
+    </div>
+    <div>
+      <img src="images/jq-game.jpg" alt="jQuery Game Development Essentials" />
+      <div class="title">jQuery Game Development Essentials</div>
+      <div class="author">Salim Arsever</div>
+    </div>
+  </div>
+....
+</body>
+</html>
+
+***Mobile Navigation - Step 2 (referencing jQuery Mobile and its stylesheet)***
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Book Browser</title>
+  <!-- jQuery Mobile CSS goes here -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css" />
+  <link rel="stylesheet" href="booklist.css" />
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- jQuery Mobile JS goes here -->
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+</head>
+
+
+***Mobile Navigation - Step 3 (the data-role attribute)***
+
+<div data-role="page">
+  <div class="ui-bar" data-role="toolbar" data-type="header">
+    <h1>Selected jQuery Books</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <!-- jQuery Mobile Search Filter goes here -->
+    <ul>
+      <li><a href="#jq-game">jQuery Game Development Essentials</a></li>
+      <li><a href="#jqmobile-cookbook">jQuery Mobile Cookbook</a></li>
+      <li><a href="#jquery-designers">jQuery for Designers</a></li>
+      <li><a href="#jquery-hotshot">jQuery Hotshot</a></li>
+      <li><a href="#jqui-cookbook">jQuery UI Cookbook</a></li>
+      <li><a href="#mobile-apps">Creating Mobile Apps with jQuery Mobile</a></li>
+      <li><a href="#drupal-7">Drupal 7 Development by Example</a></li>
+      <li><a href="wp-mobile-apps.html">WordPress Mobile Applications with PhoneGap</a></li>
+    </ul>
+  </div>
+</div>
+
+
+***Mobile Navigation - the bottom link to wp-mobile-apps.html***
+
+<div id="wp-mobile-apps" data-role="page">
+  <div class="ui-bar" data-role="toolbar" data-type="header">
+    <h1>WordPress Mobile Applications with PhoneGap</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <img src="images/wp-mobile-apps.jpg" alt="WordPress Mobile Applications with PhoneGap" />
+    <div class="title">WordPress Mobile Applications with PhoneGap</div>
+    <div class="author">Yuxian Eugene Liang</div>
+  </div>
+</div>
+
+***Delivering Multiple Pages in One Document***
+
+<div id="jq-game" data-role="page">
+  <div class="ui-bar" data-role="toolbar" data-type="header">
+    <h1>jQuery Game Development Essentials</h1>
+  </div>
+  <div role="main" class="ui-content">
+    <img src="images/jq-game.jpg" alt="jQuery Game Development Essentials" />
+    <div class="title">jQuery Game Development Essentials</div>
+    <div class="author">Salim Arsever</div>
+  </div>
+</div>
+
+***List Views - Step 1***
+
+<ul data-role="listview" data-inset="true">
+  <li><a href="#jq-game">jQuery Game Development Essentials</a></li>
+  <li><a href="#jqmobile-cookbook">jQuery Mobile Cookbook</a></li>
+  <li><a href="#jquery-designers">jQuery for Designers</a></li>
+  <li><a href="#jquery-hotshot">jQuery Hotshot</a></li>
+  <li><a href="#jqui-cookbook">jQuery UI Cookbook</a></li>
+  <li><a href="#mobile-apps">Creating Mobile Apps with jQuery Mobile</a></li>
+  <li><a href="#drupal-7">Drupal 7 Development by Example</a></li>
+  <li><a href="wp-mobile-apps.html">WordPress Mobile Applications with PhoneGap</a></li>
+</ul>
+
+***List Views - Step 2 (search forms)***
+
+<div role="main" class="ui-content">
+  <!-- jQuery Mobile Search Filter goes here -->
+  <form class="ui-filterable">
+    <input id="filter-books" data-type="search">
+  </form>
+  <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-books">
+    <li><a href="#jq-game">jQuery Game Development Essentials</a></li>
+    <li><a href="#jqmobile-cookbook">jQuery Mobile Cookbook</a></li>
+    <li><a href="#jquery-designers">jQuery for Designers</a></li>
+    <li><a href="#jquery-hotshot">jQuery Hotshot</a></li>
+    <li><a href="#jqui-cookbook">jQuery UI Cookbook</a></li>
+    <li><a href="#mobile-apps">Creating Mobile Apps with jQuery Mobile</a></li>
+    <li><a href="#drupal-7">Drupal 7 Development by Example</a></li>
+    <li><a href="wp-mobile-apps.html">WordPress Mobile Applications with PhoneGap</a></li>
+  </ul>
+</div>
+
+***Toolbar Buttons***
+
+<div class="ui-bar" data-role="toolbar" data-type="header" data-add-back-btn="true">

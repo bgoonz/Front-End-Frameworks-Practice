@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/bgoonz/Front-End-Frameworks-Practice/issues"
   },
-  "homepage": "https://github.com/bgoonz/Front-End-Frameworks-Practice#readme"
+  "homepage": "https://github.com/bgoonz/Front-End-Frameworks-Practice#readme",
+  "dependencies": {
+    "@bgoonz11/repoutils": "^1.0.5"
+  }
 }

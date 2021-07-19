@@ -1,0 +1,531 @@
+***Loading Data on Demand - HTML***
+
+<div class="letter" id="letter-a">
+  <h3><a href="#">A</a></h3>
+</div>
+<div class="letter" id="letter-b">
+  <h3><a href="#">B</a></h3>
+</div>
+<div class="letter" id="letter-c">
+  <h3><a href="#">C</a></h3>
+</div>
+<div class="letter" id="letter-d">
+  <h3><a href="#">D</a></h3>
+</div>
+
+***Appending HTML - Step 1***
+
+<div class="entry">
+  <h3 class="term">ABDICATION</h3>
+  <div class="part">n.</div>
+  <div class="definition">
+    An act whereby a sovereign attests his sense of the high temperature of the throne.
+    <div class="quote">
+      <div class="quote-line">Poor Isabella's Dead, whose abdication</div>
+      <div class="quote-line">Set all tongues wagging in the Spanish nation.</div>
+      <div class="quote-line">For that performance 'twere unfair to scold her:</div>
+      <div class="quote-line">She wisely left a throne too hot to hold her.</div>
+      <div class="quote-line">To History she'll be no royal riddle &mdash;</div>
+      <div class="quote-line">Merely a plain parched pea that jumped the griddle.</div>
+      <div class="quote-author">G.J.</div>
+    </div>
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">ABSOLUTE</h3>
+  <div class="part">adj.</div>
+  <div class="definition">
+    Independent, irresponsible.  An absolute monarchy is one in which the sovereign does as he pleases so long as he pleases the assassins.  Not many absolute monarchies are left, most of them having been replaced by limited monarchies, where the sovereign's power for evil (and for good) is greatly curtailed, and by republics, which are governed by chance.
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">ACKNOWLEDGE</h3>
+  <div class="part">v.t.</div>
+  <div class="definition">
+    To confess.  Acknowledgement of one another's faults is the highest duty imposed by our love of truth.
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">AFFIANCED</h3>
+  <div class="part">pp.</div>
+  <div class="definition">
+    Fitted with an ankle-ring for the ball-and-chain.
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">AMBIDEXTROUS</h3>
+  <div class="part">adj.</div>
+  <div class="definition">
+    Able to pick with equal skill a right-hand pocket or a left.
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">ANOINT</h3>
+  <div class="part">v.t.</div>
+  <div class="definition">
+    To grease a king or other great functionary already sufficiently slippery.
+    <div class="quote">
+      <div class="quote-line">As sovereigns are anointed by the priesthood,</div>
+      <div class="quote-line">So pigs to lead the populace are greased good.</div>
+      <div class="quote-author">Judibras</div>
+    </div>
+  </div>
+</div>
+
+<div class="entry">
+  <h3 class="term">ARMOR</h3>
+  <div class="part">n.</div>
+  <div class="definition">
+    The kind of clothing worn by a man whose tailor is a blacksmith.
+  </div>
+</div>
+
+***Appending HTML - jQuery***
+
+$(() => {
+  $('#letter-a a')
+  .click((e) => {
+    e.preventDefault()
+
+    $('#dictionary').load('a.html');
+  });
+});
+
+
+***Appending HTML - alert box ***
+
+  $('#letter-a a')
+  .click((e) => {
+    e.preventDefault()
+    $('#dictionary').load('a.html');
+    alert('Loaded!');
+  });
+});
+
+***Retrieving JSON***
+
+[
+  {
+    "term": "BACCHUS",
+    "part": "n.",
+    "definition": "A convenient deity invented by the ancients as an excuse for getting drunk.",
+    "quote": [
+      "Is public worship, then, a sin,",
+      "That for devotions paid to Bacchus",
+      "The lictors dare to run us in,",
+      "And resolutely thump and whack us?"
+    ],
+    "author": "Jorace"
+  },
+  {
+    "term": "BACKBITE",
+    "part": "v.t.",
+    "definition": "To speak of a man as you find him when he can't find you."
+  },
+  {
+    "term": "BEARD",
+    "part": "n.",
+    "definition": "The hair that is commonly cut off by those who justly execrate the absurd Chinese custom of shaving the head."
+  },
+  {
+    "term": "BEGGAR",
+    "part": "n.",
+    "definition": "One who has relied on the assistance of his friends."
+  },
+  {
+    "term": "BELLADONNA",
+    "part": "n.",
+    "definition": "In Italian a beautiful lady; in English a deadly poison.  A striking example of the essential identity of the two tongues."
+  },
+  {
+    "term": "BIGAMY",
+    "part": "n.",
+    "definition": "A mistake in taste for which the wisdom of the future will adjudge a punishment called trigamy."
+  },
+  {
+    "term": "BORE",
+    "part": "n.",
+    "definition": "A person who talks when you wish him to listen."
+  }
+]
+
+***Using Global jQuery Functions***
+
+$(() => {
+  $('#letter-b a')
+  .click((e) => {
+    e.preventDefault();
+    $.getJSON('b.json');
+  });
+});
+
+***Using Global jQuery Functions - the second argument to $.getJSON() function***
+
+$(() => {
+  $('#letter-b a')
+  .click((e) => {
+    e.preventDefault();
+    $.getJSON('b.json', (data) => {});
+  });
+});
+
+
+***Using Global jQuery Functions - Step 3***
+
+$(() => {
+  $('#letter-b a')
+  .click((e) => {
+    e.preventDefault();
+
+    const entryTemplate = (entry) => {
+      const template =
+      `<div class="entry">
+        <h3 class="term">${entry.term}</h3>
+        <div class="part">${entry.part}</div>
+        <div class="definition">
+          ${entry.definition}
+        </div>
+      </div>`
+      return template;
+    }
+
+    $.getJSON('b.json', (data) => {
+      var html = "";
+      for (let entry of data) {
+        html += entryTemplate(entry);
+      }
+      $('#dictionary').html(html);
+    });
+  });
+
+});
+
+***Using Global jQuery Functions - Step 4 (handle the entries with quotations)***
+
+$(() => {
+
+  $('#letter-b a')
+  .click((e) => {
+    e.preventDefault();
+
+    const formatAuthor = entry =>
+      entry.author ?
+        `<div class="quote-author">${entry.author}</div>` :
+        '';
+
+    const formatQuoteLine = (line) =>
+      `<div class="quote-line">${line}</div>`
+
+    const formatQuoteLines = (quote) => {
+      var result = "";
+      for (let line of quote) {
+        result += formatQuoteLine(line)
+      }
+      return result;
+    }
+
+    const formatQuote = entry =>
+      entry.quote ?
+        `
+        <div class="quote">
+          ${formatQuoteLines(entry.quote)}
+          ${formatAuthor(entry)}
+        </div>
+        ` : '';
+
+    const entryTemplate = (entry) => {
+      const template =
+      `<div class="entry">
+        <h3 class="term">${entry.term}</h3>
+        <div class="part">${entry.part}</div>
+        <div class="definition">
+          ${entry.definition}
+          ${formatQuote(entry)}
+        </div>
+      </div>`
+      return template;
+    }
+
+    $.getJSON('b.json', (data) => {
+      var html = "";
+      for (let entry of data) {
+        html += entryTemplate(entry);
+      }
+      $('#dictionary').html(html);
+    });
+  });
+
+});
+
+***Loading an XML Document - Step 1***
+
+<?xml version="1.0" encoding="UTF-8"?>
+<entries>
+  <entry term="DEFAME" part="v.t.">
+    <definition>
+      To lie about another.  To tell the truth about another.
+    </definition>
+  </entry>
+  <entry term="DEFENCELESS" part="adj.">
+    <definition>
+      Unable to attack.
+    </definition>
+  </entry>
+  <entry term="DELUSION" part="n.">
+    <definition>
+      The father of a most respectable family, comprising
+      Enthusiasm, Affection, Self-denial, Faith, Hope,
+      Charity and many other goodly sons and daughters.
+    </definition>
+    <quote author="Mumfrey Mappel">
+      <line>All hail, Delusion!  Were it not for thee</line>
+      <line>The world turned topsy-turvy we should see;
+      </line>
+      <line>For Vice, respectable with cleanly fancies,
+      </line>
+      <line>Would fly abandoned Virtue's gross advances.
+      </line>
+    </quote>
+  </entry>
+</entries>
+
+***Loading an XML Document - jQuery***
+
+$(() => {
+  $('#letter-d a')
+  .click((e) => {
+    e.preventDefault();
+    $.get('d.xml', (data) => {
+
+    });
+  });
+
+});
+
+***Loading an XML Document - Step 3 (use the normal .find(), .filter(), and other traversal methods on the XML document)***
+
+$(() => {
+  $('#letter-d a')
+    .click((e) => {
+      const formatAuthor = entry =>
+        $(entry).attr('author') ?
+        `
+        <div class="quote-author">
+            ${$(entry).attr('author')}
+        </div>
+        ` : '';
+
+      const formatQuoteLines = (quote) => {
+        var result = "";
+        for (let line of $(quote).find('line')) {
+          result += formatQuoteLine(line);
+        }
+        return result;
+      }
+
+      const formatQuoteLine = (line) =>
+        `<div class="quote-line">
+          ${$(line).text()}
+        </div>`
+
+      const formatQuote = (entry) => {
+        return $(entry).find('quote').length ?
+        `
+        <div class="quote">
+          ${formatQuoteLines($(entry).find('quote').get(0))}
+          ${formatAuthor($(entry).find('quote').get(0))}
+        </div>
+        ` : '';
+      }
+
+      const entryTemplate = (entry) => {
+        const template =
+        `
+        <div class="entry">
+          <h3 class="term">${$(entry).attr('term')}</h3>
+          <div class="part">${$(entry).attr('part')}</div>
+          <div class="definition">
+            ${$(entry).find('definition').text()}
+            ${formatQuote(entry)}
+          </div>
+        </div>
+        `
+        return template;
+      }
+
+      $.get('d.xml', (data) => {
+        var html = "";
+        for (let entry of $(data).find('entry')) {
+          html += entryTemplate(entry);
+        }
+        $('#dictionary').html(html);
+      });
+    });
+
+});
+
+***Performing a GET Request***
+
+{
+  'part': 'v.i.',
+  'definition': 'Secretly to overhear a catalogue of the crimes and vices of another or yourself.',
+  'quote': [
+    'A lady with one of her ears applied',
+    'To an open keyhole heard, inside,',
+    'Two female gossips in converse free &mdash;',
+    'The subject engaging them was she.',
+    '"I think," said one, "and my husband thinks',
+    'That she\'s a prying, inquisitive minx!"',
+    'As soon as no more of it she could hear',
+    'The lady, indignant, removed her ear.',
+    '"I will not stay," she said, with a pout,',
+    '"To hear my character lied about!"'
+  ],
+  'author': 'Gopete Sherany'
+}
+
+***Performing a GET Request - HTML***
+
+<div class="letter" id="letter-e">
+  <h3>E</h3>
+  <ul>
+    <li><a href="#">Eavesdrop</a></li>
+    <li><a href="#">Edible</a></li>
+    <li><a href="#">Education</a></li>
+    <li><a href="#">Eloquence</a></li>
+    <li><a href="#">Elysium</a></li>
+    <li><a href="#">Emancipation</a></li>
+    <li><a href="#">Emotion</a></li>
+    <li><a href="#">Envelope</a></li>
+    <li><a href="#">Envy</a></li>
+    <li><a href="#">Epitaph</a></li>
+    <li><a href="#">Evangelist</a></li>
+  </ul>
+</div>
+
+***Performing a GET Request - jQuery***
+
+$('#letter-e a')
+  .click((e) => {
+    e.preventDefault();
+
+    const requestData = {
+      term: $(e.target).text()
+    };
+
+    $.get('/api/e', requestData, (data) => {
+      const html = entryTemplate(data);
+      $('#dictionary').html(html);
+    });
+  });
+
+***Serializing a Form - HTML***
+
+<div class="letter" id="letter-f">
+  <h3>F</h3>
+  <form action="#">
+  <input type="text" name="term" value="" id="term" />
+  <input type="submit" name="search" value="search"
+    id="search" />
+  </form>
+</div>
+
+***Serializing a Form - Step 2 (prepare a form submission and craft the proper query parameters)***
+
+$(() => {
+  $('#letter-f form')
+  .submit((e) => {
+    e.preventDefault();
+
+    $.post('/api/f',
+      { term: $('input[name="term"]').val() },
+      (data) => {
+        var html = "";
+        for (let entry of data) {
+          html += entryTemplate(entry);
+        }
+        $('#dictionary').html(html);
+      }
+    );
+  });
+
+});
+
+
+***Serializing a Form - Step 3 (The .serialize() function)***
+
+$(() => {
+  $('#letter-f form')
+  .submit((e) => {
+    e.preventDefault();
+
+    $.post('/api/f',
+      $(e.target).serialize(),
+      (data) => {
+        var html = "";
+        for (let entry of data) {
+          html += entryTemplate(entry);
+        }
+        $('#dictionary').html(html);
+      }
+    );
+  });
+
+});
+
+***Keeping an Eye on the Request - Step 1***
+
+$(() => {
+  const $loading = $('<div/>')
+  .attr('id', 'loading')
+    .text('Loading...')
+  .insertBefore('#dictionary');
+ 
+  $(document)
+  .ajaxStart(() => {
+    $loading.show();
+  })
+  .ajaxStop(() => {
+    $loading.hide();
+  });
+});
+
+***Performing Ajax Calls on Page Load***
+
+Promise.all([
+  $.get('a.html'),
+  $.ready
+]).then(([content, jquery]) => {
+  $('#dictionary')
+  .hide()
+  .html(content)
+  .fadeIn();
+});
+
+***Error Handling***
+
+$(() => {
+
+  $('#letter-e a')
+    .click((e) => {
+      e.preventDefault();
+
+      $.get('notfound', (data) => {
+        $('#dictionary').html(data);
+      }).fail((xhr) => {
+        $('#dictionary')
+        .html(`An error occurred:
+          ${xhr.status}
+          ${xhr.responseText}
+        `);
+      });
+    });
+
+});
+
+

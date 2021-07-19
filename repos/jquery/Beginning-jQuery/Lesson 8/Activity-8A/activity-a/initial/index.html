@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson 8 - Activity A</title>
+
+    <link rel="stylesheet" href="activity-a.css" type="text/css" />
+
+    <script src="jquery.js"></script>
+    <script src="activity-a.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Lesson 8 - Activity A</h1>
+      <form target="#">
+        <label for="price">Max Price:</label>
+        <input
+          type="number"
+          name="price"
+          placeholder="2000.0"
+          step="0.01"
+          min="0"
+        />
+        <input type="button" name="search" value="Search" />
+      </form>
+      <table>
+        <thead>
+          <tr>
+            <th>Stock Check Date</th>
+            <th>Manufacturer</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2017-01-01</td>
+            <td>Apple</td>
+            <td>iPhone 7 - 32GB</td>
+            <td>20</td>
+            <td>1000.00</td>
+          </tr>
+          <tr>
+            <td>2017-01-01</td>
+            <td>Google</td>
+            <td>Pixel - 32GB</td>
+            <td>32</td>
+            <td>800.00</td>
+          </tr>
+          <tr>
+            <td>2017-02-02</td>
+            <td>SanDisk</td>
+            <td>SD Card - 32GB</td>
+            <td>10</td>
+            <td>80.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

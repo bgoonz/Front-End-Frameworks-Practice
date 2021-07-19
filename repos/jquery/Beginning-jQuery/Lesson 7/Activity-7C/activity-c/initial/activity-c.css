@@ -1,0 +1,14 @@
+.post img {
+  float: left;
+  padding-right: 10px;
+}
+
+.post {
+  line-height: 50px;
+  height: 50px;
+}
+
+#profile .profile-body {
+  text-align: center;
+  font-size: 50px;
+}

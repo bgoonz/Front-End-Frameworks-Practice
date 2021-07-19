@@ -1,0 +1,24 @@
+{
+  "name": "l6-activity-a",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Lesson 6 - Activity C",
+  "author": "Gregory Roodt",
+  "scripts": {
+    "api-server": "node ./api/server.js",
+    "dev-server": "webpack-dev-server",
+    "server": "npm-run-all -p api-server dev-server"
+  },
+  "engines": {
+    "node": "^8.3.0",
+    "yarn": "^0.27.0"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "morgan": "^1.8.2",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

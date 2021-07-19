@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Lesson 7 - Activity C</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css"
+    />
+    <link rel="stylesheet" href="activity-c.css" />
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page">
+      <div
+        class="ui-bar"
+        data-role="toolbar"
+        data-type="header"
+        data-position="fixed"
+      >
+        <h1>Social App</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <ul>
+          <li><a href="#posts">Home</a></li>
+          <li><a href="#new">New Post</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- The 'Home' page. Add appropriate navbar navigation and state. -->
+    <div id="posts" data-role="page">
+      <div
+        class="ui-bar"
+        data-role="toolbar"
+        data-type="header"
+        data-position="fixed"
+      >
+        <h1>Social App</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <!-- navbar goes here -->
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="#posts" class="ui-btn-active ui-state-persist">Home</a>
+            </li>
+            <li><a href="#new">New Post</a></li>
+            <li><a href="#profile">Profile</a></li>
+          </ul>
+        </div>
+        <div role="main" class="ui-content">
+          <ul data-role="listview">
+            <li class="post">
+              <img src="img/Profile1.png" />This is a post from User 1
+            </li>
+            <li class="post">
+              <img src="img/Profile2.png" />This is a post from User 2
+            </li>
+            <li class="post">
+              <img src="img/Profile3.png" />This is a post from User 3
+            </li>
+            <li class="post">
+              <img src="img/Profile4.png" />This is a post from User 4
+            </li>
+            <li class="post">
+              <img src="img/Profile5.png" />This is a post from User 5
+            </li>
+            <li class="post">
+              <img src="img/Profile6.png" />This is a post from User 6
+            </li>
+            <li class="post">
+              <img src="img/Profile1.png" />This is a post from User 1
+            </li>
+            <li class="post">
+              <img src="img/Profile2.png" />This is a post from User 2
+            </li>
+            <li class="post">
+              <img src="img/Profile3.png" />This is a post from User 3
+            </li>
+            <li class="post">
+              <img src="img/Profile4.png" />This is a post from User 4
+            </li>
+            <li class="post">
+              <img src="img/Profile5.png" />This is a post from User 5
+            </li>
+            <li class="post">
+              <img src="img/Profile6.png" />This is a post from User 6
+            </li>
+            <li class="post">
+              <img src="img/Profile1.png" />This is a post from User 1
+            </li>
+            <li class="post">
+              <img src="img/Profile2.png" />This is a post from User 2
+            </li>
+            <li class="post">
+              <img src="img/Profile3.png" />This is a post from User 3
+            </li>
+            <li class="post">
+              <img src="img/Profile4.png" />This is a post from User 4
+            </li>
+            <li class="post">
+              <img src="img/Profile5.png" />This is a post from User 5
+            </li>
+            <li class="post">
+              <img src="img/Profile6.png" />This is a post from User 6
+            </li>
+            <li class="post">
+              <img src="img/Profile1.png" />This is a post from User 1
+            </li>
+            <li class="post">
+              <img src="img/Profile2.png" />This is a post from User 2
+            </li>
+            <li class="post">
+              <img src="img/Profile3.png" />This is a post from User 3
+            </li>
+            <li class="post">
+              <img src="img/Profile4.png" />This is a post from User 4
+            </li>
+            <li class="post">
+              <img src="img/Profile5.png" />This is a post from User 5
+            </li>
+            <li class="post">
+              <img src="img/Profile6.png" />This is a post from User 6
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- The 'New Post' page. Add appropriate navbar navigation and state. -->
+    <div id="new" data-role="page">
+      <div
+        class="ui-bar"
+        data-role="toolbar"
+        data-type="header"
+        data-position="fixed"
+      >
+        <h1>Social App</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <!-- navbar goes here -->
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#posts">Home</a></li>
+            <li>
+              <a href="#new" class="ui-btn-active ui-state-persist">New Post</a>
+            </li>
+            <li><a href="#profile">Profile</a></li>
+          </ul>
+        </div>
+        <div role="main" class="ui-content">
+          <h3>New Post:</h3>
+          <textarea></textarea>
+          <input type="submit" value="Post" />
+        </div>
+      </div>
+    </div>
+
+    <!-- The 'Profile' page. Add appropriate navbar navigation and state. -->
+    <div id="profile" data-role="page">
+      <div
+        class="ui-bar"
+        data-role="toolbar"
+        data-type="header"
+        data-position="fixed"
+      >
+        <h1>Social App</h1>
+      </div>
+      <div role="main" class="ui-content">
+        <!-- navbar goes here -->
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#posts">Home</a></li>
+            <li><a href="#new">New Post</a></li>
+            <li>
+              <a href="#profile" class="ui-btn-active ui-state-persist"
+                >Profile</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div role="main" class="profile-body ui-content">
+          <img src="profile.png" />
+          <div>Name: Joe Bloggs</div>
+          <div>Age: 24</div>
+          <div>Follows: 1024</div>
+          <div>Followers: 1024</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

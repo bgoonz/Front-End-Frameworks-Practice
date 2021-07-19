@@ -1,0 +1,883 @@
+***A Simple Style Switcher***
+
+body.large .chapter { 
+  font-size: 1.5em; 
+}
+
+***The .on() function***
+
+$(() => {
+  $('#switcher-large')
+    .on('click', () => { 
+      $('body').addClass('large'); 
+    }); 
+});
+
+***Enabling the Other Buttons - Step 1***
+
+$(() => {
+  $('#switcher-default')
+    .on('click', () => { 
+      $('body')
+        .removeClass('narrow')
+        .removeClass('large'); 
+    });
+
+  $('#switcher-narrow')
+    .on('click', () => { 
+      $('body')
+        .addClass('narrow')
+        .removeClass('large'); 
+    }); 
+
+  $('#switcher-large')
+    .on('click', () => { 
+      $('body')
+        .removeClass('narrow')
+        .addClass('large'); 
+    }); 
+});
+
+***CSS rule for the narrow class***
+
+body.narrow .chapter { 
+  width: 250px; 
+}
+
+***Making Use of Event Handler Context***
+
+.selected { 
+  font-weight: bold; 
+}
+
+***Making Use of Event Handler Context - Step 4 (the correct order)***
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected')
+    .on('click', (event) => {
+      $('body')
+        .removeClass('narrow')
+        .removeClass('large');
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+    });
+
+  $('#switcher-narrow')
+    .on('click', (event) => {
+      $('body')
+        .addClass('narrow')
+        .removeClass('large');
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+  });
+
+  $('#switcher-large')
+    .on('click', (event) => {
+      $('body')
+        .removeClass('narrow')
+        .addClass('large');
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+  });
+});
+
+***Making Use of Event Handler Context - Step 5 (factor the highlighting routine out into a separate handler)***
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected')
+    .on('click', () => {
+      $('body')
+        .removeClass('narrow')
+        .removeClass('large');
+    });
+  $('#switcher-narrow')
+    .on('click', () => {
+      $('body')
+        .addClass('narrow')
+        .removeClass('large');
+    });
+
+  $('#switcher-large')
+    .on('click', () => {
+      $('body')
+        .removeClass('narrow')
+        .addClass('large');
+    });
+
+  // This resets the 'selected' state for all buttons and is factored out because it is common logic
+  $('#switcher button')
+    .on('click', (event) => {
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+    });
+});
+
+***Consolidating Code Using Event Context***
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected')
+    .on('click', () => {
+      $('body').removeClass();
+    });
+  $('#switcher-narrow')
+    .on('click', () => {
+      $('body')
+        .removeClass()
+        .addClass('narrow');
+    });
+
+  $('#switcher-large')
+    .on('click', () => {
+      $('body')
+        .removeClass()
+        .addClass('large');
+    });
+
+  $('#switcher button')
+    .on('click', (event) => {
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+    });
+});
+
+***Consolidating Code Using Event Context - factoring into our general button click handler***
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher button')
+    .on('click', (event) => {
+      $('body')
+        .removeClass();
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+    });
+
+  $('#switcher-narrow')
+    .on('click', () => {
+      $('body')
+        .addClass('narrow');
+    });
+
+  $('#switcher-large')
+    .on('click', () => {
+      $('body')
+        .addClass('large');
+    });
+});
+
+***Consolidating Code Using Event Context - getting rid of the specific handlers entirely***
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher button')
+    .on('click', (event) => {
+      const bodyClass = event.target.id.split('-')[1];
+      $('body')
+        .removeClass()
+        .addClass(bodyClass);
+
+      $('#switcher button')
+        .removeClass('selected');
+
+      $(event.target)
+        .addClass('selected');
+    });
+});
+
+
+***Consolidating Code Using Event Context - split into multiple statements***
+
+const buttonClickedId = event.target.id; // CSS id of button (switcher-default, switcher-narrow, switcher-large)
+const buttonClickedParts = buttonClickedIn.split('-'); // Split the id into 2 parts at the '-' character
+const bodyClass = buttonClickedParts[1]; // Second part after the '-' (default, narrow, large)
+
+
+***Shorthand Events***
+
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher button')
+    .click((event) => {
+      const bodyClass = event.target.id.split('-')[1];
+      $('body')
+        .removeClass()
+        .addClass(bodyClass);
+      $('#switcher button')
+        .removeClass('selected');
+      $(event.target)
+        .addClass('selected');
+  });
+});
+
+***Showing and Hiding Page Elements***
+
+.hidden { 
+  display: none; 
+}
+
+***Showing and Hiding Page Elements - add or remove a class***
+
+$(() => {
+  $('#switcher h3')
+    .click((event) => {
+      $(event.target)
+        .siblings('button')
+        .toggleClass('hidden');
+    });
+});
+
+***Event Propagation - CSS***
+
+.hover { 
+  cursor: pointer; 
+  background-color: #afa; 
+}
+
+***Event Propagation - jQuery***
+
+$(() => {
+  $('#switcher h3')
+    .hover((event) => {
+      $(event.target).addClass('hover');
+    }, (event) => {
+      $(event.target).removeClass('hover');
+    });
+});
+
+***The Journey of an Event***
+
+<div class="foo"> 
+  <span class="bar"> 
+    <a href="http://www.example.com/"> 
+      The quick brown fox jumps over the lazy dog. 
+    </a> 
+  </span> 
+  <p> 
+    How razorback-jumping frogs can level six piqued gymnasts! 
+  </p> 
+</div>
+
+***Altering the Journey – The Event Object***
+
+$(() => {
+  $('#switcher')
+    .click(() => {
+      $('#switcher button').toggleClass('hidden'); 
+    }); 
+});
+
+***Altering the Journey – The Event Object - use the event object in our handlers***
+
+$(() => {
+  $('#switcher')
+    .click((event) => { 
+      $('#switcher button').toggleClass('hidden'); 
+    }); 
+});
+
+***Event Targets***
+
+$(() => {
+  $('#switcher')
+    .click((event) => {
+      if (event.target == event.currentTarget) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    });
+});
+
+***Stopping Event Propagation***
+
+$(() => {
+  $('#switcher')
+    .click((event) => {
+      $(event.currentTarget)
+        .children('button')
+        .toggleClass('hidden');
+    });
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher button')
+    .click((event) => {
+      const bodyClass = event.target.id.split('-')[1];
+
+      $('body')
+        .removeClass()
+        .addClass(bodyClass);
+
+      $('#switcher button')
+        .removeClass('selected');
+
+      $(event.target)
+        .addClass('selected');
+
+      event.stopPropagation();
+    });
+});
+
+$(() => {
+  $('#switcher h3')
+    .hover((event) => {
+      $(event.target).addClass('hover');
+    }, (event) => {
+      $(event.target).removeClass('hover');
+    });
+});
+
+***Delegating Events - Step 1***
+
+$(() => {
+  $('#switcher')
+    .click((event) => {
+      $(event.currentTarget)
+        .children('button')
+        .toggleClass('hidden');
+    });
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+      .click((event) => {
+        if ($(event.target).is('button')) {
+          const bodyClass = event.target.id.split('-')[1];
+
+          $('body')
+            .removeClass()
+            .addClass(bodyClass);
+
+          $('#switcher button')
+            .removeClass('selected');
+
+          $(event.target)
+            .addClass('selected')
+
+          event.stopPropagation();
+        }
+    });
+});
+
+$(() => {
+  $('#switcher h3')
+    .hover((event) => {
+      $(event.target).addClass('hover');
+    }, (event) => {
+      $(event.target).removeClass('hover');
+    });
+});
+
+
+***Delegating Events - Step 2 (toggle the hover class while the user's mouse is over any part of it)***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher')
+    .click((event) => {
+      if (!$(event.target).is('button')) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    });
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+  $('#switcher')
+    .click((event) => {
+      if ($(event.target).is('button')) {
+        const bodyClass = event.target.id.split('-')[1];
+
+        $('body')
+          .removeClass()
+          .addClass(bodyClass);
+        $(event.target)
+          .addClass('selected')
+          .siblings('button')
+          .removeClass('selected');
+      }
+  });
+});
+
+
+***Delegating Events - Step 3 (avoid code repetition)***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher')
+    .click((event) => {
+      if (!$(event.target).is('button')) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    });
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+  $('#switcher')
+    .click((event) => {
+      if ($(event.target).is('button')) {
+        const bodyClass = event.target.id.split('-')[1];
+        $('body')
+          .removeClass()
+          .addClass(bodyClass);
+        $(event.target)
+          .addClass('selected')
+          .siblings('button')
+          .removeClass('selected');
+      } else {
+        $(event.target)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    });
+});
+
+
+***Using Built-in Event Delegation Capabilities***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+     event.stopPropagation();
+   })
+   .on('click', (e) => {
+     $(event.currentTarget)
+       .children('button')
+       .toggleClass('hidden');
+   });
+});
+
+
+***Removing an Event Handler - Step 1***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+     event.stopPropagation();
+   })
+   .on('click', (event) => {
+     $(event.currentTarget)
+       .children('button')
+       .toggleClass('hidden');
+   });
+
+   $('#switcher-narrow, #switcher-large')
+     .click(() => {
+       $('#switcher').off('click');
+   });
+});
+
+
+***Giving Namespaces to Event Handlers - Step 1***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+     event.stopPropagation();
+   })
+   .on('click.collapse', (event) => {
+     if (!$(event.target).is('button')) {
+       $(event.currentTarget)
+         .children('button')
+         .toggleClass('hidden');
+     }
+   });
+
+   $('#switcher-narrow, #switcher-large')
+    .click(() => {
+      $('#switcher').off('click.collapse');
+    });
+
+});
+
+
+***Rebinding Events***
+
+  const toggleSwitcher = (e) => {
+    if (!$(e.target).is('button')) {
+      $(e.currentTarget)
+        .children('button')
+        .toggleClass('hidden');
+    }
+  };
+
+***Rebinding Events - Step 2 (bind the toggleSwitcher() function again)***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+
+     event.stopPropagation();
+   })
+
+   const toggleSwitcher = (event) => {
+      if (!$(event.target).is('button')) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    };
+
+    $('#switcher').on('click.collapse', toggleSwitcher);
+
+    $('#switcher-narrow, #switcher-large')
+      .click(() => {
+        $('#switcher').off('click.collapse');
+    });
+
+    $('#switcher-default')
+      .click(() => {
+        $('#switcher').on('click.collapse', toggleSwitcher);
+    });
+});
+
+
+***Rebinding Events - Step 3 (unbind the handler when a user clicks on any button)***
+
+$(() => {
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+
+     event.stopPropagation();
+   })
+
+   const toggleSwitcher = (event) => {
+      if (!$(event.target).is('button')) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    };
+
+    $('#switcher')
+      .on('click', toggleSwitcher);
+
+    $('#switcher button')
+      .click((event) => {
+        $('#switcher').off('click', toggleSwitcher);
+
+        if (event.target.id == 'switcher-default') {
+          $('#switcher').on('click', toggleSwitcher);
+        }
+      });
+
+});
+
+***Simulating User Interaction***
+
+$(() => { 
+  $('#switcher').trigger('click'); 
+});
+
+***Simulating User Interaction - trigger the action rather than bind it***
+
+$(() => {
+  $('#switcher').click(); 
+});
+
+***Reacting to Keyboard Events***
+
+$(() => {
+
+  const triggers = {
+    D: 'default',
+    N: 'narrow',
+    L: 'large'
+  };
+
+  $(document)
+  .keyup((event) => {
+    const key = String.fromCharCode(event.which);
+
+    if (key in triggers) {
+      $(`#switcher-${triggers[key]}`).click();
+    }
+  });
+
+  const toggleHover = (event) => {
+    $(event.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher')
+    .hover(toggleHover, toggleHover);
+});
+
+$(() => {
+  $('#switcher-default')
+    .addClass('selected');
+
+  $('#switcher')
+   .on('click', 'button', (event) => {
+     const bodyClass = event.target.id.split('-')[1];
+
+     $('body')
+       .removeClass()
+       .addClass(bodyClass);
+     $(event.target)
+       .addClass('selected')
+       .siblings('button')
+       .removeClass('selected');
+
+     event.stopPropagation();
+   })
+
+   const toggleSwitcher = (event) => {
+      if (!$(event.target).is('button')) {
+        $(event.currentTarget)
+          .children('button')
+          .toggleClass('hidden');
+      }
+    };
+
+    $('#switcher')
+      .on('click', toggleSwitcher);
+
+    $('#switcher button')
+      .click((event) => {
+        $('#switcher').off('click', toggleSwitcher);
+
+        if (event.target.id == 'switcher-default') {
+          $('#switcher').on('click', toggleSwitcher);
+        }
+      });
+
+      $(() => {
+  $('#switcher').trigger('click');
+});
+
+
+});
+
+***Reacting to Keyboard Events - factor our code into a function so that more than one handler can call it***
+
+$(() => {
+  // Enable hover effect on the style switcher
+  const toggleHover = (e) => {
+    $(e.currentTarget).toggleClass('hover');
+  };
+
+  $('#switcher').hover(toggleHover, toggleHover);
+
+  // Allow the style switcher to expand and collapse.
+  const toggleSwitcher = (e) => {
+    if (!$(e.target).is('button')) {
+      $(e.currentTarget)
+        .children('button')
+        .toggleClass('hidden');
+    }
+  };
+
+  $('#switcher')
+    .on('click', toggleSwitcher)
+    // Simulate a click so we start in a collaped state.
+    .click();
+
+  // The setBodyClass() function changes the page style.
+  // The style switcher state is also updated.
+  const setBodyClass = (className) => {
+    $('body')
+      .removeClass()
+      .addClass(className);
+
+    $('#switcher button').removeClass('selected');
+    $(`#switcher-${className}`).addClass('selected');
+    $('#switcher').off('click', toggleSwitcher);
+
+    if (className == 'default') {
+      $('#switcher').on('click', toggleSwitcher);
+    }
+  };
+
+  // Begin with the switcher-default button "selected"
+  $('#switcher-default').addClass('selected');
+
+  // Map key codes to their corresponding buttons to click
+  const triggers = {
+    D: 'default',
+    N: 'narrow',
+    L: 'large'
+  };
+
+  // Call setBodyClass() when a button is clicked.
+  $('#switcher')
+    .click((e) => {
+      if ($(e.target).is('button')) {
+        setBodyClass(e.target.id.split('-')[1]);
+      }
+    });
+
+  // Call setBodyClass() when a key is pressed.
+  $(document)
+    .keyup((e) => {
+      const key = String.fromCharCode(e.which);
+
+      if (key in triggers) {
+        setBodyClass(triggers[key]);
+      }
+    });
+});

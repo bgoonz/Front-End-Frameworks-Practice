@@ -1,0 +1,11 @@
+#container {
+  text-align: center;
+}
+
+#square {
+  margin: 0 auto;
+  display: block;
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "l9-topic-a",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Lesson 9 - Topic A",
+  "author": "Gregory Roodt",
+  "scripts": {
+    "server": "webpack-dev-server"
+  },
+  "engines": {
+    "node": "^8.3.0",
+    "yarn": "^0.27.0"
+  },
+  "dependencies": {
+    "webpack": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

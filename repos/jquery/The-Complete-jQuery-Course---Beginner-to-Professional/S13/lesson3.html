@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>jQuery AJAX getting web APIs</title></head>
+<body>
+    <h1>jQuery AJAX APIs</h1>
+    <input type="button" value="search" id="searchButton">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('#searchButton').click(function(){
+               searchYoutube();
+           })
+       })
+        
+        function searchYoutube(){
+            console.log('clicked');
+            $.ajax({
+                url:'https://www.googleapis.com/youtube/v3/search',
+                dataType:'json',
+                type:'GET',
+                data:{
+                    key:'******YOUR**API**KEY**VALUE********',
+                    q:'test',
+                    part:'snippet'
+                }
+            }).done(function(data){
+                console.log(data);
+            })
+        }
+        
+        //https://www.googleapis.com/youtube/v3/search?q=test&part=snippet&key=******YOUR**API**KEY**VALUE********
+    </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+Language:
+  - label: JavaScript
+    filter: 'language:"JavaScript"'
+  - label: HTML
+    filter: 'language:"HTML"'
+  - label: CSS
+    filter: 'language:"CSS"'
+Star Count:
+  - label: 5000+
+    filter: 'stars:">=5000"'
+  - label: 10000+
+    filter: 'stars:">=10000"'
+  - label: 20000+
+    filter: 'stars:">=20000"'

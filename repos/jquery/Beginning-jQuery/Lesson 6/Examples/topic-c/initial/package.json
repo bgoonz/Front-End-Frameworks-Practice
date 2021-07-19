@@ -1,0 +1,21 @@
+{
+  "name": "l6-activity-a",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "description": "Lesson 6 - Topic C",
+  "author": "Gregory Roodt",
+  "scripts": {
+    "dev-server": "webpack-dev-server",
+    "server": "npm-run-all -p dev-server"
+  },
+  "engines": {
+    "node": "^8.3.0",
+    "yarn": "^0.27.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.0.2",
+    "webpack": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

@@ -1,0 +1,11 @@
+$(function () {
+    $('.highlight').css('color', 'red')
+    $('.highlight').html('First')
+    $('.highlight').html('Default')
+    $('.highlight:first').html('First')
+    $('li:first-child').html('The one')
+    $('.highlight:last').html('Last')
+    $('.highlight:even').html('EVEN')
+    $('.highlight:odd').html('ODD')
+    $('p:last').html('SECOND')
+})

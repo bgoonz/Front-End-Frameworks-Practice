@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>jQuery Complete Course</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome Complete jQuery Course</h1>
+        <div class="btn btn-1">Click Me 1</div>
+        <div class="btn btn-2">Click Me 2</div>
+        <div class="btn btn-3">Click Me 3</div>
+        <div id="output1"> Hello World </div>
+        <div id="output5">
+            <form id="myForm">
+                <input type="text" name="input1" value="Hello">
+                <input type="text" name="input2" value="World">
+                <select class="sel" name="sel">
+                    <option value="blue">blue</option>
+                    <option value="red">red</option>
+                    <option value="green">green</option>
+                </select>
+                <input type="submit" name="submit" value="submit"> </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="SourceFiles/lesson59.js"></script>
+</body>
+</html>

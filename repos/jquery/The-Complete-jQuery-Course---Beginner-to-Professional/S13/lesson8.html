@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>jQuery AJAX getting web APIs</title></head>
+<body>
+    <h1>jQuery AJAX APIs</h1>
+    What did you want to find?
+    <input type="text" name="search" id="search">
+    <input type="button" value="search" id="searchButton">
+    <div class="buttonOptions">
+    <input type="button" class="tokenClass" value="Previous">
+    <input type="button" class="tokenClass" value="Next">
+    </div>    
+    <div id="output"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var pageToken = {};
+       $(document).ready(function(){
+           $('#searchButton').click(function(){
+               searchYoutube();
+           })
+           $('.tokenClass').click(function(){
+               pageToken.current = $(this).val()=='Next' ? pageToken.nextPage : pageToken.prevPage;
+               searchYoutube();
+           })
+       })
+        
+        function searchYoutube(){
+            $.ajax({
+                url:'https://www.googleapis.com/youtube/v3/search',
+                dataType:'json',
+                type:'GET',
+                data:{
+                    key:'******YOUR**API**KEY**VALUE********',
+                    q:$('#search').val(),
+                    part:'snippet',
+                    maxResults:25,
+                    pageToken: pageToken.current
+                }
+            }).done(function(data){
+
+                pageToken.nextPage = data.nextPageToken;
+                pageToken.prevPage = data.prevPageToken;
+                console.log(pageToken)
+                var html = "";
+                $.each(data['items'],function(index,value){
+                    html += '<div><div class="title">'+value.snippet.title+'</div>';
+                    html += '<div><div class="url"><a href="https://www.youtube.com/watch?v='+value.id.videoId+'" target="_blank">'+value.id.videoId+'</a></div>';
+                    html += '<div><img  class="thumbnail" src="'+value.snippet.thumbnails.medium.url+'"></div>';
+                    html += '</div>';
+                })
+                $('#output').html(html);
+            })
+        }
+        
+        //https://www.googleapis.com/youtube/v3/search?q=test&part=snippet&key=******YOUR**API**KEY**VALUE********
+        //https://developers.google.com/speed/libraries/
+        //https://developers.google.com/youtube/v3/docs/videos/list
+       //https://accounts.google.com/SignUp //https://console.developers.google.com/apis/credentials
+    </script>
+    </body>
+</html>

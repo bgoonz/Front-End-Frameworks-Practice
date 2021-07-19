@@ -1,0 +1,82 @@
+$(function () {
+    $('.btn').css({
+        'border': '1px solid black'
+        , 'width': '150px'
+        , 'padding': '10px'
+    })
+    $('.btn-1').click(function (e) {
+        var url = 'http://api.icndb.com/jokes/random/';
+        $.getJSON(url, function (data) {
+            $('#output1').html(data.value.joke);
+        })
+    })
+    $('.btn-2').click(function (e) {
+        var url = 'https://swapi.co/api/people/?format=json';
+        $.getJSON(url, function (data) {
+            $.each(data.results,function(i,v){
+                $('#output1').append(v.name + '<br>');
+            });
+        })
+    })
+    $('.btn-3').click(function (e) {
+        var url = 'https://raw.githubusercontent.com/mattdesl/marvel-characters/master/characters.json';
+        $.getJSON(url, function (data) {
+             $.each(data,function(i,v){
+                $('#output1').append(v + '<br>');
+            });
+  
+        })
+        
+        
+    })
+})
+
+<html>
+<head>
+    <title>jQuery Complete Course</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Welcome Complete jQuery Course</h1>
+        <div class="btn">Click Me 1</div>
+        <div class="btn">Click Me 2</div>
+        <div class="btn">Click Me 3</div>
+        <div id="output1">
+        Hello World
+        </div>
+        <div id="output2">
+        Hello World <img src="http://via.placeholder.com/450x150"><br>
+        </div>
+        <div id="output3">
+          <img src="http://via.placeholder.com/350x150"><br>
+            
+            <img src="http://via.placeholder.com/550x150"><br>
+            <img src="http://via.placeholder.com/250x150"><br>
+            <img src="http://via.placeholder.com/300x200"><br>
+        </div>
+        <div id="output4">
+            <div class="highlight" title="element 1">Welcome to jQuery 1</div>
+            <div class="highlight" title="element 2">Welcome to jQuery 2</div>
+            <div class="highlight" title="element 3">Welcome to jQuery 3</div>
+            <div class="highlight" title="element 4">Welcome to jQuery 4</div>
+            <div class="highlight" title="element 5">Welcome to jQuery 5</div>
+            <div class="highlight" title="element 6">Welcome to jQuery 6</div>
+            <div class="highlight" title="element 7">Welcome to jQuery 7</div>
+            <div class="highlight" title="element 8">Welcome to jQuery 8</div>
+            <div class="highlight" title="element 9">Welcome to jQuery 9</div>
+            <div class="highlight" title="element 10">Welcome to jQuery 10</div>  <div class="highlight" title="element 10">Welcome to jQuery 10</div>  <div class="highlight" title="element 10">Welcome to jQuery 10</div>  <div class="highlight" title="element 10">Welcome to jQuery 10</div>  <div class="highlight" title="element 10">Welcome to jQuery 10</div>  <div class="highlight" title="element 10">Welcome to jQuery 10</div>
+        </div>
+        <div id="output5">
+            <input type="text" id="input1" value="Hello">
+            <input type="text" id="input2" value="World">
+            <select class="sel">
+                <option value="blue">blue</option>
+                <option value="red">red</option>
+                <option value="green">green</option>
+            </select>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="SourceFiles/lesson45.js"></script>
+</body>
+</html>

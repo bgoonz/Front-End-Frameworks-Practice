@@ -1,0 +1,21 @@
+{
+  "name": "Section_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5",
+    "jquery": "^3.2.1",
+    "jquery-cycle": "^3.0.3",
+    "jquery-ui": "^1.12.1",
+    "jquery-ui-dist": "^1.12.1",
+    "jquery.cookie": "^1.4.1"
+  }
+}

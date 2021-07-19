@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>jQuery Complete Course</title>
+</head>
+<body>
+    <h1>Welcome to jQuery Course</h1>
+    <div>
+        <form id="myForm">
+            <label for="first">FirstName: </label>
+            <input type="text" name="first">
+            <br>
+            <label for="last">LastName: </label>
+            <input type="text" name="last">
+            <br>
+            <label for="email">Email: </label>
+            <input type="text" name="email">
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" name="password">
+            <br>
+            <button type="button">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                validateMe();
+            })
+            function validateMe() {
+                $('label').css('color','black');
+                var error = [];
+                var emailReg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                $('#myForm input').each(function () {
+                    var inputName = $(this).attr('name');
+                    if ($(this).val().length > 4) {
+                        if(inputName=='email' && !emailReg.test($(this).val())) {
+                            error.push($(this).attr('name'));
+                        }
+                    }
+                    else {
+                        error.push($(this).attr('name'));
+                    }
+                })
+                if (error.length == 0) {
+                    $('#myForm').submit();
+                }else{
+                    for(x=0;x<error.length;x++){
+                    $('label[for="'+error[x]+'"]').css('color','red');
+                    //$('input[name="'+error[x]+'"]').after('<span>Error</span>')
+                     console.log(error[x])
+                    }
+                    
+                }
+            }
+        })
+        //https://regexr.com/
+    </script>
+</body>
+</html>

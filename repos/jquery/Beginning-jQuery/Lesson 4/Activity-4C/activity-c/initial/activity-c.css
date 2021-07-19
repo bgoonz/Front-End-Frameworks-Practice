@@ -1,0 +1,21 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+#container {
+  text-align: center;
+}
+
+#square {
+  margin: 0 auto;
+  position: absolute;
+  background-color: blue;
+  width: 10px;
+  height: 10px;
+  left: 0;
+  right: 0;
+}

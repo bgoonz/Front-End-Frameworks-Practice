@@ -1,0 +1,9 @@
+#toc {
+  background-color: #ccc;
+  padding: 10px;
+  list-style-type: none;
+}
+
+#toc::before {
+  content: "Table of contents:";
+}

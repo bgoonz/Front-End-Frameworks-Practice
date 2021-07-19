@@ -1,0 +1,21 @@
+jQuery Website
+
+https://jquery.com/ - Main
+http://api.jquery.com/ - documentation
+http://jqueryui.com/ - UI
+http://jquery.com/download/ - download
+Online coding playground
+
+https://codepen.io/
+https://jsfiddle.net/
+http://jsbin.com/
+https://liveweave.com/
+Top Resources for jQuery
+
+http://easings.net/ - Easing examples and info
+https://www.tinymce.com/ - WYSIWYG
+https://github.com/formvalidation/formvalidation - form validation
+Editors Free
+
+http://brackets.io/
+https://atom.io/

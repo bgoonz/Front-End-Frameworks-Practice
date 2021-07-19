@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>jQuery AJAX getting web APIs</title></head>
+<body>
+    <h1>jQuery AJAX APIs</h1>
+    <input type="button" value="search" id="searchButton">
+    <div id="output"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+           $('#searchButton').click(function(){
+               searchYoutube();
+           })
+       })
+        
+        function searchYoutube(){
+            $.ajax({
+                url:'https://www.googleapis.com/youtube/v3/search',
+                dataType:'json',
+                type:'GET',
+                data:{
+                    key:'******YOUR**API**KEY**VALUE********',
+                    q:'test',
+                    part:'snippet',
+                    maxResults:25,
+                    pageToken: 'CBkQAA'
+                }
+            }).done(function(data){
+                console.log(data);
+                var nextPage = data.nextPageToken;
+                var prevPage = data.prevPageToken;
+
+                var html = "";
+                $.each(data['items'],function(index,value){
+                    console.log(value.snippet.title);
+                   console.log(value.id.videoId); console.log(value.snippet.thumbnails.medium.url);
+                })
+                $('#output').html(html);
+            })
+        }
+        
+        //https://www.googleapis.com/youtube/v3/search?q=test&part=snippet&key=******YOUR**API**KEY**VALUE********
+        //https://developers.google.com/speed/libraries/
+        //https://developers.google.com/youtube/v3/docs/videos/list
+       //https://accounts.google.com/SignUp //https://console.developers.google.com/apis/credentials
+    </script>
+    </body>
+</html>

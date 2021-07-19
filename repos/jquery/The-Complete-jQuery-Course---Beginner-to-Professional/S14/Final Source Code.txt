@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Exercise Game </title>
+    <style>
+        .score{
+            background:black;
+            color:white;
+            padding:10px;
+            font-size:1.5em;
+        }
+        button{
+            padding:20px;
+            font-size:1.2em;
+            background-color: red;
+            color:white;
+        }
+        .message{
+            font-size:1em;
+            padding:20px;
+        }
+        .game {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .hole {
+            display: inline-block;
+            margin: 10px;
+            width: 20%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .dirt {
+            background-image: url(images/dirt.png);
+            background-size: cover;
+            z-index: 10;
+            position: absolute;
+            height: 50px;
+            bottom: 0px;
+            left: 0px;
+            width: 100%;
+        }
+        
+        .mole {
+            background-image: url(images/mole.png);
+            background-size: cover;
+            z-index: 3;
+            position: absolute;
+            height: 250px;
+            top: 250px;
+            left: 0px;
+            width: 100%;
+            cursor: crosshair;
+        }
+        .wack{
+            max-width:100%;
+            position: absolute;
+            left:0px;
+            top:0px;
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Wack a Mole jQuery SCORE: <span class="score"></span> </h1>
+    <div class="message"></div>
+    <button id="start">Start Game !</button>
+    <div class="game"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var score = 0;
+        var gameover = false;
+        var lastHole = 0;
+        $(function () {
+            $('#start').click(startGame);
+            $('.game').on('click','.mole',hitMole);
+        });
+        function hitMole(){
+            //console.log($(this));
+            $(this).parent().find('img').show();
+            $(this).hide();
+            $(this).parent().find('img').fadeOut(1000);
+            score++;
+            $('.score').text(score);
+        }
+        
+        
+        function startGame() {
+            makeGameBoard();
+            score = 0;
+            $('.score').text(score);
+            startMoles();
+            gameover = false;
+            setTimeout(function () {
+                return gameend();
+            }, 5000);
+        }
+        function startMoles() {
+            var jumpUp = $('.hole' + randomHole() + '> .mole');
+            var timer = Math.round(Math.random() *1000)+400;
+            jumpUp.show();
+            jumpUp.animate({
+                top: '50px'
+            }, 100);
+            //console.log(jumpUp);
+            setTimeout(function () {
+                    jumpUp.animate({
+                        top: '250px'
+                    }, 100);
+                if(!gameover) startMoles();
+                },timer);
+            }
+            function randomHole() {
+                var hole = Math.floor(Math.random() * $('.hole').length);
+                if(hole ==lastHole){
+                    return randomHole();
+                }
+                lastHole = hole;
+                return hole;
+                //console.log(hole);
+            }
+            function gameend() {
+                gameover = true;
+                $('.message').html('GAME OVER');
+            }
+            function makeGameBoard() {
+                var moles = 8;
+                var html = ' ';
+                for (var mole = 0; mole < moles; mole++) {
+                    html += '<div class="hole hole' + mole + '"><div class="mole"></div>';
+                    html += '<img src="images/wack.png" class="wack"><div class="dirt"></div></div>';
+                }
+                $('.game').html(html);
+            }
+    </script>
+</body>
+</html>

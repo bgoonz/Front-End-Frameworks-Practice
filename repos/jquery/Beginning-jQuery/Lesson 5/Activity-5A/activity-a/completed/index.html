@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Activity A</title>
+
+    <link rel="stylesheet" href="activity-a.css">
+
+    <script src="jquery.js"></script>
+    <script src="activity-a.js"></script>
+  </head>
+  <body>
+    <form action=#>
+      <h3>Checkbox Inspection</h3>
+      <input id="mycheckbox" type="checkbox" value="mycheckbox" checked>This my checkbox</input><br />
+      <div><strong>Value of .prop('checked'):&nbsp;</strong><span id="mycheckbox-prop"/></div>
+      <div><strong>Value of .attr('checked'):&nbsp;</strong><span id="mycheckbox-attr"/></div>
+      <div><strong>Value of .val():&nbsp;</strong><span id="mycheckbox-val"/></div>
+      <div><strong>Value of .is(:checked):&nbsp;</strong><span id="mycheckbox-checked"/></div>
+
+      <h3>Textbox Inspection</h3>
+      <input id="mytextbox" type="text" value="mytextbox"/><br />
+      <div><strong>Value of .prop('value'):&nbsp;</strong><span id="mytextbox-prop"/></div>
+      <div><strong>Value of .attr('value'):&nbsp;</strong><span id="mytextbox-attr"/></div>
+      <div><strong>Value of .val():&nbsp;</strong><span id="mytextbox-val"/></div>
+
+      <h3>Select Inspection</h3>
+      <select id="myselect">
+        <option value="option1">Option 1</option>
+        <option value="option2" selected>Option 2</option>
+        <option value="option3">Option 3</option>
+      </select>
+      <div><strong>Value of .val():&nbsp;</strong><span id="myselect-val"/></div>
+    </form>
+  </body>
+</html>

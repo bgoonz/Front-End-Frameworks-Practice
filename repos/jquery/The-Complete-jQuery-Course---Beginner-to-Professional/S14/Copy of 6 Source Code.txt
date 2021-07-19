@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Exercise Game </title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <h1>Wack a Mole jQuery</h1>
+    <span class="score"></span>
+    <div class="message"></div>
+    <button id="start">Start Game !</button>
+    <div class="game"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        var score = 0;
+        var gameover = false;
+        
+        $(function(){
+           $('#start').click(startGame); 
+        });
+        
+        function startGame(){
+            makeGameBoard();
+            score=0;
+            $('.score').text(score);
+            // start gameplay
+            gameover = false;
+            setTimeout(function(){
+                return gameend();
+            },5000);
+        }
+        
+        function gameend(){
+            gameover = true;
+            $('.message').html('GAME OVER');
+        }
+        
+        function makeGameBoard(){
+            var moles = 8;
+            var html = ' ';
+            for(var mole=0;mole<moles;mole++){
+                html += '<div class="hole hole'+mole+'"><div class="mole"></div>';
+                html += '<div class="dirt"></div></div>';
+            }
+            $('.game').html(html);
+        }
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

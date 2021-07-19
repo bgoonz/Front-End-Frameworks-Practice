@@ -1,0 +1,34 @@
+.horizontal {
+  float: left;
+  list-style: none;
+  margin: 10px;
+}
+
+.big-letter::first-letter {
+  font-size: 1.4em;
+}
+
+a {
+  color: #00c;
+}
+a.mailto {
+  background: url(images/email.png) no-repeat right top;
+  padding-right: 18px;
+}
+a.pdflink {
+  background: url(images/pdf.png) no-repeat right top;
+  padding-right: 18px;
+}
+
+/* Add your code below */
+.col-first {
+  background-color: hsl(136, 93%, 89%);
+}
+
+.col-second {
+  background-color: hsl(170, 49%, 65%);
+}
+
+.col-third {
+  background-color: hsl(217, 56%, 62%);
+}

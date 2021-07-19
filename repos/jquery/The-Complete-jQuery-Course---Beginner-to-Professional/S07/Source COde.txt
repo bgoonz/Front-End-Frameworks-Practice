@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>jQuery Complete Course</title>
+</head>
+<body>
+    <h1>Welcome to jQuery Course</h1>
+    <div id="start">Start Game</div>
+    <div id="gamearea">
+    <div id="findme">Match this color<br><span id="message"></span></div>
+    <div id="output"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var colorArray = [];
+        $('#gamearea').hide();    
+        $('#start').click(startGame);
+     $('#output').on('click','.cell',checkCell);
+        $('#start').css({
+            border:'1px solid black',
+            textAlign:'center',
+            padding:'10px',
+            width:'150px',
+            backgroundColor:'red',
+            fontSize:'2em',
+            marginBottom:'10px',
+            color:'white'
+        })
+        $('#findme').css({
+            border:'1px solid black',
+            textAlign:'center',
+            padding:'0',
+            width:'600px',
+            fontSize:'2em',
+            Height:'100px',
+            display:'inline-block'
+        })
+        
+        function checkCell(){
+            var curColor = $(this).css('backgroundColor');
+            if(curColor == $('#findme').css('backgroundColor')){
+               var cntValue = Number($(this).text());
+               cntValue++;
+               $(this).text(cntValue);
+               $(this).css('backgroundColor',addNewColor());
+               pickMyColor();
+                $('#message').html('Correct Great:)');
+               }else{
+               $('#message').html('Sorry Wrong Color:())');
+               }
+        }
+        function startGame(){
+            makeBoard();
+            pickMyColor();
+            $('#start').hide();
+            $('#gamearea').show();
+        }
+        
+        function addNewColor(){
+            var trackColor = randomColor();
+            colorArray.push(trackColor);
+            return trackColor;
+        }
+        function makeBoard(){
+            var x = 4;
+            var html = '';
+            for(var row=0;row < x;row++){
+                html +='<div class="row">';
+                for(var col=0;col<x;col++){
+                    html +='<div class="cell" style="background-color:'+addNewColor()+'">0</div>';
+                }
+                html +='</div>';
+            }
+            $('#output').html(html);
+            $('.cell').css({
+            border:'1px solid black',
+            textAlign:'center',
+            padding:'0',
+            margin:'0',
+            width:'150px',
+            height:'100px',
+            fontSize:'2em',
+            color:'black',
+            display:'inline-block'
+            
+            })
+            
+        }
+        function pickMyColor(){
+            var index = Math.floor(Math.random()*colorArray.length);
+            var picked = colorArray.splice(index,1);
+            $('#findme').css('background-color',picked);
+        }
+        function randomColor(){
+            //return '#'+((1<<24)*Math.random() | 0).toString(16);
+            var r =Math.floor(Math.random()*256);
+            var b =Math.floor(Math.random()*256);
+            var g =Math.floor(Math.random()*256);
+            var rgb = 'rgb('+r+','+g+','+b+')';
+            return rgb;
+        }
+    })
+        
+        
+        
+        
+        
+        
+        
+    </script>
+</body>
+</html>

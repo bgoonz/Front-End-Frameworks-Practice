@@ -1,0 +1,321 @@
+***Understanding the DOM***
+
+<html> 
+  <head> 
+    <title>the title</title> 
+  </head> 
+  <body> 
+    <div> 
+      <p>This is a paragraph.</p> 
+      <p>This is another paragraph.</p> 
+      <p>This is yet another paragraph.</p> 
+    </div> 
+  </body> 
+</html>
+
+***Using the $() Function***
+
+var $ele = $('body');
+// undefined. Assign a reference to the body element via jQuery.
+$ele instanceof Element;
+// false. The object is not a DOM element.
+$ele.get(0) instanceof Element;
+// true. The object inside the jQuery object is a DOM element.
+
+***Worked Example***
+
+<ul id="selected-plays"> 
+  <li>Comedies 
+    <ul> 
+      <li><a href="/asyoulikeit/">As You Like It</a></li> 
+      <li>All's Well That Ends Well</li> 
+      <li>A Midsummer Night's Dream</li> 
+      <li>Twelfth Night</li> 
+    </ul> 
+  </li> 
+  <li>Tragedies 
+    <ul> 
+      <li><a href="hamlet.pdf">Hamlet</a></li> 
+      <li>Macbeth</li> 
+      <li>Romeo and Juliet</li> 
+    </ul> 
+  </li> 
+  <li>Histories 
+    <ul> 
+      <li>Henry IV (<a href="mailto:henryiv@king.co.uk">email</a>) 
+         <ul> 
+           <li>Part I</li> 
+           <li>Part II</li>  
+         </ul> 
+      <li><a href="http://www.shakespeare.co.uk/henryv.htm">Henry V</a></li>
+      <li>Richard II</li> 
+    </ul> 
+  </li> 
+</ul>
+
+
+***Styling List-item Levels***
+
+.horizontal { 
+  float: left; 
+  list-style: none; 
+  margin: 10px; 
+}
+
+***Styling List-item Levels - add the horizontal class dynamically***
+
+$(() => {
+  $('#selected-plays > li')
+    .addClass('horizontal');
+});
+
+
+***Styling List-item Levels - select all sub-level items using a negation pseudo-class***
+
+$(() => {
+  $('#selected-plays > li')
+    .addClass('horizontal'); 
+  $('#selected-plays li:not(.horizontal)')
+    .addClass('sub-level');
+});
+
+
+***Styling List-item Levels - add the sub-level class***
+
+.sub-level { 
+  background: #ccc; 
+}
+
+***Selector Specificity***
+
+.big-letter::first-letter {
+  font-size: 1.4em;
+}
+
+***Selector Specificity - change the specificity of the jQuery selector***
+
+$(() => { 
+  $('#selected-plays > li') 
+    .addClass('big-letter'); 
+
+  $('#selected-plays li.horizontal')
+    .addClass('big-letter'); 
+
+  $('#selected-plays li:not(.sub-level)') 
+    .addClass('big-letter'); 
+});
+
+***Styling Links***
+
+a { 
+  color: #00c;  
+} 
+a.mailto { 
+  background: url(images/email.png) no-repeat right top; 
+  padding-right: 18px; 
+} 
+a.pdflink { 
+  background: url(images/pdf.png) no-repeat right top; 
+  padding-right: 18px; 
+} 
+a.henrylink { 
+  background-color: #fff; 
+  padding: 2px; 
+  border: 1px solid #000; 
+}
+
+***add a class for all e-mail links***
+
+$(() => {
+  $('a[href^="mailto:"]')
+    .addClass('mailto');
+});
+
+***add a class for all the links to PDF files***
+
+$(() => { 
+  $('a[href^="mailto:"]')
+    .addClass('mailto'); 
+  $('a[href$=".pdf"]')
+    .addClass('pdflink'); 
+});
+
+***add the class henrylink to all links with a href value***
+
+$(() => { 
+  $('a[href^="mailto:"]')
+    .addClass('mailto'); 
+  $('a[href$=".pdf"]')
+    .addClass('pdflink'); 
+  $('a[href^="http"][href*="henry"]') 
+    .addClass('henrylink'); 
+});
+
+
+***Styling Alternate Rows***
+
+<h2>Shakespeare's Plays</h2> 
+<table> 
+  <tr> 
+    <td>As You Like It</td> 
+    <td>Comedy</td> 
+    <td></td> 
+  </tr> 
+  <tr> 
+    <td>All's Well that Ends Well</td> 
+    <td>Comedy</td> 
+    <td>1601</td> 
+  </tr> 
+  <tr> 
+    <td>Hamlet</td> 
+    <td>Tragedy</td> 
+    <td>1604</td> 
+  </tr> 
+  <tr> 
+    <td>Macbeth</td> 
+    <td>Tragedy</td> 
+    <td>1606</td> 
+  </tr> 
+  <tr> 
+    <td>Romeo and Juliet</td> 
+    <td>Tragedy</td> 
+    <td>1595</td> 
+  </tr> 
+  <tr> 
+    <td>Henry IV, Part I</td> 
+    <td>History</td> 
+    <td>1596</td> 
+  </tr> 
+  <tr> 
+    <td>Henry V</td> 
+    <td>History</td> 
+    <td>1599</td> 
+  </tr> 
+</table> 
+<h2>Shakespeare's Sonnets</h2> 
+<table> 
+  <tr> 
+    <td>The Fair Youth</td> 
+    <td>1-126</td> 
+  </tr> 
+  <tr> 
+    <td>The Dark Lady</td> 
+    <td>127-152</td> 
+  </tr> 
+  <tr> 
+    <td>The Rival Poet</td> 
+    <td>78-86</td> 
+  </tr> 
+</table>
+
+***add a style to the stylesheet for all the table rows and use an alt class for the odd rows - CSS***
+
+tr { 
+  background-color: #fff;  
+} 
+.alt { 
+  background-color: #ccc;
+}
+
+***add a style to the stylesheet for all the table rows and use an alt class for the odd rows - jQuery***
+
+$(() => { 
+  $('tr:even').addClass('alt'); 
+});
+
+***use odd instead of even***
+
+$(() => {
+  $('tr:nth-child(odd)').addClass('alt'); 
+});
+
+***Finding Elements Based on Textual Content***
+
+$(() => { 
+  $('tr:nth-child(odd)')
+    .addClass('alt'); 
+  $('td:contains(Henry)')
+    .addClass('highlight'); 
+});
+
+***DOM Traversal Methods - the .filter() method***
+
+$('tr')
+  .filter(':even')
+  .addClass('alt');
+
+
+***DOM Traversal Methods - add a class to all external links***
+
+a.external { 
+  background: #fff url(images/external.png) no-repeat 100% 2px; 
+  padding-right: 16px; 
+}
+
+***DOM Traversal Methods - jQuery's implicit iteration***
+
+$('a')
+  .filter((i, a) =>
+    a.hostname && a.hostname !== location.hostname
+  )
+  .addClass('external');
+
+***Styling Specific Cells***
+
+$(() => {
+  $('td:contains(Henry)')
+    .next()
+    .addClass('highlight'); 
+});
+
+***Styling Specific Cells - highlight all of the cells following the one containing Henry***
+
+$(() => {
+  $('td:contains(Henry)')
+    .nextAll()
+    .addClass('highlight'); 
+});
+
+***Styling Specific Cells - To include the original cell (the one that contains Henry) along with the cells that follow***
+
+$(() => {
+  $('td:contains(Henry)')
+    .nextAll()
+    .addBack() 
+    .addClass('highlight'); 
+});
+
+***Styling Specific Cells - select every cell in each row where at least one of the cells contains Henry***
+
+$(() => { 
+  $('td:contains(Henry)')
+    .parent()
+    .children() 
+    .addClass('highlight'); 
+});
+
+***Chaining***
+
+$('td:contains(Henry)').parent().find('td:eq(1)') 
+    .addClass('highlight').end().find('td:eq(2)') 
+                           .addClass('highlight');
+
+***Chaining - same sequence of methods written in seven lines***
+
+$('td:contains(Henry)') // Find every cell containing "Henry" 
+  .parent() // Select its parent 
+  .find('td:eq(1)') // Find the 2nd descendant cell 
+  .addClass('highlight') // Add the "highlight" class 
+  .end() // Return to the parent of the cell containing "Henry" 
+  .find('td:eq(2)') // Find the 3rd descendant cell 
+  .addClass('highlight'); // Add the "highlight" class
+
+
+
+
+
+
+
+
+
+

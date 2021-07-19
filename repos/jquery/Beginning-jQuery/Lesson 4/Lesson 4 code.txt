@@ -1,0 +1,601 @@
+***Topic A - Example HTML***
+
+<div id="switcher"> 
+  <div class="label">Text Size</div> 
+  <button id="switcher-default">Default</button> 
+  <button id="switcher-large">Bigger</button> 
+  <button id="switcher-small">Smaller</button> 
+</div> 
+<div class="speech"> 
+  <p>Fourscore and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.</p> 
+  ... 
+</div>
+
+***Setting Computed Style Property Values - Step 1***
+
+$(() => {
+  $('#switcher-large')
+    .click((e) => { 
+
+    }); 
+});
+
+***Setting Computed Style Property Values - Step 2 (strip the unit label off)***
+
+$(() => { 
+  const $speech = $('div.speech'); 
+  $('#switcher-large')
+    .click(() => {
+      const num = parseFloat($speech.css('fontSize')); 
+    }); 
+});
+
+
+***Setting Computed Style Property Values - Step 3 (modify the parsed numeric value and to reset the font size based on the new value)***
+
+$(() => {
+  const $speech = $('div.speech');
+
+  $('#switcher-large')
+    .click(() => {
+      const num = parseFloat($speech.css('fontSize'));
+      $speech.css('fontSize', `${num * 1.4}px`);
+    });
+});
+
+
+***Setting Computed Style Property Values - Step 5 (Combining bigger and smaller)***
+
+$(() => {
+  const sizeMap = {
+    'switcher-small': n => n / 1.4,
+    'switcher-large': n => n * 1.4
+  };
+
+  const $speech = $('div.speech');
+
+  $('#switcher button')
+    .click((e) => {
+      const num = parseFloat($speech.css('fontSize'));
+      $speech.css(
+        'fontSize',
+        `${sizeMap[e.target.id](num)}px`
+      );
+    });
+});
+
+***Setting Computed Style Property Values - Step 6 (Adding Default button)***
+
+$(() => {
+  const sizeMap = {
+    'switcher-small': n => n / 1.4,
+    'switcher-large': n => n * 1.4,
+    'switcher-default': () => defaultSize
+  };
+
+  const $speech = $('div.speech');
+  const defaultSize = parseFloat($speech.css('fontSize'));
+
+  $('#switcher button')
+    .click((e) => {
+      const num = parseFloat($speech.css('fontSize'));
+      $speech.css(
+        'fontSize',
+        `${sizeMap[e.target.id](num)}px`
+      );
+    });
+});
+
+***Hiding and Showing Elements - Step 1 (HTML)***
+
+<div class="speech"> 
+  <p>Fourscore and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.
+  </p> 
+  <p>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battlefield of that war. We have come to dedicate a portion of that field as a final resting-place for those who here gave their lives that the nation might live. It is altogether fitting and proper that we should do this. But, in a larger sense, we cannot dedicate, we cannot consecrate, we cannot hallow, this ground. 
+  </p> 
+  <a href="#" class="more">read more</a> 
+    ... 
+</div>
+
+***Hiding and Showing Elements - Step 2***
+
+$(() => {
+  $('p')
+    .eq(1)
+    .hide();   
+});
+
+***Hiding and Showing Elements - Step 3***
+
+$(() => {
+  $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+      $('p')
+        .eq(1)
+        .show();
+      $(e.target)
+        .hide();
+    });
+});
+
+***Speeding In - Step 1***
+
+$(() => {
+  $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+      $('p')
+        .eq(1)
+        .show('slow');
+      $(e.target)
+        .hide();
+    });
+});
+
+***Fading In and Fading Out - Step 1***
+
+$(() => {
+  $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+      $('p')
+        .eq(1)
+        .fadeIn('slow');
+      $(e.target)
+        .hide();
+    });
+});
+
+***Sliding Up and Sliding Down - Step 1***
+
+$(() => {
+  $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+      $('p')
+        .eq(1)
+        .slideDown('slow');
+      $(e.target)
+        .hide();
+    });
+});
+
+***Toggling Visibility - modify the example script***
+
+$(() => {
+  const $firstPara = $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+
+      if ($firstPara.is(':hidden')) {
+        $firstPara.fadeIn('slow');
+        $(e.target).text('read less');
+      } else {
+        $firstPara.fadeOut('slow');
+        $(e.target).text('read more');
+      }
+    });
+});
+
+
+***Toggling Visibility - Using an if-else statement***
+
+$(() => {
+  const $firstPara = $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+
+      $firstPara.slideToggle('slow');
+      $(e.target)
+        .text(
+          $(e.target).text() === 'read more' ?
+            'read less' : 'read more'
+        );
+    });
+});
+
+
+***The .animate() method with four arguments***
+
+.animate(
+  { property1: 'value1', property2: 'value2'},  
+  duration,
+  easing,
+  () => { 
+    console.log('The animation is finished.'); 
+  } 
+);
+
+
+***The .animate() method - the second form***
+
+.animate(
+  { 
+    property1: 'value1',  
+    property2: 'value2' 
+  },
+  { 
+    duration: 'value',  
+    easing: 'value', 
+    specialEasing: { 
+      property1: 'easing1', 
+      property2: 'easing2' 
+    }, 
+    complete: () => { 
+      console.log('The animation is finished.'); 
+    }, 
+    queue: true, 
+    step: callback 
+  }
+);
+
+
+***Building Effects By Hand***
+
+$(() => {
+  const $firstPara = $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+
+      $firstPara.animate({ height: 'toggle' }, 'slow');
+      $(e.target)
+        .text(
+          $(e.target).text() === 'read more' ?
+            'read less' : 'read more'
+        );
+    }); 
+});
+
+
+***Animating Multiple Properties at Once - Step 1***
+
+$(() => {
+  const $firstPara = $('p')
+    .eq(1)
+    .hide();
+
+  $('a.more')
+    .click((e) => {
+      e.preventDefault();
+
+      $firstPara.animate({
+        opacity: 'toggle',
+        height: 'toggle'
+      }, 'slow');
+      $(e.target)
+        .text(
+          $(e.target).text() === 'read more' ?
+            'read less' : 'read more'
+        );
+    }); 
+});
+
+
+***Animating Multiple Properties at Once - Step 2 (numeric CSS properties)***
+
+$(() => {
+  const sizeMap = {
+    'switcher-small': n => n / 1.4,
+    'switcher-large': n => n * 1.4,
+    'switcher-default': () => defaultSize
+  };
+
+  const $speech = $('div.speech');
+  const defaultSize = parseFloat($speech.css('fontSize'));
+
+  $('#switcher button')
+    .click((e) => {
+      const num = parseFloat($speech.css('fontSize'));
+      $speech.animate({
+        fontSize: `${sizeMap[e.target.id](num)}px`
+      });
+    });
+});
+$(() => {
+  const sizeMap = {
+    'switcher-small': n => n / 1.4,
+    'switcher-large': n => n * 1.4,
+    'switcher-default': () => defaultSize
+  };
+
+  const $speech = $('div.speech');
+  const defaultSize = parseFloat($speech.css('fontSize'));
+
+  $('#switcher button')
+    .click((e) => {
+      const num = parseFloat($speech.css('fontSize'));
+      $speech.animate({
+        fontSize: `${sizeMap[e.target.id](num)}px`
+      });
+    });
+});
+
+
+***jQuery.outerWidth() method - Step 3***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher.animate({
+        borderWidth: '5px',
+        left: paraWidth - switcherWidth,
+        height: '+=20px'
+      }, 'slow');
+    });
+});
+
+
+***Positioning with CSS***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .animate({
+          borderWidth: '5px',
+          left: paraWidth - switcherWidth,
+          height: '+=20px'
+        }, 'slow');
+    });
+});
+
+
+***Working with a Single Set of Elements***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .animate({ borderWidth: '5px' }, 'slow')
+        .animate({ left: paraWidth - switcherWidth }, 'slow')
+        .animate({ height: '+=20px' }, 'slow');
+    }); 
+});
+
+
+***Working with a Single Set of Elements - Chaining jQuery effect methods***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .fadeTo('fast', 0.5)
+        .animate({ left: paraWidth - switcherWidth }, 'slow')
+        .fadeTo('slow', 1.0)
+        .slideUp('slow')
+        .slideDown('slow');
+    }); 
+});
+
+***Bypassing the Queue***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .fadeTo('fast', 0.5)
+        .animate(
+          { left: paraWidth - switcherWidth },
+          { duration: 'slow', queue: false }
+        )
+        .fadeTo('slow', 1.0)
+        .slideUp('slow')
+        .slideDown('slow');
+    }); 
+});
+
+
+***Queuing Effects Manually***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .fadeTo('fast', 0.5)
+        .animate(
+          { left: paraWidth - switcherWidth },
+          { duration: 'slow', queue: false }
+        )
+        .fadeTo('slow', 1.0)
+        .slideUp('slow')
+        .css('backgroundColor', '#f00')
+        .slideDown('slow');
+    }); 
+});
+
+
+***Queuing Effects Manually - use the .queue() method***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .fadeTo('fast', 0.5)
+        .animate(
+          { left: paraWidth - switcherWidth },
+          { duration: 'slow', queue: false }
+        )
+        .fadeTo('slow', 1.0)
+        .slideUp('slow')
+        .queue((next) => {
+          $switcher.css('backgroundColor', '#f00');
+          next();
+        })
+        .slideDown('slow');
+    }); 
+});
+
+***Working with Multiple Sets of Elements - Step 1***
+
+<p>Fourscore and seven years ago our fathers brought forth 
+   on this continent a new nation, conceived in liberty, 
+   and dedicated to the proposition that all men are 
+   created equal.</p> 
+<p>Now we are engaged in a great civil war, testing whether 
+   that nation, or any nation so conceived and so 
+   dedicated, can long endure. We are met on a great 
+   battlefield of that war. We have come to dedicate a 
+   portion of that field as a final resting-place for those 
+   who here gave their lives that the nation might live. It 
+   is altogether fitting and proper that we should do this. 
+   But, in a larger sense, we cannot dedicate, we cannot 
+   consecrate, we cannot hallow, this ground.</p> 
+<a href="#" class="more">read more</a> 
+<p>The brave men, living and dead, who struggled here have 
+   consecrated it, far above our poor power to add or 
+   detract. The world will little note, nor long remember, 
+   what we say here, but it can never forget what they did 
+   here. It is for us the living, rather, to be dedicated 
+   here to the unfinished work which they who fought here 
+   have thus far so nobly advanced.</p> 
+<p>It is rather for us to be here dedicated to the great 
+   task remaining before us—that from these honored 
+   dead we take increased devotion to that cause for which 
+   they gave the last full measure of devotion—that 
+   we here highly resolve that these dead shall not have 
+   died in vain—that this nation, under God, shall 
+   have a new birth of freedom and that government of the 
+   people, by the people, for the people, shall not perish 
+   from the earth.</p>
+
+***Working with Multiple Sets of Elements - Step 2***
+
+$(() => {
+  $('p')
+    .eq(2)
+    .css('border', '1px solid #333');
+  $('p')
+    .eq(3)
+    .css('backgroundColor', '#ccc')
+    .hide(); 
+});
+
+
+***Working with Multiple Sets of Elements - Step 3***
+
+$(() => { 
+  $('p')
+    .eq(2)
+    .css('border', '1px solid #333')
+    .click((e) => {
+      $(e.target)
+        .slideUp('slow')
+        .next()
+        .slideDown('slow');
+    });
+  $('p')
+    .eq(3)
+    .css('backgroundColor', '#ccc')
+    .hide();
+});
+
+***Queuing with Callbacks***
+
+$(() => { 
+  $('p')
+    .eq(2)
+    .css('border', '1px solid #333')
+    .click((e) => {
+      $(e.target)
+        .next()
+        .slideDown('slow', () => {
+          $(e.target).slideUp('slow');
+        });
+    });
+  $('p')
+    .eq(3)
+    .css('backgroundColor', '#ccc')
+    .hide();
+});
+
+***Queuing with Callbacks - use a callback function***
+
+$(() => {
+  $('div.label')
+    .click((e) => {
+      const $switcher = $(e.target).parent();
+      const paraWidth = $('div.speech p').outerWidth();
+      const switcherWidth = $switcher.outerWidth();
+
+      $switcher
+        .css('position', 'relative')
+        .fadeTo('fast', 0.5)
+        .animate(
+          { left: paraWidth - switcherWidth },
+          { duration: 'slow', queue: false }
+        )
+        .fadeTo('slow', 1.0)
+        .slideUp('slow', () => {
+          $switcher.css('backgroundColor', '#f00');
+        })
+        .slideDown('slow');
+    });
+});
+
+
+
+
+

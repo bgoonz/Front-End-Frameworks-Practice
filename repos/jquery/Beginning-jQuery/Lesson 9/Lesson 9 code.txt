@@ -1,0 +1,1069 @@
+***Event Delegation - HTML***
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Photo Library</title>
+
+    <link rel="stylesheet" href="09.css" type="text/css" />
+    <script src="jquery.js"></script>
+    <script src="09.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Photo Gallery</h1>
+
+      <div id="gallery">
+        <div class="photo">
+          <img src="photos/skyemonroe.jpg">
+          <div class="details">
+            <div class="description">The Cuillin Mountains, Isle of Skye, Scotland.</div>
+            <div class="date">12/24/2000</div>
+            <div class="photographer">Alasdair Dougall</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/dscn1328.jpg">
+          <div class="details">
+            <div class="description">Mt. Ruapehu in summer</div>
+            <div class="date">01/13/2005</div>
+            <div class="photographer">Andrew McMillan</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/024.JPG">
+          <div class="details">
+            <div class="description">midday sun</div>
+            <div class="date">04/26/2011</div>
+            <div class="photographer">Jaycee Barratt</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/dsc20040321_191051_23.jpg">
+          <div class="details">
+            <div class="description">Dark sunset sky tones</div>
+            <div class="date">03/21/2004</div>
+            <div class="photographer">Leon Brooks</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/portland_178.jpg">
+          <div class="details">
+            <div class="description">Mt. Shasta, Weed, CA</div>
+            <div class="date">06/16/2004</div>
+            <div class="photographer">Brian Lopez</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/michelle_229.jpg">
+          <div class="details">
+            <div class="description">Mountain with tree cover on foothills</div>
+            <div class="date">09/28/2004</div>
+            <div class="photographer">Brian Lopez</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/100_0207.JPG">
+          <div class="details">
+            <div class="description">Poas Volcano, Caldera and Poor Man's Umbrella</div>
+            <div class="date">01/02/2004</div>
+            <div class="photographer">Nat Edwards</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/DSC01281.JPG">
+          <div class="details">
+            <div class="description">Mt Compas, South Australia</div>
+            <div class="date">01/01/2007</div>
+            <div class="photographer">Rod Conlon</div>
+          </div>
+        </div>
+        <div class="photo">
+          <img src="photos/m4.jpg">
+          <div class="details">
+            <div class="description">Waterfall on the outskirts of Highlands N.C.</div>
+            <div class="date">11/21/2008</div>
+            <div class="photographer">Neal Floyd</div>
+          </div>
+        </div>
+      </div>
+      <a id="more-photos" href="pages/1.html">More Photos</a>
+    </div>
+  </body>
+</html>
+
+
+
+***Loading Additional Pages of Data - Step 1***
+
+$(() => {
+  // Write code here
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      const url = $(e.target).attr('href');
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+});
+
+***Loading Additional Pages of Data - Step 3 (update the destination of the More Photos link to point to the next page of photos)***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $link.remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+});
+
+
+***Displaying Data on Hover - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $link.remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $('div.photo')
+      .hover((e) => {
+        $(e.currentTarget)
+          .find('.details')
+          .fadeTo('fast', 0.7);
+    }, (e) => {
+        $(e.currentTarget)
+          .find('.details')
+          .fadeOut('fast');
+    });
+});
+
+***jQuery's Event Delegation - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $link.remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $('#gallery')
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+
+});
+
+
+***Choosing a Delegation Scope***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $link.remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $(document)
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+});
+
+***Defining Custom Events - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      $(e.target).trigger('nextPage');
+    });
+
+  $(document)
+    .on('nextPage', (e) => {
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $('#more-photos').remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $('#gallery')
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+
+});
+
+
+***Infinite Scrolling - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $(document)
+    .on('nextPage', (e) => {
+      const $link = $('#more-photos');
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $('#more-photos').remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $('#more-photos')
+      .click((e) => {
+        e.preventDefault();
+        $(e.target).trigger('nextPage');
+      });
+
+    $(window)
+      .scroll(() => {
+        const distance = $(window).scrollTop() + $(window).height();
+
+        if ($('#container').height() <= distance) {
+          $(document).trigger('nextPage');
+        }
+      })
+      .trigger('scroll');
+
+    $('#gallery')
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+
+});
+
+
+***Custom Event Parameters - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+
+  $('#more-photos')
+    .click((e) => {
+      e.preventDefault();
+      $(e.target).trigger('nextPage', [true]);
+    });
+
+  $(document)
+    .on('nextPage', (e, scrollToVisible) => {
+      const $link = $(e.target);
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $('#more-photos').remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery').append(data);
+
+            if (scrollToVisible) {
+              $(window)
+                .scrollTop($(document).height());
+            }
+        });
+    });
+
+    $('#gallery')
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+});
+
+***Event Throttling - Step 1***
+
+$(() => {
+  // Write code here
+  let pageNum = 1;
+  let timer = 0;
+
+  $(document)
+    .on('nextPage', (e) => {
+      const $link = $('#more-photos');
+      const url = $link.attr('href');
+
+      if (pageNum > 19) {
+        $('#more-photos').remove();
+        return;
+      }
+
+      $link.attr('href', `pages/${++pageNum}.html`);
+
+      $.get(url)
+        .then((data) => {
+          $('#gallery')
+            .append(data);
+        });
+    });
+
+    $('#more-photos')
+      .click((e) => {
+        e.preventDefault();
+        $(e.target).trigger('nextPage');
+      });
+
+    $(window)
+      .scroll(() => {
+        if (!timer) {
+          timer = setTimeout(() => {
+            const distance = $(window).scrollTop() + $(window).height();
+
+            if ($('#container').height() <= distance) {
+              $(document).trigger('nextPage');
+            }
+            timer = 0;
+          }, 250);
+        }
+      })
+      .trigger('scroll');
+
+    $('#gallery')
+      .on('mouseenter mouseleave', 'div.photo', (e) => {
+        const $details = $(e.currentTarget).find('.details');
+
+        if (e.type == 'mouseenter') {
+          $details.fadeTo('fast', 0.7);
+        } else {
+          $details.fadeOut('fast');
+        }
+      });
+
+});
+
+***Interrupting Animations - HTML***
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Executive Board</title>
+
+    <link rel="stylesheet" href="09.css" type="text/css" />
+
+    <script src="jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="09.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <h2>Executive Board</h2>
+      <p class="team-desc">The Executive Board is responsible for the day-to-day operations of the jQuery project, and has powers delegated to it by our governance plan or a regular vote of the voting membership. The Executive Board is made up of seven members of the voting membership, elected twice annually by the voting membership, in October and April.</p>
+      <p><button id="fx-toggle">Toggle Animations</button></p>
+      <div class="team">
+        <div class="member">
+          <img class="avatar" src="photos/rey.jpg" alt="" />
+          <div class="name">Rey Bango</div>
+          <div class="location">Florida</div>
+          <p class="bio">Rey Bango is a consultant living in South Florida, specializing in web application development. Known for his passion for jQuery, approachable demeanor, and community-centric focus, Rey works tirelessly to promote the benefits of the jQuery project and assist the community by ensuring they have the information necessary to be successful. He&#8217;s well-respected within the JavaScript community for his desire to promote unity and cooperation within the various JavaScript projects and his contributions as a writer for <a href="http://ajaxian.com/">Ajaxian.com</a>.</p>
+        </div>
+
+        <div class="member">
+          <img class="avatar" src="photos/scott.jpg" alt="" />
+          <div class="name">Scott González</div>
+          <div class="location">North Carolina</div>
+          <div class="position">jQuery UI Development Lead</div>
+          <p class="bio">Scott is a web developer living in Raleigh, NC. As a jQuery UI Development Lead, he puts a lot of effort into maintaining the existing code base to make sure it is small, efficient and consistent. Scott also leads the accessibility team and works with new contributors to help improve the project and the community.</p>
+        </div>
+
+        <div class="member">
+          <img class="avatar" src="photos/yehuda.jpg" alt="" />
+          <div class="name">Yehuda Katz</div>
+          <div class="location">California</div>
+          <p class="bio">Yehuda is a developer living in San Francisco, CA who maintained the web site <a class="external text" title="http://visualjquery.com/" href="http://visualjquery.com/">Visual jQuery</a>, and published the <a class="external text" title="http://visualjquery.com/magazine/" href="http://visualjquery.com/magazine/">Visual jQuery Magazine</a>. Additionally, he&#8217;s a frequent contributor to the <a class="external text" title="http://jquery.com/blog/" href="http://jquery.com/blog/">jQuery Blog</a> and promoter of good practices within the jQuery core. Yehuda is a member of the Ruby on Rails Core Team, and spends much of his time traveling to promote and evangelize both jQuery and Rails.</p>
+        </div>
+
+        <div class="member">
+          <img class="avatar" src="photos/john.jpg" alt="" />
+          <div class="name">John Resig</div>
+          <div class="location">Boston</div>
+          <p class="bio">John is in charge of managing the direction of the jQuery library. This involves taking a critical look at existing (and expected) features and making informed decisions about them. He&#8217;s also in charge of managing development resources and time spent on the different aspects of the project.</p>
+        </div>
+        <div class="member">
+          <img class="avatar" src="photos/leah.jpg" alt="" />
+          <div class="name">Leah Silber</div>
+          <div class="location">California</div>
+          <p class="bio">Leah lives in San Francisco, California, working for a large Ruby on Rails company, where she is primarily responsible for developer and community relations. She also produces an annual Ruby on Rails conference in San Francisco. Leah&#8217;s been a long-time jQuery fan and was an editor of the <a class="external text" title="http://visualjquery.com/magazine/" href="http://visualjquery.com/magazine/">Visual jQuery Magazine</a>. As a member of the events team she works on event logistics, fundraising and sponsorships.</p>
+        </div>
+
+        <div class="member">
+          <img class="avatar" src="photos/ralph.jpg" alt="" />
+          <div class="name">Ralph Whitbeck</div>
+          <div class="location">New York</div>
+          <div class="position">Team Lead: Conservancy, Plugins&hellip;</div>
+          <p class="bio">Ralph is the project representative for the Software Freedom Conservancy (SFC) and communicates the project desires for financial spending and policies with our fiscal sponsor (SFC).  Voted to the Executive Board for the last two terms.  He leads the Plugins, Forum and Podcast subteams.  On the podcast subteam he is a co-host of the <a href="http://podcast.jquery.com">Official jQuery Podcast</a> which interviews key members of the jQuery community. Ralph is a senior web application engineer at <a href="http://www.brandlogic.com">BrandLogic Corporation</a> where he builds web applications with jQuery for Fortune 500 companies. </p>
+        </div>
+
+        <div class="member">
+          <img class="avatar" src="photos/richard.jpg" alt="" />
+          <div class="name">Richard D. Worth</div>
+          <div class="location">Washington, D.C.</div>
+          <div class="position">jQuery UI Project Lead</div>
+          <p class="bio">Richard D. Worth is a UI Developer living in Northern VA (Wash DC suburbs). He is the Project Lead for jQuery UI, and has authored or co-authored the current versions of jQuery UI Dialog, Progressbar, Selectables, and Slider plugins. Richard also contributes to the design of the jQuery UI API, automated and manual tests for UI components, and documentation.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+***Interrupting Animations - Step 1 (alter the size of the image and keep it centered)***
+
+$(() => {
+  // Write code here
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+***Halting a Running Animation - Step 1***
+
+$(() => {
+  // Write code here
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+***Disabling all Effects***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+});
+
+***Defining Effect Durations - Step 1 (Implement animations with durations)***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const showDetails = (e) => {
+    $(e.currentTarget)
+      .find('div')
+      .css({
+        display: 'block',
+        left: '-300px',
+        top: 0
+      })
+      .each((i, element) => {
+        $(element)
+          .animate({
+            left: 0,
+            top: 25 * i
+          });
+      });
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+***Defining Effect Durations - Step 2 (track which details are currently on the screen with the use of a class)***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const showDetails = (e) => {
+     $(e.currentTarget)
+       .siblings('.active')
+       .removeClass('active')
+       .children('div')
+       .fadeOut()
+       .end()
+       .end()
+       .addClass('active')
+       .find('div')
+       .css({
+         display: 'block',
+         left: '-300px',
+         top: 0
+       })
+       .each((i, element) => {
+         $(element)
+           .animate({
+             left: 0,
+             top: 25 * i
+           });
+       });
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+
+***Multi-property Easing***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const showDetails = (e) => {
+     $(e.currentTarget)
+       .siblings('.active')
+       .removeClass('active')
+       .children('div')
+       .fadeOut()
+       .end()
+       .end()
+       .addClass('active')
+       .find('div')
+       .css({
+         display: 'block',
+         left: '-300px',
+         top: 0
+       })
+       .each((i, element) => {
+         $(element)
+           .animate({
+             left: 0,
+             top: 25 * i
+           },{
+             duration: 'slow',
+             specialEasing: {
+               top: 'easeInQuart'
+             }
+           });
+        });
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+
+***Animation Promises - Step 1***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const $movable = $('<div/>')
+    .attr('id', 'movable')
+    .appendTo('body');
+
+  const bioBaseStyles = {
+    display: 'none',
+    height: '5px',
+    width: '25px'
+  };
+
+  const bioEffects = {
+    duration: 800,
+    easing: 'easeOutQuart',
+    specialEasing: {
+      opacity: 'linear'
+    }
+  };
+
+  const showDetails = (e) => {
+     $(e.currentTarget)
+       .siblings('.active')
+       .removeClass('active')
+       .children('div')
+       .fadeOut()
+       .end()
+       .end()
+       .addClass('active')
+       .find('div')
+       .css({
+         display: 'block',
+         left: '-300px',
+         top: 0
+       })
+       .each((i, element) => {
+         $(element)
+           .animate({
+             left: 0,
+             top: 25 * i
+           },{
+             duration: 'slow',
+             specialEasing: {
+               top: 'easeInQuart'
+             }
+           });
+        });
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+
+***Animation Promises - Step 2 (add the showBio() function)***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const $movable = $('<div/>')
+    .attr('id', 'movable')
+    .appendTo('body');
+
+  const bioBaseStyles = {
+    display: 'none',
+    height: '5px',
+    width: '25px'
+  };
+
+  const bioEffects = {
+    duration: 800,
+    easing: 'easeOutQuart',
+    specialEasing: {
+      opacity: 'linear'
+    }
+  };
+
+  const showBio = (target) => {
+    const $member = $(target).parent();
+    const memberOffset = $member.offset();
+    const $bio = $member.find('p.bio');
+    const startStyles = $.extend(
+      {},
+      bioBaseStyles,
+      memberOffset
+    );
+    const endStyles = {
+      width: $bio.width(),
+      top: memberOffset.top + 5,
+      left: $member.width() + memberOffset.left - 5,
+      opacity: 'show'
+    };
+
+    $movable
+      .html($bio.clone())
+      .css(startStyles)
+      .animate(endStyles, bioEffects)
+      .animate(
+        { height: $bio.height() },
+        { easing: 'easeOutQuart' }
+      );
+  };
+
+  const showDetails = (e) => {
+     $(e.currentTarget)
+       .siblings('.active')
+       .removeClass('active')
+       .children('div')
+       .fadeOut()
+       .end()
+       .end()
+       .addClass('active')
+       .find('div')
+       .css({
+         display: 'block',
+         left: '-300px',
+         top: 0
+       })
+       .each((i, element) => {
+         $(element)
+           .animate({
+             left: 0,
+             top: 25 * i
+           },{
+             duration: 'slow',
+             specialEasing: {
+               top: 'easeInQuart'
+             }
+           });
+        });
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+
+***Animation Promises - Step 3 (modify the .showDetails() function)***
+
+$(() => {
+  // Write code here
+  $('#fx-toggle')
+    .show()
+    .on('click', () => {
+      $.fx.off = !$.fx.off;
+    });
+
+  $.fx.speeds._default = 250;
+
+  const $movable = $('<div/>')
+    .attr('id', 'movable')
+    .appendTo('body');
+
+  const bioBaseStyles = {
+    display: 'none',
+    height: '5px',
+    width: '25px'
+  };
+
+  const bioEffects = {
+    duration: 800,
+    easing: 'easeOutQuart',
+    specialEasing: {
+      opacity: 'linear'
+    }
+  };
+
+  const showBio = (target) => {
+    const $member = $(target).parent();
+    const memberOffset = $member.offset();
+    const $bio = $member.find('p.bio');
+    const startStyles = $.extend(
+      {},
+      bioBaseStyles,
+      memberOffset
+    );
+    const endStyles = {
+      width: $bio.width(),
+      top: memberOffset.top + 5,
+      left: $member.width() + memberOffset.left - 5,
+      opacity: 'show'
+    };
+
+    $movable
+      .html($bio.clone())
+      .css(startStyles)
+      .animate(endStyles, bioEffects)
+      .animate(
+        { height: $bio.height() },
+        { easing: 'easeOutQuart' }
+      );
+  };
+
+  const showDetails = (e) => {
+     $(e.currentTarget)
+       .siblings('.active')
+       .removeClass('active')
+       .children('div')
+       .fadeOut()
+       .end()
+       .end()
+       .addClass('active')
+       .find('div')
+       .css({
+         display: 'block',
+         left: '-300px',
+         top: 0
+       })
+       .each((i, element) => {
+         $(element)
+           .animate({
+             left: 0,
+             top: 25 * i
+           },{
+             duration: 'slow',
+             specialEasing: {
+               top: 'easeInQuart'
+             }
+           });
+        })
+        .promise()
+        .then(showBio);
+  };
+  $('div.member').click(showDetails);
+
+  $('div.member')
+    .on('mouseenter mouseleave', (e) => {
+      const type = e.type;
+      const width = (type == 'mouseenter') ? 85 : 75;
+      const height = width;
+      const paddingTop = (type == 'mouseenter') ? 0 : 5;
+      const paddingLeft = paddingTop;
+
+      $(e.currentTarget)
+        .find('img')
+        .stop()
+        .animate({
+          width,
+          height,
+          paddingTop,
+          paddingLeft
+        });
+    });
+});
+
+

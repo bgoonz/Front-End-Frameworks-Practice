@@ -1,0 +1,9 @@
+$.Animation.prefilter(function(element, properties, options) {
+    if (options.removeAfter) {
+    this.done(function () {
+      $(element).remove();
+      });
+  }
+});
+
+$('#my-div').fadeOut({ removeAfter: true })
