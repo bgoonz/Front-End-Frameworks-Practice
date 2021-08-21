@@ -31,8 +31,8 @@
     "gatsby-source-filesystem": "^3.7.1",
     "gatsby-transformer-remark": "^4.4.1",
     "gatsby-transformer-sharp": "^3.7.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-helmet": "^6.1.0",
     "theme-ui": "^0.10.0"
   }
